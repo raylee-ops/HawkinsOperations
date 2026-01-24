@@ -1,0 +1,64 @@
+<!--
+  Wazuh Rule: Kerberoasting Activity Detected
+  ID: 100072
+  Level: 11 (High)
+  Description: Detects Kerberos TGS ticket requests indicating Kerberoasting attack
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="windows,kerberos,">
+  <rule id="100072" level="11" frequency="10" timeframe="60">
+    <if_sid>60000</if_sid>
+    <field name="win.system.eventID">^4769$</field>
+    <field name="win.eventdata.ticketEncryptionType">0x17</field>
+    <same_source_ip />
+    <description>Kerberoasting detected - Multiple TGS requests with RC4 encryption</description>
+    <mitre>
+      <id>T1558.003</id>
+    </mitre>
+    <group>kerberoasting,credential_access,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Identifies Kerberoasting by detecting 10+ Kerberos TGS ticket requests (Event 4769)
+  using RC4 encryption (0x17) within 60 seconds, indicating bulk service ticket requests.
+
+Fields Used:
+  - win.eventdata.serviceName: Service principal name requested
+  - win.eventdata.ticketEncryptionType: Encryption type (0x17 = RC4)
+  - win.eventdata.ipAddress: Source IP of requests
+  - win.eventdata.targetUserName: User account requesting tickets
+
+False Positives:
+  - Legitimate service account usage
+  - Some legacy applications requiring RC4
+  - Service discovery tools
+  - Monitoring systems
+
+Severity: High (11)
+
+MITRE ATT&CK: T1558.003 - Steal or Forge Kerberos Tickets: Kerberoasting
+
+Log Sources:
+  - Windows Security Event 4769 (Kerberos Service Ticket Request)
+  - Domain Controller security logs
+
+Test Examples:
+  - Rubeus.exe kerberoast (bulk TGS requests)
+  - Invoke-Kerberoast.ps1 PowerShell script
+  - GetUserSPNs.py from Impacket
+  - Multiple SPN ticket requests in short timeframe
+
+Tuning Notes:
+  - Alert on bulk RC4 ticket requests from single user
+  - Monitor for requests to high-value service accounts
+  - Implement AES encryption for Kerberos
+  - Disable RC4 where possible
+  - Use managed service accounts (gMSA) with strong passwords
+  - Monitor for subsequent offline cracking attempts
+  - Investigate requesting user account for compromise
+  - Correlate with other credential access indicators
+-->

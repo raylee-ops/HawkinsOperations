@@ -1,0 +1,63 @@
+<!--
+  Wazuh Rule: DNS Tunneling Detected
+  ID: 100067
+  Level: 11 (High)
+  Description: Detects DNS queries with characteristics of DNS tunneling for C2 or exfiltration
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="dns,network,">
+  <rule id="100067" level="11" frequency="30" timeframe="300">
+    <if_sid>5200</if_sid>
+    <field name="dns.query.length">^[6-9]\d$|^\d{3,}$</field>
+    <same_source_ip />
+    <description>DNS tunneling detected - Abnormally long or frequent DNS queries</description>
+    <mitre>
+      <id>T1071.004</id>
+    </mitre>
+    <group>dns_tunneling,command_and_control,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Identifies DNS tunneling by detecting excessive DNS queries (30+ in 5 minutes) from the same
+  source with unusually long query names (60+ characters), indicative of data encoding.
+
+Fields Used:
+  - dns.query: DNS query string
+  - dns.query.length: Length of DNS query
+  - dns.query.type: Query type (TXT, NULL often used for tunneling)
+  - srcip: Source IP making queries
+
+False Positives:
+  - Legitimate CDN or security services using long domains
+  - Some cloud services with lengthy domain names
+  - Certain advertising or tracking domains
+
+Severity: High (11)
+
+MITRE ATT&CK: T1071.004 - Application Layer Protocol: DNS
+
+Log Sources:
+  - DNS server logs
+  - DNS query logs
+  - Network packet capture
+  - Firewall DNS inspection
+
+Test Examples:
+  - Queries to subdomain like: a1b2c3d4e5f6g7h8.tunneldomain.com
+  - Rapid sequential DNS TXT queries
+  - Base64-encoded data in subdomain labels
+  - NULL record queries with encoded payloads
+
+Tuning Notes:
+  - Baseline normal DNS query patterns
+  - Alert on TXT and NULL record queries to unusual domains
+  - Monitor for high entropy in subdomain labels
+  - Check for periodic query patterns (beaconing)
+  - Implement DNS sinkholing for known C2 domains
+  - Use threat intelligence feeds for known tunneling domains
+  - Consider DNS query length and character distribution analysis
+-->

@@ -1,0 +1,72 @@
+<!--
+  Wazuh Rule: Windows Registry Autorun Key Modification
+  ID: 100070
+  Level: 9 (Medium-High)
+  Description: Detects modifications to Windows registry autorun keys for persistence
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="windows,registry,">
+  <rule id="100070" level="9">
+    <if_sid>60000</if_sid>
+    <field name="win.eventdata.targetObject">\\CurrentVersion\\Run\\|\\CurrentVersion\\RunOnce\\|\\Winlogon\\</field>
+    <field name="win.system.eventID">^13$</field>
+    <description>Registry autorun key modified - Possible persistence mechanism</description>
+    <mitre>
+      <id>T1547.001</id>
+    </mitre>
+    <group>registry_persistence,autorun,</group>
+  </rule>
+
+  <rule id="100070001" level="11">
+    <if_sid>100070</if_sid>
+    <field name="win.eventdata.details">\\Temp\\|\\AppData\\|\\Users\\Public\\|cmd.exe|powershell.exe</field>
+    <description>Suspicious registry autorun key - Points to unusual location or script</description>
+    <mitre>
+      <id>T1547.001</id>
+    </mitre>
+    <group>registry_persistence,autorun,suspicious,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Monitors Sysmon Event 13 (Registry value set) for modifications to common autorun registry
+  locations. Elevated severity when values point to suspicious paths or scripts.
+
+Fields Used:
+  - win.eventdata.targetObject: Registry key path
+  - win.eventdata.details: Registry value content
+  - win.eventdata.image: Process modifying registry
+  - win.eventdata.user: User account
+
+False Positives:
+  - Software installations and updates
+  - Legitimate startup applications
+  - System configuration changes
+  - User-installed applications
+
+Severity: Medium-High (9), High (11 for suspicious values)
+
+MITRE ATT&CK: T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys
+
+Log Sources:
+  - Sysmon Event ID 13 (Registry value set)
+  - Windows Security Event 4657 (Registry modified)
+
+Test Examples:
+  - HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Malware = C:\\Temp\\malware.exe
+  - HKCU\\..\\Run\\Backdoor = powershell.exe -enc [base64]
+  - Winlogon\\Userinit = userinit.exe,C:\\malicious.exe
+
+Tuning Notes:
+  - Baseline legitimate startup applications
+  - Whitelist known software by process and value
+  - Alert on registry modifications from scripting engines
+  - Monitor for modifications by non-admin users
+  - Check for unusual parent processes making changes
+  - Correlate with file creation events
+  - Validate executables with digital signatures
+  - Regularly audit autorun locations
+-->
