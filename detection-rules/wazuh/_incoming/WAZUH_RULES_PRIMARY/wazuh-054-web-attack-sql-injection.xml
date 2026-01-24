@@ -1,0 +1,63 @@
+<!--
+  Wazuh Rule: SQL Injection Attack Attempt
+  ID: 100054
+  Level: 11 (High)
+  Description: Detects SQL injection patterns in web server logs
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="web,attack,">
+  <rule id="100054" level="11">
+    <if_sid>31100</if_sid>
+    <match>union.*select|' or '1'='1|'; DROP TABLE|exec\(|<script>|javascript:</match>
+    <description>Possible SQL injection or XSS attack detected</description>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+    <group>sql_injection,web_attack,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Identifies SQL injection and cross-site scripting (XSS) attempts in web server
+  access logs by matching common attack patterns and payloads.
+
+Fields Used:
+  - request_uri: HTTP request URI containing potential injection
+  - source_ip: Attacker IP address
+  - user_agent: Client user agent string
+  - status_code: HTTP response code
+
+False Positives:
+  - Legitimate queries containing SQL keywords
+  - Security testing and vulnerability scans
+  - Web application firewalls testing
+  - Developer testing environments
+
+Severity: High (11)
+
+MITRE ATT&CK: T1190 - Exploit Public-Facing Application
+
+Log Sources:
+  - Apache access.log
+  - Nginx access.log
+  - IIS logs
+  - WAF logs
+
+Test Examples:
+  - /search.php?q=' OR '1'='1
+  - /admin.php?id=1' UNION SELECT * FROM users--
+  - /page.asp?id=1; DROP TABLE users;--
+  - /?q=<script>alert('XSS')</script>
+
+Tuning Notes:
+  - Implement web application firewall (WAF)
+  - Encode/decode URL-encoded payloads for better detection
+  - Correlate with application error logs
+  - Track repeat offenders for blocking
+  - Whitelist security scanners by IP
+  - Monitor for successful exploits (500 errors, unusual responses)
+  - Implement input validation and parameterized queries
+-->

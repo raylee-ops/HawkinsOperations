@@ -1,0 +1,71 @@
+<!--
+  Wazuh Rule: New Windows Service Created
+  ID: 100059
+  Level: 8 (Medium)
+  Description: Detects creation of new Windows services for potential persistence
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="windows,service,">
+  <rule id="100059" level="8">
+    <if_sid>60612</if_sid>
+    <field name="win.system.eventID">^7045$</field>
+    <description>New Windows service installed on system</description>
+    <mitre>
+      <id>T1543.003</id>
+    </mitre>
+    <group>service_creation,persistence,</group>
+  </rule>
+
+  <rule id="100059001" level="10">
+    <if_sid>100059</if_sid>
+    <field name="win.eventdata.imagePath">\\Temp\\|\\AppData\\|\\Users\\Public\\|cmd.exe|powershell.exe</field>
+    <description>Suspicious Windows service created - Unusual executable path</description>
+    <mitre>
+      <id>T1543.003</id>
+    </mitre>
+    <group>service_creation,persistence,suspicious,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Monitors Windows System Event 7045 for new service installations. Elevated severity
+  when service executable path contains suspicious locations or scripts.
+
+Fields Used:
+  - win.eventdata.serviceName: Name of new service
+  - win.eventdata.imagePath: Service executable path
+  - win.eventdata.serviceType: Service type
+  - win.eventdata.startType: Service start mode
+  - win.eventdata.accountName: Service account
+
+False Positives:
+  - Legitimate software installations
+  - Windows updates
+  - Driver installations
+  - Enterprise deployment tools
+
+Severity: Medium (8), High (10 for suspicious paths)
+
+MITRE ATT&CK: T1543.003 - Create or Modify System Process: Windows Service
+
+Log Sources:
+  - Windows System Event 7045 (Service Installation)
+  - Windows Security Event 4697 (Service Installation)
+
+Test Examples:
+  - Service: "WindowsUpdate" ImagePath: "C:\Users\Public\malware.exe"
+  - Service with ImagePath: "cmd.exe /c C:\temp\backdoor.bat"
+  - Service running PowerShell scripts from AppData
+
+Tuning Notes:
+  - Whitelist known software installation services
+  - Alert on services with SYSTEM privileges from unusual paths
+  - Monitor for service creation followed by immediate start
+  - Check service description for generic or suspicious text
+  - Correlate with file creation events
+  - Track service creation outside business hours
+  - Verify service binaries with digital signatures
+-->

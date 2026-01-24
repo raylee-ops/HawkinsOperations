@@ -1,0 +1,65 @@
+<!--
+  Wazuh Rule: Impossible Travel Detection
+  ID: 100064
+  Level: 12 (Critical)
+  Description: Detects user logins from geographically impossible locations within short timeframes
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="authentication,anomaly,">
+  <rule id="100064" level="12">
+    <if_sid>60122</if_sid>
+    <field name="data.geoip.distance">^[5-9]\d{3,}$|^\d{5,}$</field>
+    <field name="data.time_diff">^[1-5]\d{2}$|^[1-9]\d{1}$</field>
+    <description>Impossible travel detected - User logged in from distant location too quickly</description>
+    <mitre>
+      <id>T1078</id>
+    </mitre>
+    <group>impossible_travel,credential_compromise,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Identifies scenarios where a user authenticates from two geographic locations that are
+  physically impossible to travel between in the time elapsed (e.g., 5000+ km in <10 minutes).
+
+Fields Used:
+  - user: Username
+  - geoip.location: Current login location
+  - geoip.previous_location: Previous login location
+  - geoip.distance: Distance between locations (km)
+  - time_diff: Time between logins (seconds)
+
+False Positives:
+  - VPN usage changing apparent location
+  - Shared accounts (should be eliminated)
+  - GeoIP database inaccuracies
+  - Cloud services with multiple regional endpoints
+
+Severity: Critical (12)
+
+MITRE ATT&CK: T1078 - Valid Accounts
+
+Log Sources:
+  - Authentication logs with GeoIP enrichment
+  - VPN connection logs
+  - Cloud service authentication
+  - Wazuh GeoIP integration
+
+Test Examples:
+  - User logs in from New York at 10:00 AM, then from London at 10:05 AM
+  - Authentication from Tokyo then Sydney within 1 hour
+  - Rapid location changes across continents
+
+Tuning Notes:
+  - Requires GeoIP database and enrichment
+  - Adjust distance and time thresholds based on environment
+  - Whitelist known VPN exit points
+  - Immediately investigate and potentially block account
+  - Correlate with account compromise indicators
+  - Implement MFA to prevent credential theft impact
+  - Track and baseline normal user login patterns
+  - Consider time zones and business travel schedules
+-->

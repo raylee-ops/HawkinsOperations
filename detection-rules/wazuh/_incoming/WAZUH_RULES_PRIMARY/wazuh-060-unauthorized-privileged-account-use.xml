@@ -1,0 +1,64 @@
+<!--
+  Wazuh Rule: Unauthorized Privileged Account Usage
+  ID: 100060
+  Level: 11 (High)
+  Description: Detects privileged account usage from unusual locations or times
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="authentication,privilege,">
+  <rule id="100060" level="11">
+    <if_sid>60122</if_sid>
+    <field name="win.eventdata.targetUserName">^admin|^root|^administrator</field>
+    <field name="win.eventdata.logonType">^10$</field>
+    <time>00:00-06:00</time>
+    <description>Privileged account used during off-hours - Possible unauthorized access</description>
+    <mitre>
+      <id>T1078.002</id>
+    </mitre>
+    <group>privileged_access,suspicious_logon,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Monitors successful logons (Event 4624) for privileged accounts (admin, root, administrator)
+  during unusual hours (midnight to 6 AM) with RDP logon type (10).
+
+Fields Used:
+  - win.eventdata.targetUserName: Account name used
+  - win.eventdata.logonType: Type of logon (10 = RDP)
+  - win.eventdata.ipAddress: Source IP address
+  - win.system.timeCreated: Timestamp of event
+
+False Positives:
+  - Authorized night shift administrators
+  - Scheduled maintenance windows
+  - Emergency system operations
+  - Global teams in different time zones
+
+Severity: High (11)
+
+MITRE ATT&CK: T1078.002 - Valid Accounts: Domain Accounts
+
+Log Sources:
+  - Windows Security Event 4624 (Successful logon)
+  - Domain controller security logs
+  - Workstation security logs
+
+Test Examples:
+  - Administrator account RDP logon at 3:00 AM
+  - Root account login from unusual geographic location
+  - Admin account access from non-corporate IP address
+
+Tuning Notes:
+  - Adjust time range based on business operations
+  - Whitelist authorized maintenance windows
+  - Correlate with VPN connection logs
+  - Alert on privileged logons from unexpected IPs
+  - Track privileged account usage patterns
+  - Implement privileged access management (PAM)
+  - Require MFA for all privileged accounts
+  - Monitor for lateral movement following privileged logon
+-->
