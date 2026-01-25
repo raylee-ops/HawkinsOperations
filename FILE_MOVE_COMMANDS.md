@@ -7,7 +7,7 @@ Run these commands to move your existing misplaced files into the correct folder
 ## Before You Start
 
 ```bash
-cd /path/to/hawkinsops-soc-content
+cd /path/to/HawkinsOperations
 git status  # Make sure you're in the right repo
 ```
 
