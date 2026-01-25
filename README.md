@@ -10,13 +10,14 @@ Recruiter-friendly SOC artifacts with **verifiable** counts and a **real deploym
 - Wazuh Deployment Reality: `docs/wazuh/DEPLOYMENT_REALITY.md`
 - v1.0.1 Checklist: `RELEASE_v1.0.1_CHECKLIST.md`
 
-## What’s in this repo (truthful)
-This release is **Wazuh-first**.
+## What's in this repo (truthful)
+This release contains detection rules across multiple platforms.
 
-- **Wazuh rules:** stored as XML modules in `detection-rules/wazuh/_incoming/WAZUH_RULES_PRIMARY/`
+- **Sigma rules:** YAML-based detection rules organized by MITRE ATT&CK tactics in `detection-rules/sigma/`
+- **Splunk queries:** SPL-based detection queries in `detection-rules/splunk/`
+- **Wazuh rules:** XML rule modules in `detection-rules/wazuh/rules/`
 - **IR playbooks:** Markdown playbooks in `incident-response/playbooks/`
 - **Threat hunting + runbooks:** scaffolded indices (content in progress)
-- **Sigma + Splunk:** scaffolded folders (planned)
 
 > Counts are intentionally not hard-coded here. Use the verification commands and quote the output.
 
@@ -25,8 +26,14 @@ Run from repo root:
 - `docs/VERIFY_COMMANDS_POWERSHELL.md`
 
 ## Wazuh deployment (fast path)
-Build a deployable bundle from the repo’s Wazuh XML modules:
+Build a deployable bundle from the repo's Wazuh XML modules:
 
+**PowerShell (Windows):**
+```powershell
+.\scripts\build-wazuh-bundle.ps1
+```
+
+**Bash (Linux/WSL):**
 ```bash
 bash ./scripts/build-wazuh-bundle.sh
 ```

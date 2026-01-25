@@ -10,7 +10,7 @@ This document bridges that gap.
 
 **Primary Wazuh rule modules (XML, stored individually):**
 
-- `detection-rules/wazuh/_incoming/WAZUH_RULES_PRIMARY/*.xml`
+- `detection-rules/wazuh/rules/*.xml`
 
 > Note: some XML modules contain **multiple `<rule id="...">` blocks**. Use `docs/VERIFY_COMMANDS_POWERSHELL.md` to count rule blocks accurately.
 
@@ -34,12 +34,17 @@ For a simple “portfolio deploy,” we bundle your rule modules into **one** fi
 
 From repo root:
 
+**PowerShell (Windows):**
+```powershell
+.\scripts\build-wazuh-bundle.ps1
+```
+
+**Bash (Linux/WSL):**
 ```bash
 bash ./scripts/build-wazuh-bundle.sh
 ```
 
-Output:
-
+**Output:**
 - `dist/wazuh/local_rules.xml`
 
 ---

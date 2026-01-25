@@ -10,7 +10,7 @@ HawkinsOps SOC Content Library - A recruiter-friendly portfolio of security oper
 
 ```
 detection-rules/
-├── wazuh/_incoming/WAZUH_RULES_PRIMARY/  # Individual XML rule modules (source of truth)
+├── wazuh/rules/                          # Individual XML rule modules (source of truth)
 ├── sigma/                                 # YAML-based detection rules (planned)
 └── splunk/                                # SPL queries (planned)
 
@@ -40,7 +40,7 @@ _archive/                                 # Imported legacy content from previou
 ### Detection Rule Management
 
 **Wazuh Rules:**
-- Individual XML rule modules stored in `detection-rules/wazuh/_incoming/WAZUH_RULES_PRIMARY/`
+- Individual XML rule modules stored in `detection-rules/wazuh/rules/`
 - Each XML file may contain **multiple `<rule id="...">` blocks**
 - Rules follow Wazuh XML schema with MITRE ATT&CK tags
 - Rules are **not** directly deployable from repo - must be bundled first
@@ -77,8 +77,8 @@ $sigma  = (Get-ChildItem -Recurse -Filter *.yml -Path ".\detection-rules\sigma" 
 $splunk = (Get-ChildItem -Recurse -Filter *.spl -Path ".\detection-rules\splunk" -ErrorAction SilentlyContinue).Count
 
 # Wazuh: Count XML files AND individual rule blocks
-$wazuhXmlFiles = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\_incoming\WAZUH_RULES_PRIMARY" -ErrorAction SilentlyContinue).Count
-$wazuhRuleBlocks = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\_incoming\WAZUH_RULES_PRIMARY" -ErrorAction SilentlyContinue |
+$wazuhXmlFiles = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\rules" -ErrorAction SilentlyContinue).Count
+$wazuhRuleBlocks = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\rules" -ErrorAction SilentlyContinue |
     Select-String -Pattern "<rule id=" | Measure-Object).Count
 
 Write-Host "Sigma (.yml): $sigma | Splunk (.spl): $splunk | Wazuh XML files: $wazuhXmlFiles | Wazuh <rule id=> blocks: $wazuhRuleBlocks"
@@ -91,15 +91,21 @@ $playbooks = (Get-ChildItem -Recurse -Filter *.md -Path ".\incident-response\pla
 Write-Host "IR playbooks (.md): $playbooks"
 ```
 
-### Build Deployable Wazuh Bundle (Bash)
+### Build Deployable Wazuh Bundle
 
-From repo root (Git Bash or Linux):
+From repo root:
 
+**PowerShell (Windows):**
+```powershell
+.\scripts\build-wazuh-bundle.ps1
+```
+
+**Bash (Linux/WSL):**
 ```bash
 bash ./scripts/build-wazuh-bundle.sh
 ```
 
-Output: `dist/wazuh/local_rules.xml`
+**Output:** `dist/wazuh/local_rules.xml`
 
 ### Deploy to Wazuh Manager (Example)
 
@@ -156,7 +162,7 @@ Should return no results in the canonical repo.
 
 ### When Adding Wazuh Rules
 
-- Store as individual XML files in `detection-rules/wazuh/_incoming/WAZUH_RULES_PRIMARY/`
+- Store as individual XML files in `detection-rules/wazuh/rules/`
 - Include embedded comments with: Description, Author, Date, Summary, Fields Used, False Positives, MITRE ATT&CK mapping, Log Sources, Test Examples, Tuning Notes
 - Use MITRE ATT&CK technique IDs in `<mitre><id>` tags
 - Set appropriate severity level (1-15)

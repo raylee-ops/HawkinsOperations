@@ -9,15 +9,15 @@ Run these from **repo root** (Windows PowerShell). These commands are designed t
 ## 1) Detection content counts (repo-verified)
 
 ```powershell
-# Detection rules (counts are 0 if a folder doesn't exist)
+# Detection rules - counts all platform-specific rule files
 $sigma  = (Get-ChildItem -Recurse -Filter *.yml -Path ".\detection-rules\sigma" -ErrorAction SilentlyContinue).Count
 $splunk = (Get-ChildItem -Recurse -Filter *.spl -Path ".\detection-rules\splunk" -ErrorAction SilentlyContinue).Count
 
 # Wazuh:
 # - XML file modules present
-$wazuhXmlFiles = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\_incoming\WAZUH_RULES_PRIMARY" -ErrorAction SilentlyContinue).Count
-# - Individual <rule id="..."> blocks (what actually matters)
-$wazuhRuleBlocks = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\_incoming\WAZUH_RULES_PRIMARY" -ErrorAction SilentlyContinue |
+$wazuhXmlFiles = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\rules" -ErrorAction SilentlyContinue).Count
+# - Individual <rule id="..."> blocks (what actually matters for deployment)
+$wazuhRuleBlocks = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\rules" -ErrorAction SilentlyContinue |
     Select-String -Pattern "<rule id=" | Measure-Object).Count
 
 Write-Host "Sigma (.yml): $sigma | Splunk (.spl): $splunk | Wazuh XML files: $wazuhXmlFiles | Wazuh <rule id=> blocks: $wazuhRuleBlocks"
