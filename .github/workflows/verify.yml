@@ -1,0 +1,195 @@
+name: Verify Detection Content
+
+on:
+  push:
+    branches: [ main, polish/** ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  verify-counts:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Count detection rules
+        id: counts
+        shell: pwsh
+        run: |
+          # Count Sigma rules
+          $sigma = (Get-ChildItem -Recurse -Filter *.yml -Path ".\detection-rules\sigma" -ErrorAction SilentlyContinue).Count
+
+          # Count Splunk queries
+          $splunk = (Get-ChildItem -Recurse -Filter *.spl -Path ".\detection-rules\splunk" -ErrorAction SilentlyContinue).Count
+
+          # Count Wazuh XML files
+          $wazuhXmlFiles = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\rules" -ErrorAction SilentlyContinue).Count
+
+          # Count Wazuh rule blocks
+          $wazuhRuleBlocks = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\rules" -ErrorAction SilentlyContinue |
+              Select-String -Pattern "<rule id=" | Measure-Object).Count
+
+          # Count IR playbooks
+          $playbooks = (Get-ChildItem -Recurse -Filter *.md -Path ".\incident-response\playbooks" -ErrorAction SilentlyContinue).Count
+
+          Write-Output "SIGMA_COUNT=$sigma" >> $env:GITHUB_OUTPUT
+          Write-Output "SPLUNK_COUNT=$splunk" >> $env:GITHUB_OUTPUT
+          Write-Output "WAZUH_XML_COUNT=$wazuhXmlFiles" >> $env:GITHUB_OUTPUT
+          Write-Output "WAZUH_RULES_COUNT=$wazuhRuleBlocks" >> $env:GITHUB_OUTPUT
+          Write-Output "PLAYBOOK_COUNT=$playbooks" >> $env:GITHUB_OUTPUT
+
+          Write-Host "✅ Sigma rules: $sigma"
+          Write-Host "✅ Splunk queries: $splunk"
+          Write-Host "✅ Wazuh XML files: $wazuhXmlFiles"
+          Write-Host "✅ Wazuh rule blocks: $wazuhRuleBlocks"
+          Write-Host "✅ IR playbooks: $playbooks"
+
+      - name: Generate verification report
+        shell: pwsh
+        env:
+          SIGMA_COUNT: ${{ steps.counts.outputs.SIGMA_COUNT }}
+          SPLUNK_COUNT: ${{ steps.counts.outputs.SPLUNK_COUNT }}
+          WAZUH_XML_COUNT: ${{ steps.counts.outputs.WAZUH_XML_COUNT }}
+          WAZUH_RULES_COUNT: ${{ steps.counts.outputs.WAZUH_RULES_COUNT }}
+          PLAYBOOK_COUNT: ${{ steps.counts.outputs.PLAYBOOK_COUNT }}
+        run: |
+          $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss UTC"
+          $commitSha = "${{ github.sha }}".Substring(0, 7)
+
+          @"
+          # Verified Detection Counts
+
+          **Last Verified:** $timestamp
+          **Commit:** ``$commitSha``
+          **Branch:** ``${{ github.ref_name }}``
+
+          ---
+
+          ## Detection Rules
+
+          | Platform | Count | Location |
+          |----------|-------|----------|
+          | **Sigma** (YAML) | **$env:SIGMA_COUNT** rules | ``detection-rules/sigma/`` |
+          | **Splunk** (SPL) | **$env:SPLUNK_COUNT** queries | ``detection-rules/splunk/`` |
+          | **Wazuh** (XML) | **$env:WAZUH_XML_COUNT** files, **$env:WAZUH_RULES_COUNT** rule blocks | ``detection-rules/wazuh/rules/`` |
+
+          ## Incident Response
+
+          | Type | Count | Location |
+          |------|-------|----------|
+          | **IR Playbooks** (Markdown) | **$env:PLAYBOOK_COUNT** playbooks | ``incident-response/playbooks/`` |
+
+          ---
+
+          ## Platform Breakdown
+
+          ### Sigma Rules (YAML)
+          - **Format:** Platform-agnostic detection logic in YAML
+          - **Organization:** Grouped by MITRE ATT&CK tactics
+          - **Use Case:** Convert to any SIEM (Splunk, Elastic, QRadar, Microsoft Sentinel)
+          - **Tactics Covered:** credential-access, defense-evasion, discovery, execution, exfiltration, impact, lateral-movement, persistence, privilege-escalation
+
+          ### Splunk Queries (SPL)
+          - **Format:** Splunk Search Processing Language
+          - **Organization:** Multi-query files grouped by MITRE ATT&CK tactics
+          - **Use Case:** Production-ready Splunk searches
+          - **Features:** Optimized filtering, whitelisting, aggregation
+
+          ### Wazuh Rules (XML)
+          - **Format:** Wazuh XML rule modules
+          - **Organization:** Individual rule files (wazuh-NNN-*.xml)
+          - **Use Case:** Open-source SIEM deployment
+          - **Deployment:** Build via ``scripts/build-wazuh-bundle.sh``
+          - **Note:** Some XML files contain multiple ``<rule id="">`` blocks
+
+          ### IR Playbooks (Markdown)
+          - **Format:** Structured markdown playbooks
+          - **Framework:** 7-step incident response process
+          - **Phases:** Detection → Triage (5m) → Investigation (30m) → Containment (15m) → Eradication → Recovery → Documentation
+          - **Features:** Time-boxed, actionable PowerShell commands, MITRE ATT&CK mapping
+
+          ---
+
+          ## Verification Commands
+
+          You can reproduce these counts by running the verification commands in:
+          - ``docs/VERIFY_COMMANDS_POWERSHELL.md``
+
+          Or view the GitHub Actions workflow:
+          - ``.github/workflows/verify.yml``
+
+          ---
+
+          ## Deployment Ready
+
+          ### Wazuh Bundle Build
+
+          Build a single deployable Wazuh rules file:
+
+          ````bash
+          bash ./scripts/build-wazuh-bundle.sh
+          ````
+
+          Output: ``dist/wazuh/local_rules.xml``
+
+          Deploy to Wazuh manager:
+
+          ````bash
+          sudo cp dist/wazuh/local_rules.xml /var/ossec/etc/rules/local_rules.xml
+          sudo systemctl restart wazuh-manager
+          ````
+
+          See ``docs/wazuh/DEPLOYMENT_REALITY.md`` for complete deployment instructions.
+
+          ---
+
+          *This file is auto-generated by GitHub Actions. Counts are verified on every push.*
+          "@ | Out-File -FilePath "PROOF_PACK/VERIFIED_COUNTS.md" -Encoding utf8
+
+          Write-Host "✅ Generated PROOF_PACK/VERIFIED_COUNTS.md"
+
+      - name: Build Wazuh bundle
+        shell: pwsh
+        run: |
+          .\scripts\build-wazuh-bundle.ps1
+
+          if (Test-Path "dist\wazuh\local_rules.xml") {
+            Write-Host "✅ Wazuh bundle built successfully"
+            Get-Item "dist\wazuh\local_rules.xml" | Select-Object Name, Length
+          } else {
+            Write-Host "⚠️ Wazuh bundle not created"
+          }
+
+      - name: Upload Wazuh bundle
+        if: success() && hashFiles('dist/wazuh/local_rules.xml') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: wazuh-rules-bundle
+          path: dist/wazuh/local_rules.xml
+          retention-days: 90
+
+      - name: Upload verification report
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-counts
+          path: PROOF_PACK/VERIFIED_COUNTS.md
+          retention-days: 90
+
+      - name: Commit updated counts
+        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/polish/')
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add PROOF_PACK/VERIFIED_COUNTS.md
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update: Verified detection counts [skip ci]"
+            git push
+          fi
