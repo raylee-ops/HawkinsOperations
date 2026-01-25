@@ -2,3 +2,8 @@ _MIGRATE/
 *.zip
 *.7z
 *.rar
+
+# Local duplicates/backups (do not commit)
+HawkinsOperations/
+HawkinsOperations_BACKUP_before_v1.0.1/
+
