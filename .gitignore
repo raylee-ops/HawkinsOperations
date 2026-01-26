@@ -1,4 +1,9 @@
+# Archive and migration artifacts
 _MIGRATE/
+_archive/corrupt_imports/
+detection-rules/wazuh/_incoming/
+
+# Compressed archives
 *.zip
 *.7z
 *.rar
@@ -6,4 +11,14 @@ _MIGRATE/
 # Local duplicates/backups (do not commit)
 HawkinsOperations/
 HawkinsOperations_BACKUP_before_v1.0.1/
+
+# Sensitive data
+**/Credentials/**
+**/conversations*.json
+
+# Local tool configuration
+.claude/
+
+# Build artifacts
+dist/
 
