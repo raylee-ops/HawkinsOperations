@@ -1,7 +1,7 @@
 # Verified Detection Counts
 
-**Last Verified:** 2026-01-25 22:10:00 UTC
-**Commit:** `manual`
+**Last Verified:** 2026-01-26 02:14:24 UTC
+**Commit:** `0576131`
 **Branch:** `polish/recruiter-pack`
 
 ---
@@ -40,7 +40,7 @@
 - **Format:** Wazuh XML rule modules
 - **Organization:** Individual rule files (wazuh-NNN-*.xml)
 - **Use Case:** Open-source SIEM deployment
-- **Deployment:** Build via `scripts/build-wazuh-bundle.ps1` or `.sh`
+- **Deployment:** Build via `scripts/build-wazuh-bundle.ps1`
 - **Note:** Some XML files contain multiple `<rule id="">` blocks
 
 ### IR Playbooks (Markdown)
@@ -56,13 +56,6 @@
 You can reproduce these counts by running the verification commands in:
 - `docs/VERIFY_COMMANDS_POWERSHELL.md`
 
-Or run the verification script:
-
-**PowerShell:**
-```powershell
-.\\_verify_counts.ps1
-```
-
 Or view the GitHub Actions workflow:
 - `.github/workflows/verify.yml`
 
@@ -74,24 +67,18 @@ Or view the GitHub Actions workflow:
 
 Build a single deployable Wazuh rules file:
 
-**PowerShell (Windows):**
-```powershell
+``powershell
 .\scripts\build-wazuh-bundle.ps1
-```
+``
 
-**Bash (Linux/WSL):**
-```bash
-bash ./scripts/build-wazuh-bundle.sh
-```
-
-**Output:** `dist/wazuh/local_rules.xml`
+Output: `dist/wazuh/local_rules.xml`
 
 Deploy to Wazuh manager:
 
-```bash
+``bash
 sudo cp dist/wazuh/local_rules.xml /var/ossec/etc/rules/local_rules.xml
 sudo systemctl restart wazuh-manager
-```
+``
 
 See `docs/wazuh/DEPLOYMENT_REALITY.md` for complete deployment instructions.
 
