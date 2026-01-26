@@ -2,7 +2,7 @@ name: Verify Detection Content
 
 on:
   push:
-    branches: [ main, polish/** ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -182,7 +182,7 @@ jobs:
           retention-days: 90
 
       - name: Commit updated counts
-        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/polish/'))
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         shell: pwsh
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
