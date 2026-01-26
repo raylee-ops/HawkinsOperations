@@ -1,33 +1,81 @@
 ---
-name: Bug report
-about: Report a defect, broken link, incorrect count, or deploy issue
-title: "[BUG] <short description>"
+name: Bug Report
+about: Report a problem with detection rules, playbooks, or documentation
+title: '[BUG] '
 labels: bug
-assignees: []
+assignees: ''
+
 ---
 
-## What happened?
-Describe the problem clearly.
+## Bug Description
 
-## Where is it?
-- File(s) / path(s):
-- Section / heading (if docs):
+**What's broken:**
+A clear and concise description of the bug.
 
-## Expected behavior
-What should have happened?
+**Affected Component:**
+- [ ] Detection Rule (Sigma/Splunk/Wazuh)
+- [ ] IR Playbook
+- [ ] Documentation
+- [ ] Build Script
+- [ ] Verification Script
+- [ ] Other (specify)
 
-## Reproduction / Verification
-Provide commands and outputs (sanitized):
+---
 
-```text
-# commands + output here
-```
+## To Reproduce
 
-## Environment (if relevant)
-- OS:
-- Wazuh version:
-- Sigma converter (if applicable):
-- Splunk version:
+**Steps to reproduce the behavior:**
+1. Go to '...'
+2. Run command '...'
+3. See error '...'
 
-## Additional context
-Anything else helpful (screenshots, logs). Please sanitize sensitive data.
+**Expected Behavior:**
+What you expected to happen.
+
+**Actual Behavior:**
+What actually happened.
+
+---
+
+## Environment
+
+**Platform:** (Windows/Linux/macOS)
+**PowerShell Version:** (if applicable)
+**Git Version:**
+
+**Relevant Files:**
+- File path: \`detection-rules/...\`
+- Line number: (if applicable)
+
+---
+
+## Error Output
+
+\`\`\`
+Paste error messages or unexpected output here
+\`\`\`
+
+---
+
+## Screenshots
+
+If applicable, add screenshots to help explain your problem.
+
+---
+
+## Additional Context
+
+**Possible Fix:**
+If you have an idea for how to fix this, describe it here.
+
+**Related Issues:**
+Link to any related issues or PRs.
+
+---
+
+## Checklist
+
+- [ ] I have searched existing issues to avoid duplicates
+- [ ] I have included error messages/output
+- [ ] I have specified the affected component
+- [ ] I have provided steps to reproduce (if applicable)

@@ -1,5 +1,12 @@
 # HawkinsOps SOC Content Library
 
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/raylee-ops/HawkinsOperations/verify.yml?branch=main&label=verification&logo=github)](https://github.com/raylee-ops/HawkinsOperations/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/raylee-ops/HawkinsOperations)](https://github.com/raylee-ops/HawkinsOperations/commits/main)
+[![Sigma Rules](https://img.shields.io/badge/Sigma-105%20rules-orange)](detection-rules/sigma/)
+[![Wazuh Rules](https://img.shields.io/badge/Wazuh-29%20rules-red)](detection-rules/wazuh/rules/)
+[![IR Playbooks](https://img.shields.io/badge/IR%20Playbooks-12-green)](incident-response/playbooks/)
+
 **Portfolio-ready security operations content with verifiable detection rules and production deployment capability.**
 
 > 🎯 **For Recruiters & Hiring Managers:** [START_HERE.md](START_HERE.md) provides a 90-second validation path
