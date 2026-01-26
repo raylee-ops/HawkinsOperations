@@ -1,8 +1,8 @@
 # Verified Detection Counts
 
-**Last Verified:** 2026-01-26 02:14:24 UTC
-**Commit:** `0576131`
-**Branch:** `polish/recruiter-pack`
+**Last Verified:** 2026-01-26 02:43:52 UTC
+**Commit:** `72411e1`
+**Branch:** `main`
 
 ---
 
