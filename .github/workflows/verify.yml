@@ -10,6 +10,8 @@ on:
 jobs:
   verify-counts:
     runs-on: windows-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -102,7 +104,7 @@ jobs:
           - **Format:** Wazuh XML rule modules
           - **Organization:** Individual rule files (wazuh-NNN-*.xml)
           - **Use Case:** Open-source SIEM deployment
-          - **Deployment:** Build via ``scripts/build-wazuh-bundle.sh``
+          - **Deployment:** Build via ``scripts/build-wazuh-bundle.ps1``
           - **Note:** Some XML files contain multiple ``<rule id="">`` blocks
 
           ### IR Playbooks (Markdown)
@@ -129,8 +131,8 @@ jobs:
 
           Build a single deployable Wazuh rules file:
 
-          ````bash
-          bash ./scripts/build-wazuh-bundle.sh
+          ````powershell
+          .\scripts\build-wazuh-bundle.ps1
           ````
 
           Output: ``dist/wazuh/local_rules.xml``
@@ -180,16 +182,22 @@ jobs:
           retention-days: 90
 
       - name: Commit updated counts
-        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/polish/')
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/polish/'))
+        shell: pwsh
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
           git add PROOF_PACK/VERIFIED_COUNTS.md
 
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
+          git diff --staged --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "No changes to commit"
+          } else {
             git commit -m "Auto-update: Verified detection counts [skip ci]"
             git push
-          fi
+            if ($LASTEXITCODE -ne 0) {
+              Write-Error "Failed to push changes"
+              exit 1
+            }
+          }
