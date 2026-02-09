@@ -1,0 +1,11 @@
+#!/bin/bash
+# Create timestamped log entry
+if [ -z "$1" ]; then
+  echo "Usage: loglab <title> [optional text]"
+  exit 1
+fi
+LOGDIR=~/HAWKINS_OPS/Data/Logs
+FILE="$LOGDIR/$(date +'%Y-%m-%d_%H-%M-%S')_${1// /_}.log"
+echo "[$(date)] $1" >> "$FILE"
+[ -n "$2" ] && echo "$2" >> "$FILE"
+echo ">>> Log saved to $FILE"

@@ -22,3 +22,26 @@ HawkinsOperations_BACKUP_before_v1.0.1/
 # Build artifacts
 dist/
 
+# Output directories and artifacts (NEVER commit)
+OUTPUTS/
+**/OUTPUTS/
+run_*/
+**/run_*/
+*.log
+logs/
+
+# Development dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# Secrets and credentials
+.env
+*.env
+*.token
+*.key
+*.pem
+**/secrets/
+**/vault/
+
