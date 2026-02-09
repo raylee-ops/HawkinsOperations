@@ -7,15 +7,19 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   verify-counts:
     runs-on: windows-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
 
       - name: Count detection rules
         id: counts
@@ -167,7 +171,7 @@ jobs:
 
       - name: Upload Wazuh bundle
         if: success() && hashFiles('dist/wazuh/local_rules.xml') != ''
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: wazuh-rules-bundle
           path: dist/wazuh/local_rules.xml
@@ -175,29 +179,8 @@ jobs:
 
       - name: Upload verification report
         if: success()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: verified-counts
           path: PROOF_PACK/VERIFIED_COUNTS.md
           retention-days: 90
-
-      - name: Commit updated counts
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        shell: pwsh
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-
-          git add PROOF_PACK/VERIFIED_COUNTS.md
-
-          git diff --staged --quiet
-          if ($LASTEXITCODE -eq 0) {
-            Write-Host "No changes to commit"
-          } else {
-            git commit -m "Auto-update: Verified detection counts [skip ci]"
-            git push
-            if ($LASTEXITCODE -ne 0) {
-              Write-Error "Failed to push changes"
-              exit 1
-            }
-          }

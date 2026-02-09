@@ -7,6 +7,10 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+concurrency:
+  group: parity-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -42,6 +46,7 @@ jobs:
       - name: Run local parity script
         shell: pwsh
         run: |
+          Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
           .\scripts\ci.ps1 -InstallMissingTools
 
       - name: Upload OUTPUTS artifact bundle
@@ -49,5 +54,10 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: security-evidence-output
-          path: OUTPUTS/*
+          path: |
+            OUTPUTS/scan_summary.md
+            OUTPUTS/trivy.txt
+            OUTPUTS/gitleaks.json
+            OUTPUTS/pester.xml
+            OUTPUTS/screenshots_checklist.md
           if-no-files-found: error
