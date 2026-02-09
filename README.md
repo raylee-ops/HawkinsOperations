@@ -1,6 +1,11 @@
 # HawkinsOps SOC Content Library
 
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/raylee-ops/HawkinsOperations/verify.yml?branch=main&label=verification&logo=github)](https://github.com/raylee-ops/HawkinsOperations/actions)
+[![gitleaks](https://img.shields.io/github/actions/workflow/status/raylee-ops/HawkinsOperations/gitleaks.yml?branch=main&label=gitleaks)](https://github.com/raylee-ops/HawkinsOperations/actions/workflows/gitleaks.yml)
+[![trivy-fs](https://img.shields.io/github/actions/workflow/status/raylee-ops/HawkinsOperations/trivy.yml?branch=main&label=trivy-fs)](https://github.com/raylee-ops/HawkinsOperations/actions/workflows/trivy.yml)
+[![codeql](https://img.shields.io/github/actions/workflow/status/raylee-ops/HawkinsOperations/codeql.yml?branch=main&label=codeql)](https://github.com/raylee-ops/HawkinsOperations/actions/workflows/codeql.yml)
+[![scorecard](https://img.shields.io/github/actions/workflow/status/raylee-ops/HawkinsOperations/scorecard.yml?branch=main&label=scorecard)](https://github.com/raylee-ops/HawkinsOperations/actions/workflows/scorecard.yml)
+[![security-local-parity](https://img.shields.io/github/actions/workflow/status/raylee-ops/HawkinsOperations/security-parity.yml?branch=main&label=security-local-parity)](https://github.com/raylee-ops/HawkinsOperations/actions/workflows/security-parity.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/raylee-ops/HawkinsOperations)](https://github.com/raylee-ops/HawkinsOperations/commits/main)
 [![Sigma Rules](https://img.shields.io/badge/Sigma-105%20rules-orange)](detection-rules/sigma/)
@@ -91,6 +96,34 @@ IR Playbooks (.md files): 12
 ### Detailed Verification
 
 See [docs/VERIFY_COMMANDS_POWERSHELL.md](docs/VERIFY_COMMANDS_POWERSHELL.md) for individual platform commands.
+
+---
+
+## Security Stack CI (Recruiter Proof)
+
+This repository includes deterministic security automation for recruiter-visible engineering proof:
+
+- Secret scanning: `.github/workflows/gitleaks.yml`
+- Filesystem security scan: `.github/workflows/trivy.yml`
+- Static analysis: `.github/workflows/codeql.yml`
+- OSS project posture: `.github/workflows/scorecard.yml`
+- Local/CI parity runner: `.github/workflows/security-parity.yml`
+
+Local parity command:
+
+```powershell
+.\scripts\ci.ps1 -InstallMissingTools
+```
+
+Deterministic evidence outputs:
+- `OUTPUTS/scan_summary.md`
+- `OUTPUTS/trivy.txt`
+- `OUTPUTS/gitleaks.json`
+- `OUTPUTS/pester.xml`
+- `OUTPUTS/screenshots_checklist.md`
+
+Pin rotation policy:
+- `docs/pinning_policy.md`
 
 ---
 
