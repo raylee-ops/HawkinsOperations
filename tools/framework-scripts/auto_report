@@ -1,0 +1,13 @@
+#!/bin/bash
+# Generate daily summary report
+REPORTDIR=~/HAWKINS_OPS/Data/Reports
+OUTFILE="$REPORTDIR/auto_report_$(date +'%Y-%m-%d').txt"
+
+echo "===============================" > "$OUTFILE"
+echo " HawkinsOps Auto Report" >> "$OUTFILE"
+echo " Date: $(date)" >> "$OUTFILE"
+echo "===============================" >> "$OUTFILE"
+
+find ~/HAWKINS_OPS/Data/Logs -type f -mtime -1 -exec cat {} \; >> "$OUTFILE"
+
+echo ">>> Report generated at $OUTFILE"
