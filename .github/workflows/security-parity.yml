@@ -1,0 +1,53 @@
+name: security-local-parity
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  parity:
+    runs-on: windows-2022
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Install gitleaks v8.24.2
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          New-Item -ItemType Directory -Path "$env:RUNNER_TEMP\tools\gitleaks" -Force | Out-Null
+          $zipPath = "$env:RUNNER_TEMP\gitleaks.zip"
+          Invoke-WebRequest -Uri "https://github.com/gitleaks/gitleaks/releases/download/v8.24.2/gitleaks_8.24.2_windows_x64.zip" -OutFile $zipPath
+          Expand-Archive -Path $zipPath -DestinationPath "$env:RUNNER_TEMP\tools\gitleaks" -Force
+          "$env:RUNNER_TEMP\tools\gitleaks" | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+          & "$env:RUNNER_TEMP\tools\gitleaks\gitleaks.exe" version
+
+      - name: Install trivy v0.56.2
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          New-Item -ItemType Directory -Path "$env:RUNNER_TEMP\tools\trivy" -Force | Out-Null
+          $zipPath = "$env:RUNNER_TEMP\trivy.zip"
+          Invoke-WebRequest -Uri "https://github.com/aquasecurity/trivy/releases/download/v0.56.2/trivy_0.56.2_windows-64bit.zip" -OutFile $zipPath
+          Expand-Archive -Path $zipPath -DestinationPath "$env:RUNNER_TEMP\tools\trivy" -Force
+          "$env:RUNNER_TEMP\tools\trivy" | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+          & "$env:RUNNER_TEMP\tools\trivy\trivy.exe" --version
+
+      - name: Run local parity script
+        shell: pwsh
+        run: |
+          .\scripts\ci.ps1 -InstallMissingTools
+
+      - name: Upload OUTPUTS artifact bundle
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: security-evidence-output
+          path: OUTPUTS/*
+          if-no-files-found: error

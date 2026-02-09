@@ -1,0 +1,45 @@
+name: trivy-fs
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Install trivy v0.56.2
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="0.56.2"
+          mkdir -p "$RUNNER_TEMP/bin"
+          curl -sSL "https://github.com/aquasecurity/trivy/releases/download/v${VERSION}/trivy_${VERSION}_Linux-64bit.tar.gz" -o "$RUNNER_TEMP/trivy.tgz"
+          tar -xzf "$RUNNER_TEMP/trivy.tgz" -C "$RUNNER_TEMP/bin" trivy
+          chmod +x "$RUNNER_TEMP/bin/trivy"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+          trivy --version
+
+      - name: Run trivy filesystem scan (HIGH/CRITICAL fail)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p OUTPUTS
+          trivy fs . --config trivy.yaml --output OUTPUTS/trivy.txt --exit-code 1
+
+      - name: Upload trivy artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: trivy-output
+          path: OUTPUTS/trivy.txt
+          if-no-files-found: error
