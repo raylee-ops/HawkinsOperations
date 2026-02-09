@@ -1,0 +1,13 @@
+format: table
+scanners:
+  - vuln
+  - misconfig
+  - secret
+severity:
+  - HIGH
+  - CRITICAL
+ignore-unfixed: true
+no-progress: true
+skip-dirs:
+  - OUTPUTS
+  - .git

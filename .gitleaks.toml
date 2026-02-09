@@ -1,0 +1,11 @@
+title = "HawkinsOperations Gitleaks Policy"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Ignore generated output artifacts"
+paths = [
+  '''^OUTPUTS/''',
+  '''^PROOF_PACK/'''
+]
