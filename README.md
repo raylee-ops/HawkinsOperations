@@ -56,27 +56,14 @@ This repository contains production-ready security detection content across mult
 
 ---
 
-## Consolidated Automation & Documentation
+## Additional Resources
 
-**Single Source of Truth:** This repository consolidates tools, scripts, and documentation from multiple HawkinsOps projects into one canonical location.
-
-### Automation Tools
+**Migration Project Documentation:** This repository includes reference documentation from the active RH_MIGRATION_2026_V2 filesystem migration project.
 
 | Category | Description | Location |
 |----------|-------------|----------|
-| **Framework Scripts** | Cross-platform bash utilities (auto_report, loglab, opsnote) | `tools/framework-scripts/` |
-| **Windows Automation** | PowerShell sync and automation tools | `tools/windows-automation/` |
-| **Migration Tools** | Filesystem migration utilities and validators | `tools/migration-tools/` |
-
-### Documentation
-
-| Category | Description | Location |
-|----------|-------------|----------|
-| **System Blueprints** | Architecture docs, rebuild runbooks, services matrix | `docs/blueprints/rebuild_pack/` |
 | **Migration Patterns** | Filesystem migration project documentation | `docs/migration-patterns/` |
-| **Website Assets** | Public-facing landing page and branding | `content/website/` |
-
-**Consolidation Map:** See [CONSOLIDATION_MAP.md](CONSOLIDATION_MAP.md) for full repository consolidation details.
+| **Migration Tools** | PowerShell validation utilities | `tools/migration-tools/` |
 
 ---
 
