@@ -1,0 +1,44 @@
+# Cross-platform line ending configuration
+# Ensures bash scripts use LF and PowerShell scripts preserve their endings
+
+# Auto-detect text files
+* text=auto
+
+# Shell scripts must use LF (Unix line endings)
+*.sh text eol=lf
+*.bash text eol=lf
+
+# PowerShell scripts use CRLF (Windows line endings)
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
+*.psd1 text eol=crlf
+
+# Web files use LF
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+
+# Markdown and docs use LF
+*.md text eol=lf
+*.txt text eol=lf
+
+# YAML files use LF (Sigma rules)
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# XML files use LF (Wazuh rules)
+*.xml text eol=lf
+
+# SPL queries use LF
+*.spl text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.7z binary
+*.rar binary
