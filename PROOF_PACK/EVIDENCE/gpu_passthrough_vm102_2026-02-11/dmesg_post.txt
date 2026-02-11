@@ -1,0 +1,23 @@
+[Tue Feb  3 07:39:11 2026] acpi PNP0A08:00: _OSC: platform does not support [PCIeHotplug LTR DPC]
+[Tue Feb  3 07:39:11 2026] acpi PNP0A08:00: _OSC: OS now controls [SHPCHotplug PME AER PCIeCapability]
+[Tue Feb  3 07:39:11 2026] iommu: Default domain type: Translated 
+[Tue Feb  3 07:39:11 2026] iommu: DMA domain TLB invalidation policy: lazy mode 
+[Tue Feb  3 07:39:12 2026] pcieport 0000:00:1c.0: PME: Signaling with IRQ 24
+[Tue Feb  3 07:39:12 2026] pcieport 0000:00:1c.0: AER: enabled with IRQ 24
+[Tue Feb  3 07:39:12 2026] pcieport 0000:00:1c.1: PME: Signaling with IRQ 25
+[Tue Feb  3 07:39:12 2026] pcieport 0000:00:1c.1: AER: enabled with IRQ 25
+[Tue Feb  3 07:39:12 2026] pcieport 0000:00:1c.2: PME: Signaling with IRQ 26
+[Tue Feb  3 07:39:12 2026] pcieport 0000:00:1c.2: AER: enabled with IRQ 26
+[Tue Feb  3 07:39:12 2026] pcieport 0000:00:1c.3: PME: Signaling with IRQ 27
+[Tue Feb  3 07:39:12 2026] pcieport 0000:00:1c.3: AER: enabled with IRQ 27
+[Tue Feb  3 07:39:12 2026] VFIO - User Level meta-driver version: 0.3
+[Tue Feb  3 07:39:14 2026] nvidia: loading out-of-tree module taints kernel.
+[Tue Feb  3 07:39:14 2026] nvidia: module license 'NVIDIA' taints kernel.
+[Tue Feb  3 07:39:14 2026] nvidia: module verification failed: signature and/or required key missing - tainting kernel
+[Tue Feb  3 07:39:14 2026] nvidia-nvlink: Nvlink Core is being initialized, major device number 236
+[Tue Feb  3 07:39:14 2026] NVRM: loading NVIDIA UNIX x86_64 Kernel Module  535.288.01  Tue Nov 18 18:26:41 UTC 2025
+[Tue Feb  3 07:39:14 2026] nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  535.288.01  Tue Nov 18 18:19:41 UTC 2025
+[Tue Feb  3 07:39:14 2026] [drm] [nvidia-drm] [GPU ID 0x00000100] Loading driver
+[Tue Feb  3 07:39:14 2026] [drm] Initialized nvidia-drm 0.0.0 20160202 for 0000:01:00.0 on minor 1
+[Tue Feb  3 07:39:16 2026] nvidia_uvm: module uses symbols from proprietary module nvidia, inheriting taint.
+[Tue Feb  3 07:39:17 2026] nvidia-uvm: Loaded the UVM driver, major device number 234.

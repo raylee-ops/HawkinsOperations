@@ -1,0 +1,12 @@
+run_date_utc: 2026-02-11T11:44:46Z
+target_duration_sec: 600
+gpu_burn_exit_code: 0
+status: PASS
+telemetry_start: 2026/02/11 11:33:43.159
+telemetry_end: 2026/02/11 11:44:17.746
+final_progress_line: 100.0%  proc'd: 6438 (11229 Gflop/s)   errors: 0   temps: 81 C 
+max_temp_c: 83
+max_util_pct: 100
+samples_ge_90_util: 609/628
+raw_log_file: gpu-burn_600s.txt
+telemetry_file: telemetry.csv

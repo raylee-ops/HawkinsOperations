@@ -1,0 +1,1547 @@
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Linux version 5.15.0-168-generic (buildd@lcy02-amd64-116) (gcc (Ubuntu 11.4.0-1ubuntu1~22.04.2) 11.4.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #178-Ubuntu SMP Fri Jan 9 19:05:03 UTC 2026 (Ubuntu 5.15.0-168.178-generic 5.15.193)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Command line: BOOT_IMAGE=/vmlinuz-5.15.0-168-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro
+Feb 11 08:07:09 [REDACTED_HOST] kernel: KERNEL supported cpus:
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   Intel GenuineIntel
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   AMD AuthenticAMD
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   Hygon HygonGenuine
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   Centaur CentaurHauls
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   zhaoxin   Shanghai  
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-provided physical RAM map:
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000002ffff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x0000000000030000-0x000000000004ffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x0000000000050000-0x000000000009efff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x000000000009f000-0x000000000009ffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x0000000000100000-0x000000007e8ebfff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x000000007e8ec000-0x000000007eb6bfff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x000000007eb6c000-0x000000007eb7dfff] ACPI data
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x000000007eb7e000-0x000000007ebfdfff] ACPI NVS
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x000000007ebfe000-0x000000007ef99fff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x000000007ef9a000-0x000000007ef9bfff] ACPI NVS
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x000000007ef9c000-0x000000007effffff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x000000007f000000-0x000000007fffffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: BIOS-e820: [mem 0x0000000100000000-0x000000107fffffff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NX (Execute Disable) protection: active
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: update [mem 0x7d3a7018-0x7d3b0a57] usable ==> usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: update [mem 0x7d3a7018-0x7d3b0a57] usable ==> usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: update [mem 0x7cb2f018-0x7cb56457] usable ==> usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: update [mem 0x7cb2f018-0x7cb56457] usable ==> usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: extended physical RAM map:
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x0000000000000000-0x000000000002ffff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x0000000000030000-0x000000000004ffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x0000000000050000-0x000000000009efff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000000009f000-0x000000000009ffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x0000000000100000-0x000000007cb2f017] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007cb2f018-0x000000007cb56457] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007cb56458-0x000000007d3a7017] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007d3a7018-0x000000007d3b0a57] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007d3b0a58-0x000000007e8ebfff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007e8ec000-0x000000007eb6bfff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007eb6c000-0x000000007eb7dfff] ACPI data
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007eb7e000-0x000000007ebfdfff] ACPI NVS
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007ebfe000-0x000000007ef99fff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007ef9a000-0x000000007ef9bfff] ACPI NVS
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007ef9c000-0x000000007effffff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x000000007f000000-0x000000007fffffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: reserve setup_data: [mem 0x0000000100000000-0x000000107fffffff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: efi: EFI v2.70 by Proxmox distribution of EDK II
+Feb 11 08:07:09 [REDACTED_HOST] kernel: efi: SMBIOS=0x7e9d4000 ACPI=0x7eb7d000 ACPI 2.0=0x7eb7d014 MEMATTR=0x7d3b6018 MOKvar=0x7e981000 RNG=0x7eb6e018 
+Feb 11 08:07:09 [REDACTED_HOST] kernel: random: crng init done
+Feb 11 08:07:09 [REDACTED_HOST] kernel: secureboot: Secure boot disabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: SMBIOS 2.8 present.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: DMI: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 4.2025.05-2 11/13/2025
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Hypervisor detected: KVM
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: Using msrs 4b564d01 and 4b564d00
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: cpu 0, msr c5ee01001, primary cpu clock
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: using sched offset of 10789561438 cycles
+Feb 11 08:07:09 [REDACTED_HOST] kernel: clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Feb 11 08:07:09 [REDACTED_HOST] kernel: tsc: Detected 2294.876 MHz processor
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+Feb 11 08:07:09 [REDACTED_HOST] kernel: last_pfn = 0x1080000 max_arch_pfn = 0x400000000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+Feb 11 08:07:09 [REDACTED_HOST] kernel: last_pfn = 0x7f000 max_arch_pfn = 0x400000000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Using GB pages for direct mapping
+Feb 11 08:07:09 [REDACTED_HOST] kernel: secureboot: Secure boot disabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: RAMDISK: [mem 0x692a1000-0x748effff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Early table checksum verification disabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: RSDP 0x000000007EB7D014 000024 (v02 BOCHS )
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: XSDT 0x000000007EB7C0E8 000054 (v01 BOCHS  BXPC     00000001      01000013)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: FACP 0x000000007EB74000 0000F4 (v03 BOCHS  BXPC     00000001 BXPC 00000001)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: DSDT 0x000000007EB75000 0069B1 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: FACS 0x000000007EBDB000 000040
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: APIC 0x000000007EB73000 0000B0 (v03 BOCHS  BXPC     00000001 BXPC 00000001)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: SSDT 0x000000007EB72000 0000CA (v01 BOCHS  VMGENID  00000001 BXPC 00000001)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: MCFG 0x000000007EB71000 00003C (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: WAET 0x000000007EB70000 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: BGRT 0x000000007EB6F000 000038 (v01 INTEL  EDK2     00000002      01000013)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Reserving FACP table memory at [mem 0x7eb74000-0x7eb740f3]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Reserving DSDT table memory at [mem 0x7eb75000-0x7eb7b9b0]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Reserving FACS table memory at [mem 0x7ebdb000-0x7ebdb03f]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Reserving APIC table memory at [mem 0x7eb73000-0x7eb730af]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Reserving SSDT table memory at [mem 0x7eb72000-0x7eb720c9]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Reserving MCFG table memory at [mem 0x7eb71000-0x7eb7103b]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Reserving WAET table memory at [mem 0x7eb70000-0x7eb70027]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Reserving BGRT table memory at [mem 0x7eb6f000-0x7eb6f037]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: No NUMA configuration found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Faking a node at [mem 0x0000000000000000-0x000000107fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NODE_DATA(0) allocated [mem 0x107ffd6000-0x107fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Zone ranges:
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   Normal   [mem 0x0000000100000000-0x000000107fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   Device   empty
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Movable zone start for each node
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Early memory node ranges
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   node   0: [mem 0x0000000000001000-0x000000000002ffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   node   0: [mem 0x0000000000050000-0x000000000009efff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   node   0: [mem 0x0000000000100000-0x000000007e8ebfff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   node   0: [mem 0x000000007ebfe000-0x000000007ef99fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   node   0: [mem 0x000000007ef9c000-0x000000007effffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   node   0: [mem 0x0000000100000000-0x000000107fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000107fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: On node 0, zone DMA: 1 pages in unavailable ranges
+Feb 11 08:07:09 [REDACTED_HOST] kernel: On node 0, zone DMA: 32 pages in unavailable ranges
+Feb 11 08:07:09 [REDACTED_HOST] kernel: On node 0, zone DMA: 97 pages in unavailable ranges
+Feb 11 08:07:09 [REDACTED_HOST] kernel: On node 0, zone DMA32: 786 pages in unavailable ranges
+Feb 11 08:07:09 [REDACTED_HOST] kernel: On node 0, zone DMA32: 2 pages in unavailable ranges
+Feb 11 08:07:09 [REDACTED_HOST] kernel: On node 0, zone Normal: 4096 pages in unavailable ranges
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PM-Timer IO Port: 0x608
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+Feb 11 08:07:09 [REDACTED_HOST] kernel: IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: update [mem 0x7cb57000-0x7cb7afff] usable ==> reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: TSC deadline timer available
+Feb 11 08:07:09 [REDACTED_HOST] kernel: smpboot: Allowing 8 CPUs, 0 hotplug CPUs
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: KVM setup pv remote TLB flush
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup PV sched yield
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PM: hibernation: Registered nosave memory: [mem 0x00030000-0x0004ffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x000fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PM: hibernation: Registered nosave memory: [mem 0x7cb57000-0x7cb7afff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PM: hibernation: Registered nosave memory: [mem 0x7e8ec000-0x7ebfdfff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PM: hibernation: Registered nosave memory: [mem 0x7ef9a000-0x7ef9bfff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PM: hibernation: Registered nosave memory: [mem 0x7f000000-0xffffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: [mem 0x80000000-0xdfffffff] available for PCI devices
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Booting paravirtualized kernel on KVM
+Feb 11 08:07:09 [REDACTED_HOST] kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+Feb 11 08:07:09 [REDACTED_HOST] kernel: setup_percpu: NR_CPUS:8192 nr_cpumask_bits:8 nr_cpu_ids:8 nr_node_ids:1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: percpu: Embedded 62 pages/cpu s217088 r8192 d28672 u262144
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcpu-alloc: s217088 r8192 d28672 u262144 alloc=1*2097152
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcpu-alloc: [0] 0 1 2 3 4 5 6 7 
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup async PF for cpu 0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: stealtime: cpu 0, msr 103fc34080
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: PV spinlocks enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Built 1 zonelists, mobility grouping on.  Total pages: 16507992
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Policy zone: Normal
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Kernel command line: BOOT_IMAGE=/vmlinuz-5.15.0-168-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Unknown kernel command line parameters "BOOT_IMAGE=/vmlinuz-5.15.0-168-generic", will be passed to user space.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Dentry cache hash table entries: 8388608 (order: 14, 67108864 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Inode-cache hash table entries: 4194304 (order: 13, 33554432 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: mem auto-init: stack:off, heap alloc:on, heap free:off
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Memory: 65579488K/67088808K available (16393K kernel code, 4398K rwdata, 10992K rodata, 3292K init, 18772K bss, 1509060K reserved, 0K cma-reserved)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Kernel/User page tables isolation: enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ftrace: allocating 50876 entries in 199 pages
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ftrace: allocated 199 pages with 5 groups
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rcu: Hierarchical RCU implementation.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rcu:         RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=8.
+Feb 11 08:07:09 [REDACTED_HOST] kernel:         Rude variant of Tasks RCU enabled.
+Feb 11 08:07:09 [REDACTED_HOST] kernel:         Tracing variant of Tasks RCU enabled.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NR_IRQS: 524544, nr_irqs: 488, preallocated irqs: 16
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Console: colour dummy device 80x25
+Feb 11 08:07:09 [REDACTED_HOST] kernel: printk: console [tty0] enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Core revision 20210730
+Feb 11 08:07:09 [REDACTED_HOST] kernel: APIC: Switch to symmetric I/O mode setup
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x2apic enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Switched APIC routing to physical x2apic.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup PV IPIs
+Feb 11 08:07:09 [REDACTED_HOST] kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x21144c93112, max_idle_ns: 440795225318 ns
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Calibrating delay loop (skipped) preset value.. 4589.75 BogoMIPS (lpj=9179504)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/cpu: User Mode Instruction Prevention (UMIP) activated
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Spectre V2 : Mitigation: Retpolines
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Spectre V2 : Spectre v2 / SpectreRSB: Filling RSB on context switch and VMEXIT
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Spectre V2 : Enabling Restricted Speculation for firmware calls
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+Feb 11 08:07:09 [REDACTED_HOST] kernel: MDS: Mitigation: Clear CPU buffers
+Feb 11 08:07:09 [REDACTED_HOST] kernel: TAA: Mitigation: Clear CPU buffers
+Feb 11 08:07:09 [REDACTED_HOST] kernel: MMIO Stale Data: Mitigation: Clear CPU buffers
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Freeing SMP alternatives memory: 44K
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pid_max: default: 32768 minimum: 301
+Feb 11 08:07:09 [REDACTED_HOST] kernel: LSM: Security Framework initializing
+Feb 11 08:07:09 [REDACTED_HOST] kernel: landlock: Up and running.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Yama: becoming mindful.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: AppArmor: AppArmor initialized
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Mount-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Mountpoint-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: smpboot: CPU0: Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz (family: 0x6, model: 0x4f, stepping: 0x1)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Performance Events: Broadwell events, full-width counters, Intel PMU driver.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ... version:                2
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ... bit width:              48
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ... generic registers:      4
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ... value mask:             0000ffffffffffff
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ... max period:             00007fffffffffff
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ... fixed-purpose events:   3
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ... event mask:             000000070000000f
+Feb 11 08:07:09 [REDACTED_HOST] kernel: signal: max sigframe size: 1776
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rcu: Hierarchical SRCU implementation.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: smp: Bringing up secondary CPUs ...
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86: Booting SMP configuration:
+Feb 11 08:07:09 [REDACTED_HOST] kernel: .... node  #0, CPUs:      #1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: cpu 1, msr c5ee01041, secondary cpu clock
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup async PF for cpu 1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: stealtime: cpu 1, msr 103fc74080
+Feb 11 08:07:09 [REDACTED_HOST] kernel:  #2
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: cpu 2, msr c5ee01081, secondary cpu clock
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup async PF for cpu 2
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: stealtime: cpu 2, msr 103fcb4080
+Feb 11 08:07:09 [REDACTED_HOST] kernel:  #3
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: cpu 3, msr c5ee010c1, secondary cpu clock
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup async PF for cpu 3
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: stealtime: cpu 3, msr 103fcf4080
+Feb 11 08:07:09 [REDACTED_HOST] kernel:  #4
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: cpu 4, msr c5ee01101, secondary cpu clock
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup async PF for cpu 4
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: stealtime: cpu 4, msr 103fd34080
+Feb 11 08:07:09 [REDACTED_HOST] kernel:  #5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: cpu 5, msr c5ee01141, secondary cpu clock
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup async PF for cpu 5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: stealtime: cpu 5, msr 103fd74080
+Feb 11 08:07:09 [REDACTED_HOST] kernel:  #6
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: cpu 6, msr c5ee01181, secondary cpu clock
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup async PF for cpu 6
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: stealtime: cpu 6, msr 103fdb4080
+Feb 11 08:07:09 [REDACTED_HOST] kernel:  #7
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-clock: cpu 7, msr c5ee011c1, secondary cpu clock
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: setup async PF for cpu 7
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kvm-guest: stealtime: cpu 7, msr 103fdf4080
+Feb 11 08:07:09 [REDACTED_HOST] kernel: smp: Brought up 1 node, 8 CPUs
+Feb 11 08:07:09 [REDACTED_HOST] kernel: smpboot: Max logical packages: 1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: smpboot: Total of 8 processors activated (36718.01 BogoMIPS)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: devtmpfs: initialized
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/mm: Memory block size: 2048MB
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PM: Registering ACPI NVS region [mem 0x7eb7e000-0x7ebfdfff] (524288 bytes)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PM: Registering ACPI NVS region [mem 0x7ef9a000-0x7ef9bfff] (8192 bytes)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Feb 11 08:07:09 [REDACTED_HOST] kernel: futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pinctrl core: initialized pinctrl subsystem
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PM: RTC time: 08:07:03, date: 2026-02-11
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Feb 11 08:07:09 [REDACTED_HOST] kernel: DMA: preallocated 4096 KiB GFP_KERNEL pool for atomic allocations
+Feb 11 08:07:09 [REDACTED_HOST] kernel: DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Feb 11 08:07:09 [REDACTED_HOST] kernel: DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Feb 11 08:07:09 [REDACTED_HOST] kernel: audit: initializing netlink subsys (disabled)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: audit: type=2000 audit(1770797224.536:1): state=initialized audit_enabled=0 res=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: thermal_sys: Registered thermal governor 'fair_share'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: thermal_sys: Registered thermal governor 'bang_bang'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: thermal_sys: Registered thermal governor 'step_wise'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: thermal_sys: Registered thermal governor 'user_space'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: thermal_sys: Registered thermal governor 'power_allocator'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: cpuidle: using governor ladder
+Feb 11 08:07:09 [REDACTED_HOST] kernel: cpuidle: using governor menu
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: bus type PCI registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in E820
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI: Using configuration type 1 for base access
+Feb 11 08:07:09 [REDACTED_HOST] kernel: kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+Feb 11 08:07:09 [REDACTED_HOST] kernel: HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Feb 11 08:07:09 [REDACTED_HOST] kernel: fbcon: Taking over console
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Added _OSI(Module Device)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Added _OSI(Processor Device)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Added _OSI(Linux-Dell-Video)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Interpreter enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PM: (supports S0 S5)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Using IOAPIC for interrupt routing
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI: Using E820 reservations for host bridge windows
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: Enabled 3 GPEs in block 00 to 3F
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpi PNP0A08:00: _OSC: platform does not support [PCIeHotplug LTR DPC]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpi PNP0A08:00: _OSC: OS now controls [SHPCHotplug PME AER PCIeCapability]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI host bridge to bus 0000:00
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: root bus resource [mem 0x80000000-0xdfffffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: root bus resource [mem 0xf0000000-0xfebfffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: root bus resource [mem 0x380000000000-0x3847ffffffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:00.0: [8086:29c0] type 00 class 0x060000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:01.0: [1234:1111] type 00 class 0x030000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:01.0: reg 0x10: [mem 0x80000000-0x80ffffff pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:01.0: reg 0x18: [mem 0x8304b000-0x8304bfff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:01.0: reg 0x30: [mem 0xffff0000-0xffffffff pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:01.0: BAR 0: assigned to efifb
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:01.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1a.0: [8086:2937] type 00 class 0x0c0300
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1a.0: reg 0x20: [io  0x8100-0x811f]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1a.1: [8086:2938] type 00 class 0x0c0300
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1a.1: reg 0x20: [io  0x80e0-0x80ff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1a.2: [8086:2939] type 00 class 0x0c0300
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1a.2: reg 0x20: [io  0x80c0-0x80df]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1a.7: [8086:293c] type 00 class 0x0c0320
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1a.7: reg 0x10: [mem 0x8304a000-0x8304afff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1b.0: [8086:293e] type 00 class 0x040300
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1b.0: reg 0x10: [mem 0x83040000-0x83043fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0: [1b36:000c] type 01 class 0x060400
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0: reg 0x10: [mem 0x83049000-0x83049fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0: enabling Extended Tags
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1: [1b36:000c] type 01 class 0x060400
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1: reg 0x10: [mem 0x83048000-0x83048fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1: enabling Extended Tags
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2: [1b36:000c] type 01 class 0x060400
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2: reg 0x10: [mem 0x83047000-0x83047fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2: enabling Extended Tags
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3: [1b36:000c] type 01 class 0x060400
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3: reg 0x10: [mem 0x83046000-0x83046fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3: enabling Extended Tags
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1d.0: [8086:2934] type 00 class 0x0c0300
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1d.0: reg 0x20: [io  0x80a0-0x80bf]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1d.1: [8086:2935] type 00 class 0x0c0300
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1d.1: reg 0x20: [io  0x8080-0x809f]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1d.2: [8086:2936] type 00 class 0x0c0300
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1d.2: reg 0x20: [io  0x8060-0x807f]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1d.7: [8086:293a] type 00 class 0x0c0320
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1d.7: reg 0x10: [mem 0x83045000-0x83045fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0: [8086:244e] type 01 class 0x060401
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1f.0: [8086:2918] type 00 class 0x060100
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1f.0: quirk: [io  0x0600-0x067f] claimed by ICH6 ACPI/GPIO/TCO
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1f.2: [8086:2922] type 00 class 0x010601
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1f.2: reg 0x20: [io  0x8040-0x805f]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1f.2: reg 0x24: [mem 0x83044000-0x83044fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1f.3: [8086:2930] type 00 class 0x0c0500
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1f.3: reg 0x20: [io  0x8000-0x803f]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [0] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:01:00.0: [10de:1db5] type 00 class 0x030200
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:01:00.0: reg 0x10: [mem 0x81000000-0x81ffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:01:00.0: reg 0x14: [mem 0x380000000000-0x3807ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:01:00.0: reg 0x1c: [mem 0x380800000000-0x380801ffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:01:00.0: Max Payload Size set to 128 (was 256, max 256)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:01:00.0: Enabling HDA controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0: PCI bridge to [bus 01]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0:   bridge window [mem 0x81000000-0x81ffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0:   bridge window [mem 0x380000000000-0x380801ffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [0-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1: PCI bridge to [bus 02]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1:   bridge window [mem 0x82e00000-0x82ffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1:   bridge window [mem 0x381000000000-0x3817ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [0-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2: PCI bridge to [bus 03]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2:   bridge window [mem 0x82c00000-0x82dfffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2:   bridge window [mem 0x381800000000-0x381fffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [0-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3: PCI bridge to [bus 04]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3:   bridge window [mem 0x82a00000-0x82bfffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3:   bridge window [mem 0x382000000000-0x3827ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: extended config space not accessible
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [0-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [6] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [7] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [8] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [9] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [10] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [11] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [12] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [13] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [14] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [15] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [16] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [17] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [18] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [19] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [20] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [21] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [22] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [23] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [24] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [25] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [26] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [27] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [28] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [29] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [30] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [31] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0: [1b36:0001] type 01 class 0x060400
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0: reg 0x10: [mem 0x82800000-0x828000ff 64bit]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:02.0: [1b36:0001] type 01 class 0x060400
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:02.0: reg 0x10: [mem 0x82801000-0x828010ff 64bit]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:03.0: [1b36:0001] type 01 class 0x060400
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:03.0: reg 0x10: [mem 0x82802000-0x828020ff 64bit]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0: [1b36:0001] type 01 class 0x060400
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0: reg 0x10: [mem 0x82803000-0x828030ff 64bit]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0: PCI bridge to [bus 05-09] (subtractive decode)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [io  0x6000-0x7fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [mem 0x82000000-0x828fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [mem 0x382800000000-0x3847ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [io  0x0000-0x0cf7 window] (subtractive decode)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [io  0x0d00-0xffff window] (subtractive decode)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [mem 0x000a0000-0x000bffff window] (subtractive decode)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [mem 0x80000000-0xdfffffff window] (subtractive decode)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [mem 0xf0000000-0xfebfffff window] (subtractive decode)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [mem 0x380000000000-0x3847ffffffff window] (subtractive decode)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:06: extended config space not accessible
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [18-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [0-6] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [1] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [5-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [6-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [7-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [8-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [9-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [10-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [11-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [12-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [13-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [14-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [15-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [16-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [17-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [19-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [20-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [21-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [22-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [23-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [24-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [25-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [26-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [27-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [28-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [29-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [30-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [31-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:03.0: [1af4:1002] type 00 class 0x00ff00
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:03.0: reg 0x10: [io  0x7040-0x707f]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:03.0: reg 0x14: [mem 0x82601000-0x82601fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:03.0: reg 0x20: [mem 0x384000004000-0x384000007fff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:12.0: [1af4:1000] type 00 class 0x020000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:12.0: reg 0x10: [io  0x7000-0x703f]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:12.0: reg 0x14: [mem 0x82600000-0x82600fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:12.0: reg 0x20: [mem 0x384000000000-0x384000003fff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:12.0: reg 0x30: [mem 0xfffc0000-0xffffffff pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0: PCI bridge to [bus 06]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0:   bridge window [io  0x7000-0x7fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0:   bridge window [mem 0x82600000-0x827fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0:   bridge window [mem 0x384000000000-0x3847ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:07: extended config space not accessible
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [0-7] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [1-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [2-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [3-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [4-2] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [5-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [6-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [7-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [8-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [9-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [10-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [11-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [12-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [13-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [14-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [15-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [16-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [17-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [18-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [19-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [20-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [21-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [22-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [23-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [24-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [25-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [26-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [27-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [28-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [29-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [30-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [31-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:02.0: PCI bridge to [bus 07]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:02.0:   bridge window [mem 0x82400000-0x825fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:02.0:   bridge window [mem 0x383800000000-0x383fffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:08: extended config space not accessible
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [0-8] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [1-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [2-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [3-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [4-3] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [5-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [6-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [7-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [8-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [9-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [10-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [11-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [12-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [13-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [14-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [15-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [16-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [17-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [18-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [19-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [20-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [21-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [22-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [23-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [24-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [25-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [26-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [27-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [28-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [29-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [30-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [31-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:03.0: PCI bridge to [bus 08]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:03.0:   bridge window [mem 0x82200000-0x823fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:03.0:   bridge window [mem 0x383000000000-0x3837ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:09: extended config space not accessible
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [1-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [0-9] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [2-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [3-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [4-4] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [5-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [6-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [7-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [8-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [9-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [10-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [11-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [12-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [13-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [14-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [15-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [16-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [17-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [18-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [19-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [20-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [21-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [22-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [23-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [24-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [25-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [26-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [27-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [28-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [29-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [30-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: acpiphp: Slot [31-5] registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:09:01.0: [1af4:1004] type 00 class 0x010000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:09:01.0: reg 0x10: [io  0x6000-0x603f]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:09:01.0: reg 0x14: [mem 0x82000000-0x82000fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:09:01.0: reg 0x20: [mem 0x382800000000-0x382800003fff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0: PCI bridge to [bus 09]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0:   bridge window [io  0x6000-0x6fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0:   bridge window [mem 0x82000000-0x821fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0:   bridge window [mem 0x382800000000-0x382fffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link LNKE configured for IRQ 10
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link LNKF configured for IRQ 10
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link LNKG configured for IRQ 11
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link LNKH configured for IRQ 11
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link GSIA configured for IRQ 16
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link GSIB configured for IRQ 17
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link GSIC configured for IRQ 18
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link GSID configured for IRQ 19
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link GSIE configured for IRQ 20
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link GSIF configured for IRQ 21
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link GSIG configured for IRQ 22
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: PCI: Interrupt link GSIH configured for IRQ 23
+Feb 11 08:07:09 [REDACTED_HOST] kernel: iommu: Default domain type: Translated 
+Feb 11 08:07:09 [REDACTED_HOST] kernel: iommu: DMA domain TLB invalidation policy: lazy mode 
+Feb 11 08:07:09 [REDACTED_HOST] kernel: SCSI subsystem initialized
+Feb 11 08:07:09 [REDACTED_HOST] kernel: libata version 3.00 loaded.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:01.0: vgaarb: setting as boot VGA device
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:01.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:01.0: vgaarb: bridge control possible
+Feb 11 08:07:09 [REDACTED_HOST] kernel: vgaarb: loaded
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: bus type USB registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usbcore: registered new interface driver usbfs
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usbcore: registered new interface driver hub
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usbcore: registered new device driver usb
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pps_core: LinuxPPS API ver. 1 registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PTP clock support registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: EDAC MC: Ver: 3.0.0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Registered efivars operations
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NetLabel: Initializing
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NetLabel:  domain hash size = 128
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NetLabel:  unlabeled traffic allowed by default
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI: Using ACPI for IRQ routing
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI: pci_cache_line_size set to 64 bytes
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: reserve RAM buffer [mem 0x0009f000-0x0009ffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: reserve RAM buffer [mem 0x7cb2f018-0x7fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: reserve RAM buffer [mem 0x7cb57000-0x7fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: reserve RAM buffer [mem 0x7d3a7018-0x7fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: reserve RAM buffer [mem 0x7e8ec000-0x7fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: reserve RAM buffer [mem 0x7ef9a000-0x7fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: e820: reserve RAM buffer [mem 0x7f000000-0x7fffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: clocksource: Switched to clocksource kvm-clock
+Feb 11 08:07:09 [REDACTED_HOST] kernel: VFS: Disk quotas dquot_6.6.0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: AppArmor: AppArmor Filesystem Enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pnp: PnP ACPI init
+Feb 11 08:07:09 [REDACTED_HOST] kernel: system 00:03: [mem 0xe0000000-0xefffffff window] has been reserved
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pnp: PnP ACPI: found 4 devices
+Feb 11 08:07:09 [REDACTED_HOST] kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NET: Registered PF_INET protocol family
+Feb 11 08:07:09 [REDACTED_HOST] kernel: IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: tcp_listen_portaddr_hash hash table entries: 32768 (order: 7, 524288 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: TCP established hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: TCP: Hash tables configured (established 524288 bind 65536)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: MPTCP token hash table entries: 65536 (order: 8, 1572864 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: UDP hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: UDP-Lite hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NET: Registered PF_XDP protocol family
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:12.0: can't claim BAR 6 [mem 0xfffc0000-0xffffffff pref]: no compatible bridge window
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0: bridge window [io  0x1000-0x0fff] to [bus 01] add_size 1000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1: bridge window [io  0x1000-0x0fff] to [bus 02] add_size 1000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2: bridge window [io  0x1000-0x0fff] to [bus 03] add_size 1000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3: bridge window [io  0x1000-0x0fff] to [bus 04] add_size 1000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0: BAR 13: assigned [io  0x1000-0x1fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1: BAR 13: assigned [io  0x2000-0x2fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2: BAR 13: assigned [io  0x3000-0x3fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3: BAR 13: assigned [io  0x4000-0x4fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0: PCI bridge to [bus 01]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0:   bridge window [io  0x1000-0x1fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0:   bridge window [mem 0x81000000-0x81ffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.0:   bridge window [mem 0x380000000000-0x380801ffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1: PCI bridge to [bus 02]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1:   bridge window [io  0x2000-0x2fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1:   bridge window [mem 0x82e00000-0x82ffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.1:   bridge window [mem 0x381000000000-0x3817ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2: PCI bridge to [bus 03]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2:   bridge window [io  0x3000-0x3fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2:   bridge window [mem 0x82c00000-0x82dfffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.2:   bridge window [mem 0x381800000000-0x381fffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3: PCI bridge to [bus 04]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3:   bridge window [io  0x4000-0x4fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3:   bridge window [mem 0x82a00000-0x82bfffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1c.3:   bridge window [mem 0x382000000000-0x3827ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:06:12.0: BAR 6: assigned [mem 0x82640000-0x8267ffff pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0: PCI bridge to [bus 06]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0:   bridge window [io  0x7000-0x7fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0:   bridge window [mem 0x82600000-0x827fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:01.0:   bridge window [mem 0x384000000000-0x3847ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:02.0: PCI bridge to [bus 07]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:02.0:   bridge window [mem 0x82400000-0x825fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:02.0:   bridge window [mem 0x383800000000-0x383fffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:03.0: PCI bridge to [bus 08]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:03.0:   bridge window [mem 0x82200000-0x823fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:03.0:   bridge window [mem 0x383000000000-0x3837ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0: PCI bridge to [bus 09]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0:   bridge window [io  0x6000-0x6fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0:   bridge window [mem 0x82000000-0x821fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:05:04.0:   bridge window [mem 0x382800000000-0x382fffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0: PCI bridge to [bus 05-09]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [io  0x6000-0x7fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [mem 0x82000000-0x828fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci 0000:00:1e.0:   bridge window [mem 0x382800000000-0x3847ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: resource 7 [mem 0x80000000-0xdfffffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: resource 8 [mem 0xf0000000-0xfebfffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:00: resource 9 [mem 0x380000000000-0x3847ffffffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:01: resource 0 [io  0x1000-0x1fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:01: resource 1 [mem 0x81000000-0x81ffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:01: resource 2 [mem 0x380000000000-0x380801ffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:02: resource 0 [io  0x2000-0x2fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:02: resource 1 [mem 0x82e00000-0x82ffffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:02: resource 2 [mem 0x381000000000-0x3817ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:03: resource 0 [io  0x3000-0x3fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:03: resource 1 [mem 0x82c00000-0x82dfffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:03: resource 2 [mem 0x381800000000-0x381fffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:04: resource 0 [io  0x4000-0x4fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:04: resource 1 [mem 0x82a00000-0x82bfffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:04: resource 2 [mem 0x382000000000-0x3827ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: resource 0 [io  0x6000-0x7fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: resource 1 [mem 0x82000000-0x828fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: resource 2 [mem 0x382800000000-0x3847ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: resource 4 [io  0x0000-0x0cf7 window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: resource 5 [io  0x0d00-0xffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: resource 6 [mem 0x000a0000-0x000bffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: resource 7 [mem 0x80000000-0xdfffffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: resource 8 [mem 0xf0000000-0xfebfffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:05: resource 9 [mem 0x380000000000-0x3847ffffffff window]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:06: resource 0 [io  0x7000-0x7fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:06: resource 1 [mem 0x82600000-0x827fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:06: resource 2 [mem 0x384000000000-0x3847ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:07: resource 1 [mem 0x82400000-0x825fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:07: resource 2 [mem 0x383800000000-0x383fffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:08: resource 1 [mem 0x82200000-0x823fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:08: resource 2 [mem 0x383000000000-0x3837ffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:09: resource 0 [io  0x6000-0x6fff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:09: resource 1 [mem 0x82000000-0x821fffff]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pci_bus 0000:09: resource 2 [mem 0x382800000000-0x382fffffffff 64bit pref]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: \_SB_.GSIA: Enabled at IRQ 16
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: \_SB_.GSIB: Enabled at IRQ 17
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: \_SB_.GSIC: Enabled at IRQ 18
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: \_SB_.GSID: Enabled at IRQ 19
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI: CLS 32 bytes, default 64
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: software IO TLB: mapped [mem 0x0000000076f3e000-0x000000007af3e000] (64MB)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x21144c93112, max_idle_ns: 440795225318 ns
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Trying to unpack rootfs image as initramfs...
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Initialise system trusted keyrings
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Key type blacklist registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: workingset: timestamp_bits=36 max_order=24 bucket_order=0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: zbud: loaded
+Feb 11 08:07:09 [REDACTED_HOST] kernel: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Feb 11 08:07:09 [REDACTED_HOST] kernel: fuse: init (API version 7.34)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: integrity: Platform Keyring initialized
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Key type asymmetric registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Asymmetric key parser 'x509' registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 243)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: io scheduler mq-deadline registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcieport 0000:00:1c.0: PME: Signaling with IRQ 24
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcieport 0000:00:1c.0: AER: enabled with IRQ 24
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcieport 0000:00:1c.1: PME: Signaling with IRQ 25
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcieport 0000:00:1c.1: AER: enabled with IRQ 25
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcieport 0000:00:1c.2: PME: Signaling with IRQ 26
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcieport 0000:00:1c.2: AER: enabled with IRQ 26
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcieport 0000:00:1c.3: PME: Signaling with IRQ 27
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pcieport 0000:00:1c.3: AER: enabled with IRQ 27
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:01.0: HPC vendor_id 1b36 device_id 1 ss_vid 0 ss_did 0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: \_SB_.GSIF: Enabled at IRQ 21
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:01.0: pci_hp_register failed with error -16
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:01.0: Slot initialization failed
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:02.0: HPC vendor_id 1b36 device_id 1 ss_vid 0 ss_did 0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: \_SB_.GSIG: Enabled at IRQ 22
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:02.0: pci_hp_register failed with error -16
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:02.0: Slot initialization failed
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:03.0: HPC vendor_id 1b36 device_id 1 ss_vid 0 ss_did 0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: \_SB_.GSIH: Enabled at IRQ 23
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:03.0: pci_hp_register failed with error -16
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:03.0: Slot initialization failed
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:04.0: HPC vendor_id 1b36 device_id 1 ss_vid 0 ss_did 0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: \_SB_.GSIE: Enabled at IRQ 20
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:04.0: pci_hp_register failed with error -16
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp 0000:05:04.0: Slot initialization failed
+Feb 11 08:07:09 [REDACTED_HOST] kernel: shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+Feb 11 08:07:09 [REDACTED_HOST] kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ACPI: button: Power Button [PWRF]
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Free page reporting enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Linux agpgart interface v0.103
+Feb 11 08:07:09 [REDACTED_HOST] kernel: loop: module loaded
+Feb 11 08:07:09 [REDACTED_HOST] kernel: tun: Universal TUN/TAP device driver, 1.6
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PPP generic driver version 2.4.2
+Feb 11 08:07:09 [REDACTED_HOST] kernel: VFIO - User Level meta-driver version: 0.3
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-pci: EHCI PCI platform driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-pci 0000:00:1a.7: EHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-pci 0000:00:1a.7: new USB bus registered, assigned bus number 1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-pci 0000:00:1a.7: irq 19, io mem 0x8304a000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-pci 0000:00:1a.7: USB 2.0 started, EHCI 1.00
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb1: Product: EHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb1: Manufacturer: Linux 5.15.0-168-generic ehci_hcd
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb1: SerialNumber: 0000:00:1a.7
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 1-0:1.0: USB hub found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 1-0:1.0: 6 ports detected
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-pci 0000:00:1d.7: EHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-pci 0000:00:1d.7: new USB bus registered, assigned bus number 2
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-pci 0000:00:1d.7: irq 19, io mem 0x83045000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-pci 0000:00:1d.7: USB 2.0 started, EHCI 1.00
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb2: Product: EHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb2: Manufacturer: Linux 5.15.0-168-generic ehci_hcd
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb2: SerialNumber: 0000:00:1d.7
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 2-0:1.0: USB hub found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 2-0:1.0: 6 ports detected
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ehci-platform: EHCI generic platform driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ohci-pci: OHCI PCI platform driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ohci-platform: OHCI generic platform driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd: USB Universal Host Controller Interface driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.0: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.0: new USB bus registered, assigned bus number 3
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.0: detected 2 ports
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.0: irq 16, io base 0x00008100
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.15
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb3: Product: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb3: Manufacturer: Linux 5.15.0-168-generic uhci_hcd
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb3: SerialNumber: 0000:00:1a.0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 3-0:1.0: USB hub found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 3-0:1.0: 2 ports detected
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.1: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.1: new USB bus registered, assigned bus number 4
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.1: detected 2 ports
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.1: irq 17, io base 0x000080e0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.15
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb4: Product: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb4: Manufacturer: Linux 5.15.0-168-generic uhci_hcd
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb4: SerialNumber: 0000:00:1a.1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 4-0:1.0: USB hub found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 4-0:1.0: 2 ports detected
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.2: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.2: new USB bus registered, assigned bus number 5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.2: detected 2 ports
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1a.2: irq 18, io base 0x000080c0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb5: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.15
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb5: Product: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb5: Manufacturer: Linux 5.15.0-168-generic uhci_hcd
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb5: SerialNumber: 0000:00:1a.2
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 5-0:1.0: USB hub found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 5-0:1.0: 2 ports detected
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.0: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 6
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.0: detected 2 ports
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.0: irq 16, io base 0x000080a0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb6: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.15
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb6: Product: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb6: Manufacturer: Linux 5.15.0-168-generic uhci_hcd
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb6: SerialNumber: 0000:00:1d.0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 6-0:1.0: USB hub found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 6-0:1.0: 2 ports detected
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.1: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.1: new USB bus registered, assigned bus number 7
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.1: detected 2 ports
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.1: irq 17, io base 0x00008080
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb7: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.15
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb7: Product: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb7: Manufacturer: Linux 5.15.0-168-generic uhci_hcd
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb7: SerialNumber: 0000:00:1d.1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 7-0:1.0: USB hub found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 7-0:1.0: 2 ports detected
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.2: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.2: new USB bus registered, assigned bus number 8
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.2: detected 2 ports
+Feb 11 08:07:09 [REDACTED_HOST] kernel: uhci_hcd 0000:00:1d.2: irq 18, io base 0x00008060
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb8: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.15
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb8: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb8: Product: UHCI Host Controller
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb8: Manufacturer: Linux 5.15.0-168-generic uhci_hcd
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb usb8: SerialNumber: 0000:00:1d.2
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 8-0:1.0: USB hub found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hub 8-0:1.0: 2 ports detected
+Feb 11 08:07:09 [REDACTED_HOST] kernel: i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+Feb 11 08:07:09 [REDACTED_HOST] kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Feb 11 08:07:09 [REDACTED_HOST] kernel: mousedev: PS/2 mouse device common for all mice
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rtc_cmos 00:02: RTC can wake from S4
+Feb 11 08:07:09 [REDACTED_HOST] kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rtc_cmos 00:02: registered as rtc0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rtc_cmos 00:02: setting system clock to 2026-02-11T08:07:05 UTC (1770797225)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rtc_cmos 00:02: alarms up to one day, y3k, 242 bytes nvram
+Feb 11 08:07:09 [REDACTED_HOST] kernel: i2c_dev: i2c /dev entries driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: device-mapper: uevent: version 1.0.3
+Feb 11 08:07:09 [REDACTED_HOST] kernel: device-mapper: ioctl: 4.45.0-ioctl (2021-03-22) initialised: dm-devel@redhat.com
+Feb 11 08:07:09 [REDACTED_HOST] kernel: intel_pstate: CPU model not supported
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Feb 11 08:07:09 [REDACTED_HOST] kernel: efifb: probing for efifb
+Feb 11 08:07:09 [REDACTED_HOST] kernel: efifb: framebuffer at 0x80000000, using 4000k, total 4000k
+Feb 11 08:07:09 [REDACTED_HOST] kernel: efifb: mode is 1280x800x32, linelength=5120, pages=1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: efifb: scrolling: redraw
+Feb 11 08:07:09 [REDACTED_HOST] kernel: efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Console: switching to colour frame buffer device 160x50
+Feb 11 08:07:09 [REDACTED_HOST] kernel: fb0: EFI VGA frame buffer device
+Feb 11 08:07:09 [REDACTED_HOST] kernel: EFI Variables Facility v0.08 2004-May-17
+Feb 11 08:07:09 [REDACTED_HOST] kernel: drop_monitor: Initializing network drop monitor service
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NET: Registered PF_INET6 protocol family
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb 2-1: new high-speed USB device number 2 using ehci-pci
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb 2-1: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb 2-1: New USB device strings: Mfr=1, Product=3, SerialNumber=10
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb 2-1: Product: QEMU USB Tablet
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb 2-1: Manufacturer: QEMU
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usb 2-1: SerialNumber: 28754-0000:00:1d.7-1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Freeing initrd memory: 186684K
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Segment Routing with IPv6
+Feb 11 08:07:09 [REDACTED_HOST] kernel: In-situ OAM (IOAM) with IPv6
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NET: Registered PF_PACKET protocol family
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Key type dns_resolver registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: No MBM correction factor available
+Feb 11 08:07:09 [REDACTED_HOST] kernel: IPI shorthand broadcast: enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sched_clock: Marking stable (1889367248, 1833722)->(2582720081, -691519111)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: registered taskstats version 1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loading compiled-in X.509 certificates
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Build time autogenerated kernel key: f152561eb05f1b12f36dac47de18b09053caa018'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Live Patch Signing 2025 Kmod: d541cef61dc7e793b7eb7e899970a2eef0b5dc8c'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: blacklist: Loading compiled-in revocation X.509 certificates
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: zswap: loaded using pool lzo/zbud
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Key type .fscrypt registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Key type fscrypt-provisioning registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Key type encrypted registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: AppArmor: AppArmor sha1 policy hashing enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: integrity: Loading X.509 certificate: UEFI:MokListRT (MOKvar table)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: integrity: Loaded X.509 cert 'Canonical Ltd. Master Certificate Authority: ad91990bc22ab1f517048c23b6655a268e345a63'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ima: No TPM chip found, activating TPM-bypass!
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loading compiled-in module X.509 certificates
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Loaded X.509 cert 'Build time autogenerated kernel key: f152561eb05f1b12f36dac47de18b09053caa018'
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ima: Allocated hash algorithm: sha1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ima: No architecture policies found
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: Initialising EVM extended attributes:
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: security.selinux
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: security.SMACK64
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: security.SMACK64EXEC
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: security.SMACK64TRANSMUTE
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: security.SMACK64MMAP
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: security.apparmor
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: security.ima
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: security.capability
+Feb 11 08:07:09 [REDACTED_HOST] kernel: evm: HMAC attrs: 0x1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: PM:   Magic number: 14:711:118
+Feb 11 08:07:09 [REDACTED_HOST] kernel: RAS: Correctable Errors collector initialized.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: clk: Disabling unused clocks
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Freeing unused decrypted memory: 2036K
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Freeing unused kernel image (initmem) memory: 3292K
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Write protecting the kernel read-only data: 30720k
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Freeing unused kernel image (text/rodata gap) memory: 2036K
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Freeing unused kernel image (rodata/data gap) memory: 1296K
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/mm: Checking user space page tables
+Feb 11 08:07:09 [REDACTED_HOST] kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Run /init as init process
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   with arguments:
+Feb 11 08:07:09 [REDACTED_HOST] kernel:     /init
+Feb 11 08:07:09 [REDACTED_HOST] kernel:   with environment:
+Feb 11 08:07:09 [REDACTED_HOST] kernel:     HOME=/
+Feb 11 08:07:09 [REDACTED_HOST] kernel:     TERM=linux
+Feb 11 08:07:09 [REDACTED_HOST] kernel:     BOOT_IMAGE=/vmlinuz-5.15.0-168-generic
+Feb 11 08:07:09 [REDACTED_HOST] kernel: cryptd: max_cpu_qlen set to 1000
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ahci 0000:00:1f.2: version 3.0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ahci 0000:00:1f.2: AHCI 0001.0000 32 slots 6 ports 1.5 Gbps 0x3f impl SATA mode
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ahci 0000:00:1f.2: flags: 64bit ncq only 
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi host0: Virtio SCSI HBA
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi 0:0:0:0: Direct-Access     QEMU     QEMU HARDDISK    2.5+ PQ: 0 ANSI: 5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: AVX2 version of gcm_enc/dec engaged.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: AES CTR mode by8 optimization enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input4
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi host1: ahci
+Feb 11 08:07:09 [REDACTED_HOST] kernel: input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input3
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi host2: ahci
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi host3: ahci
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hid: raw HID events driver (C) Jiri Kosina
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi host4: ahci
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi host5: ahci
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi host6: ahci
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata1: SATA max UDMA/133 abar m4096@0x83044000 port 0x83044100 irq 41
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata2: SATA max UDMA/133 abar m4096@0x83044000 port 0x83044180 irq 41
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata3: SATA max UDMA/133 abar m4096@0x83044000 port 0x83044200 irq 41
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata4: SATA max UDMA/133 abar m4096@0x83044000 port 0x83044280 irq 41
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata5: SATA max UDMA/133 abar m4096@0x83044000 port 0x83044300 irq 41
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata6: SATA max UDMA/133 abar m4096@0x83044000 port 0x83044380 irq 41
+Feb 11 08:07:09 [REDACTED_HOST] kernel: virtio_net virtio1 enp6s18: renamed from eth0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sd 0:0:0:0: Power-on or device reset occurred
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sd 0:0:0:0: [sda] 629145600 512-byte logical blocks: (322 GB/300 GiB)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sd 0:0:0:0: [sda] Write Protect is off
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sd 0:0:0:0: [sda] Mode Sense: 63 00 10 08
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+Feb 11 08:07:09 [REDACTED_HOST] kernel:  sda: sda1 sda2 sda3
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata3: SATA link down (SStatus 0 SControl 300)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata2: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata4: SATA link down (SStatus 0 SControl 300)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata2.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata2.00: applying bridge limits
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata1.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata1.00: applying bridge limits
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata5: SATA link down (SStatus 0 SControl 300)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata6: SATA link down (SStatus 0 SControl 300)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata1.00: configured for UDMA/100
+Feb 11 08:07:09 [REDACTED_HOST] kernel: ata2.00: configured for UDMA/100
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sr 1:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+Feb 11 08:07:09 [REDACTED_HOST] kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sr 1:0:0:0: Attached scsi CD-ROM sr0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sr 1:0:0:0: Attached scsi generic sg1 type 5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: scsi 2:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sr 2:0:0:0: [sr1] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sr 2:0:0:0: Attached scsi CD-ROM sr1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: sr 2:0:0:0: Attached scsi generic sg2 type 5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usbcore: registered new interface driver usbhid
+Feb 11 08:07:09 [REDACTED_HOST] kernel: usbhid: USB HID core driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: input: QEMU QEMU USB Tablet as /devices/pci0000:00/0000:00:1d.7/usb2/2-1/2-1:1.0/0003:0627:0001.0001/input/input5
+Feb 11 08:07:09 [REDACTED_HOST] kernel: hid-generic 0003:0627:0001.0001: input,hidraw0: USB HID v0.01 Mouse [QEMU QEMU USB Tablet] on usb-0000:00:1d.7-1/input0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Console: switching to colour dummy device 80x25
+Feb 11 08:07:09 [REDACTED_HOST] kernel: bochs-drm 0000:00:01.0: vgaarb: deactivate vga console
+Feb 11 08:07:09 [REDACTED_HOST] kernel: [drm] Found bochs VGA, ID 0xb0c5.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: [drm] Framebuffer size 16384 kB @ 0x80000000, mmio @ 0x8304b000.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: [drm] Found EDID data blob.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: [drm] Initialized bochs-drm 1.0.0 20130925 for 0000:00:01.0 on minor 0
+Feb 11 08:07:09 [REDACTED_HOST] kernel: fbcon: bochs-drmdrmfb (fb0) is primary device
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Console: switching to colour frame buffer device 160x50
+Feb 11 08:07:09 [REDACTED_HOST] kernel: bochs-drm 0000:00:01.0: [drm] fb0: bochs-drmdrmfb frame buffer device
+Feb 11 08:07:09 [REDACTED_HOST] kernel: nvidia: loading out-of-tree module taints kernel.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: nvidia: module license 'NVIDIA' taints kernel.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Disabling lock debugging due to kernel taint
+Feb 11 08:07:09 [REDACTED_HOST] kernel: nvidia: module verification failed: signature and/or required key missing - tainting kernel
+Feb 11 08:07:09 [REDACTED_HOST] kernel: nvidia-nvlink: Nvlink Core is being initialized, major device number 236
+Feb 11 08:07:09 [REDACTED_HOST] kernel: NVRM: loading NVIDIA UNIX x86_64 Kernel Module  535.288.01  Tue Nov 18 18:26:41 UTC 2025
+Feb 11 08:07:09 [REDACTED_HOST] kernel: nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  535.288.01  Tue Nov 18 18:19:41 UTC 2025
+Feb 11 08:07:09 [REDACTED_HOST] kernel: [drm] [nvidia-drm] [GPU ID 0x00000100] Loading driver
+Feb 11 08:07:09 [REDACTED_HOST] kernel: [drm] Initialized nvidia-drm 0.0.0 20160202 for 0000:01:00.0 on minor 1
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: avx2x4   gen() 31353 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: avx2x4   xor()  8685 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: avx2x2   gen() 29120 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: avx2x2   xor() 20015 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: avx2x1   gen() 24076 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: avx2x1   xor() 17444 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: sse2x4   gen() 16509 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: sse2x4   xor()  8395 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: sse2x2   gen() 16767 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: sse2x2   xor() 11531 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: sse2x1   gen() 15043 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: sse2x1   xor() 10270 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: using algorithm avx2x4 gen() 31353 MB/s
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: .... xor() 8685 MB/s, rmw enabled
+Feb 11 08:07:09 [REDACTED_HOST] kernel: raid6: using avx2x2 recovery algorithm
+Feb 11 08:07:09 [REDACTED_HOST] kernel: xor: automatically using best checksumming function   avx       
+Feb 11 08:07:09 [REDACTED_HOST] kernel: async_tx: api initialized (async)
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Btrfs loaded, crc32c=crc32c-intel, zoned=yes, fsverity=yes
+Feb 11 08:07:09 [REDACTED_HOST] kernel: EXT4-fs (dm-0): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+Feb 11 08:07:09 agent systemd[1]: Inserted module 'autofs4'
+Feb 11 08:07:09 agent systemd[1]: systemd 255.4-1ubuntu8.8 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+Feb 11 08:07:09 agent systemd[1]: Detected virtualization kvm.
+Feb 11 08:07:09 agent systemd[1]: Detected architecture x86-64.
+Feb 11 08:07:09 agent systemd[1]: Hostname set to <agent>.
+Feb 11 08:07:09 agent systemd[1]: Configuration file /run/systemd/system/systemd-networkd-wait-online.service.d/10-netplan.conf is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+Feb 11 08:07:09 agent systemd[1]: Configuration file /run/systemd/system/netplan-ovs-cleanup.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+Feb 11 08:07:09 agent systemd[1]: Queued start job for default target graphical.target.
+Feb 11 08:07:09 agent systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+Feb 11 08:07:09 agent systemd[1]: Created slice system-postfix.slice - Slice /system/postfix.
+Feb 11 08:07:09 agent systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+Feb 11 08:07:09 agent systemd[1]: Created slice user.slice - User and Session Slice.
+Feb 11 08:07:09 agent systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+Feb 11 08:07:09 agent systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+Feb 11 08:07:09 agent systemd[1]: Expecting device dev-disk-by\x2duuid-302ed62f\x2d2e13\x2d43c6\x2dbf7a\x2d1dd0ccd4e8d2.device - /dev/disk/by-uuid/302ed62f-2e13-43c6-bf7a-1dd0ccd4e8d2...
+Feb 11 08:07:09 agent systemd[1]: Expecting device dev-disk-by\x2duuid-CE77\x2dB4EB.device - /dev/disk/by-uuid/CE77-B4EB...
+Feb 11 08:07:09 agent systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+Feb 11 08:07:09 agent systemd[1]: Reached target slices.target - Slice Units.
+Feb 11 08:07:09 agent systemd[1]: Reached target snapd.mounts-pre.target - Mounting snaps.
+Feb 11 08:07:09 agent systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+Feb 11 08:07:09 agent systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.
+Feb 11 08:07:09 agent systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.
+Feb 11 08:07:09 agent systemd[1]: Listening on multipathd.socket - multipathd control socket.
+Feb 11 08:07:09 agent systemd[1]: Listening on syslog.socket - Syslog Socket.
+Feb 11 08:07:09 agent systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.
+Feb 11 08:07:09 agent systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+Feb 11 08:07:09 agent systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+Feb 11 08:07:09 agent systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+Feb 11 08:07:09 agent systemd[1]: Listening on systemd-networkd.socket - Network Service Netlink Socket.
+Feb 11 08:07:09 agent systemd[1]: systemd-pcrextend.socket - TPM2 PCR Extension (Varlink) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Feb 11 08:07:09 agent systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+Feb 11 08:07:09 agent systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+Feb 11 08:07:09 agent systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+Feb 11 08:07:09 agent systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+Feb 11 08:07:09 agent systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+Feb 11 08:07:09 agent systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+Feb 11 08:07:09 agent systemd[1]: Starting systemd-journald.service - Journal Service...
+Feb 11 08:07:09 agent systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+Feb 11 08:07:09 agent systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+Feb 11 08:07:09 agent systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+Feb 11 08:07:09 agent systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+Feb 11 08:07:09 agent systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+Feb 11 08:07:09 agent systemd-journald[484]: Collecting audit messages is disabled.
+Feb 11 08:07:09 agent systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+Feb 11 08:07:09 agent systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+Feb 11 08:07:09 agent systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+Feb 11 08:07:09 agent systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+Feb 11 08:07:09 agent systemd[1]: netplan-ovs-cleanup.service - OpenVSwitch configuration for cleanup was skipped because of an unmet condition check (ConditionFileIsExecutable=/usr/bin/ovs-vsctl).
+Feb 11 08:07:09 agent systemd[1]: systemd-fsck-root.service - File System Check on Root Device was skipped because of an unmet condition check (ConditionPathExists=!/run/initramfs/fsck-root).
+Feb 11 08:07:09 agent systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pstore: Using crash dump compression: deflate
+Feb 11 08:07:09 [REDACTED_HOST] kernel: pstore: Registered efi as persistent store backend
+Feb 11 08:07:09 agent systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Feb 11 08:07:09 agent systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+Feb 11 08:07:09 agent systemd[1]: systemd-tpm2-setup-early.service - TPM2 SRK Setup (Early) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Feb 11 08:07:09 agent systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+Feb 11 08:07:09 [REDACTED_HOST] kernel: EXT4-fs (dm-0): re-mounted. Opts: (null). Quota mode: none.
+Feb 11 08:07:09 agent systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+Feb 11 08:07:09 agent systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+Feb 11 08:07:09 agent systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+Feb 11 08:07:09 agent systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+Feb 11 08:07:09 agent systemd[1]: Finished keyboard-setup.service - Set the console keyboard layout.
+Feb 11 08:07:09 agent systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+Feb 11 08:07:09 agent systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Feb 11 08:07:09 agent systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+Feb 11 08:07:09 agent systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+Feb 11 08:07:09 agent systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
+Feb 11 08:07:09 agent systemd[1]: modprobe@drm.service: Deactivated successfully.
+Feb 11 08:07:09 agent systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+Feb 11 08:07:09 agent systemd[1]: Started systemd-journald.service - Journal Service.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: Adding 8388604k swap on /swap.img.  Priority:-2 extents:10 across:58318848k FS
+Feb 11 08:07:09 [REDACTED_HOST] kernel: alua: device handler registered
+Feb 11 08:07:09 [REDACTED_HOST] kernel: emc: device handler registered
+Feb 11 08:07:09 agent systemd-journald[484]: Received client request to flush runtime journal.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: rdac: device handler registered
+Feb 11 08:07:09 agent systemd-journald[484]: /var/log/journal/36670ed7a73a4a758289407ebd45a71d/system.journal: Journal file uses a different sequence number ID, rotating.
+Feb 11 08:07:09 agent systemd-journald[484]: Rotating system journal.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: loop0: detected capacity change from 0 to 130608
+Feb 11 08:07:09 [REDACTED_HOST] kernel: loop1: detected capacity change from 0 to 130960
+Feb 11 08:07:09 [REDACTED_HOST] kernel: loop2: detected capacity change from 0 to 178256
+Feb 11 08:07:09 [REDACTED_HOST] kernel: loop3: detected capacity change from 0 to 187192
+Feb 11 08:07:09 [REDACTED_HOST] kernel: loop4: detected capacity change from 0 to 79520
+Feb 11 08:07:09 [REDACTED_HOST] kernel: loop5: detected capacity change from 0 to 98480
+Feb 11 08:07:09 [REDACTED_HOST] kernel: nvidia_uvm: module uses symbols from proprietary module nvidia, inheriting taint.
+Feb 11 08:07:09 [REDACTED_HOST] kernel: nvidia-uvm: Loaded the UVM driver, major device number 234.
+Feb 11 08:07:10 [REDACTED_HOST] kernel: lpc_ich 0000:00:1f.0: I/O space for GPIO uninitialized
+Feb 11 08:07:10 [REDACTED_HOST] kernel: i801_smbus 0000:00:1f.3: Enabling SMBus device
+Feb 11 08:07:10 [REDACTED_HOST] kernel: i801_smbus 0000:00:1f.3: SMBus using PCI interrupt
+Feb 11 08:07:10 [REDACTED_HOST] kernel: i2c i2c-0: 1/1 memory slots populated (from DMI)
+Feb 11 08:07:10 [REDACTED_HOST] kernel: i2c i2c-0: Memory type 0x07 not supported yet, not instantiating SPD
+Feb 11 08:07:10 [REDACTED_HOST] kernel: RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+Feb 11 08:07:10 [REDACTED_HOST] kernel: snd_hda_intel 0000:00:1b.0: no codecs found!
+Feb 11 08:07:10 [REDACTED_HOST] kernel: EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.604:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="buildah" pid=788 comm="apparmor_parser"
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.604:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=780 comm="apparmor_parser"
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.604:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=783 comm="apparmor_parser"
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.604:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=782 comm="apparmor_parser"
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.604:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=787 comm="apparmor_parser"
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.604:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=781 comm="apparmor_parser"
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.608:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=784 comm="apparmor_parser"
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.608:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="busybox" pid=789 comm="apparmor_parser"
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.608:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="cam" pid=793 comm="apparmor_parser"
+Feb 11 08:07:10 [REDACTED_HOST] kernel: audit: type=1400 audit(1770797230.608:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-checkns" pid=794 comm="apparmor_parser"
+Feb 11 08:07:11 [REDACTED_HOST] kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Feb 11 08:07:11 [REDACTED_HOST] kernel: cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Feb 11 08:07:11 [REDACTED_HOST] kernel: cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+Feb 11 08:07:14 [REDACTED_HOST] kernel: NET: Registered PF_QIPCRTR protocol family
+Feb 11 08:07:14 agent systemd-journald[484]: /var/log/journal/36670ed7a73a4a758289407ebd45a71d/user-1000.journal: Journal file uses a different sequence number ID, rotating.
+Feb 11 08:07:14 [REDACTED_HOST] kernel: loop6: detected capacity change from 0 to 8
+Feb 11 08:07:14 [REDACTED_HOST] kernel: overlayfs: idmapped layers are currently not supported
+Feb 11 08:07:15 [REDACTED_HOST] kernel: ACPI Warning: \_SB.PCI0.SE0.S00._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20210730/nsarguments-61)
+Feb 11 08:07:15 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=309 DF PROTO=UDP SPT=41218 DPT=42910 LEN=794 
+Feb 11 08:07:15 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=310 DF PROTO=UDP SPT=41218 DPT=42910 LEN=887 
+Feb 11 08:07:15 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=311 DF PROTO=UDP SPT=41218 DPT=42910 LEN=842 
+Feb 11 08:07:15 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=312 DF PROTO=UDP SPT=41241 DPT=42910 LEN=836 
+Feb 11 08:07:16 [REDACTED_HOST] kernel: Initializing XFRM netlink socket
+Feb 11 08:07:16 [REDACTED_HOST] kernel: bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+Feb 11 08:07:16 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=373 DF PROTO=UDP SPT=52408 DPT=40184 LEN=794 
+Feb 11 08:07:16 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=374 DF PROTO=UDP SPT=52408 DPT=40184 LEN=887 
+Feb 11 08:07:16 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=375 DF PROTO=UDP SPT=52408 DPT=40184 LEN=842 
+Feb 11 08:07:16 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=376 DF PROTO=UDP SPT=53163 DPT=40184 LEN=836 
+Feb 11 08:07:16 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=381 DF PROTO=UDP SPT=41621 DPT=55450 LEN=794 
+Feb 11 08:07:16 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=382 DF PROTO=UDP SPT=41621 DPT=55450 LEN=887 
+Feb 11 08:07:42 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=4672 DF PROTO=UDP SPT=41269 DPT=58225 LEN=794 
+Feb 11 08:08:04 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=6361 DF PROTO=UDP SPT=57420 DPT=40832 LEN=794 
+Feb 11 08:08:29 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=13668 DF PROTO=UDP SPT=52809 DPT=38604 LEN=794 
+Feb 11 08:08:55 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=17273 DF PROTO=UDP SPT=44377 DPT=43925 LEN=794 
+Feb 11 08:09:19 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=17603 DF PROTO=UDP SPT=41976 DPT=41601 LEN=794 
+Feb 11 08:09:19 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=17604 DF PROTO=UDP SPT=41976 DPT=41601 LEN=887 
+Feb 11 08:16:00 [REDACTED_HOST] kernel: NVRM: Persistence mode is deprecated and will be removed in a future release. Please use nvidia-persistenced instead.
+Feb 11 08:18:26 [REDACTED_HOST] kernel: docker0: port 1(vethdf7fab4) entered blocking state
+Feb 11 08:18:26 [REDACTED_HOST] kernel: docker0: port 1(vethdf7fab4) entered disabled state
+Feb 11 08:18:26 [REDACTED_HOST] kernel: device vethdf7fab4 entered promiscuous mode
+Feb 11 08:18:26 [REDACTED_HOST] kernel: eth0: renamed from vethd08e99b
+Feb 11 08:18:26 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethdf7fab4: link becomes ready
+Feb 11 08:18:26 [REDACTED_HOST] kernel: docker0: port 1(vethdf7fab4) entered blocking state
+Feb 11 08:18:26 [REDACTED_HOST] kernel: docker0: port 1(vethdf7fab4) entered forwarding state
+Feb 11 08:18:26 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): docker0: link becomes ready
+Feb 11 08:18:26 [REDACTED_HOST] kernel: docker0: port 1(vethdf7fab4) entered disabled state
+Feb 11 08:18:26 [REDACTED_HOST] kernel: vethd08e99b: renamed from eth0
+Feb 11 08:18:26 [REDACTED_HOST] kernel: docker0: port 1(vethdf7fab4) entered disabled state
+Feb 11 08:18:26 [REDACTED_HOST] kernel: device vethdf7fab4 left promiscuous mode
+Feb 11 08:18:26 [REDACTED_HOST] kernel: docker0: port 1(vethdf7fab4) entered disabled state
+Feb 11 08:18:26 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=2134 DF PROTO=UDP SPT=56089 DPT=53012 LEN=794 
+Feb 11 08:18:26 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=2135 DF PROTO=UDP SPT=56089 DPT=53012 LEN=887 
+Feb 11 08:18:26 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=2136 DF PROTO=UDP SPT=56089 DPT=53012 LEN=842 
+Feb 11 08:18:26 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=2137 DF PROTO=UDP SPT=33744 DPT=53012 LEN=836 
+Feb 11 08:18:27 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=2160 DF PROTO=UDP SPT=51709 DPT=36369 LEN=794 
+Feb 11 08:18:27 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=2161 DF PROTO=UDP SPT=51709 DPT=36369 LEN=887 
+Feb 11 08:18:27 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=2162 DF PROTO=UDP SPT=51709 DPT=36369 LEN=842 
+Feb 11 08:18:27 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=2163 DF PROTO=UDP SPT=50862 DPT=36369 LEN=836 
+Feb 11 08:20:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth14b5099) entered blocking state
+Feb 11 08:20:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth14b5099) entered disabled state
+Feb 11 08:20:37 [REDACTED_HOST] kernel: device veth14b5099 entered promiscuous mode
+Feb 11 08:20:37 [REDACTED_HOST] kernel: eth0: renamed from veth6a80f31
+Feb 11 08:20:37 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth14b5099: link becomes ready
+Feb 11 08:20:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth14b5099) entered blocking state
+Feb 11 08:20:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth14b5099) entered forwarding state
+Feb 11 08:20:37 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): br-aaed55a96e45: link becomes ready
+Feb 11 08:20:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth14b5099) entered disabled state
+Feb 11 08:20:37 [REDACTED_HOST] kernel: veth6a80f31: renamed from eth0
+Feb 11 08:20:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth14b5099) entered disabled state
+Feb 11 08:20:37 [REDACTED_HOST] kernel: device veth14b5099 left promiscuous mode
+Feb 11 08:20:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth14b5099) entered disabled state
+Feb 11 08:20:37 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=4245 DF PROTO=UDP SPT=43286 DPT=53568 LEN=794 
+Feb 11 08:20:37 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=4246 DF PROTO=UDP SPT=43286 DPT=53568 LEN=887 
+Feb 11 08:20:37 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=4247 DF PROTO=UDP SPT=43286 DPT=53568 LEN=842 
+Feb 11 08:20:37 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=4248 DF PROTO=UDP SPT=33071 DPT=53568 LEN=836 
+Feb 11 08:20:38 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=4534 DF PROTO=UDP SPT=39021 DPT=50756 LEN=794 
+Feb 11 08:20:38 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=4535 DF PROTO=UDP SPT=39021 DPT=50756 LEN=887 
+Feb 11 08:20:38 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=4536 DF PROTO=UDP SPT=39021 DPT=50756 LEN=842 
+Feb 11 08:20:38 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=4537 DF PROTO=UDP SPT=39417 DPT=50756 LEN=836 
+Feb 11 08:21:28 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth9eb1aae) entered blocking state
+Feb 11 08:21:28 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth9eb1aae) entered disabled state
+Feb 11 08:21:28 [REDACTED_HOST] kernel: device veth9eb1aae entered promiscuous mode
+Feb 11 08:21:28 [REDACTED_HOST] kernel: eth0: renamed from vethc76436c
+Feb 11 08:21:28 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth9eb1aae: link becomes ready
+Feb 11 08:21:28 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth9eb1aae) entered blocking state
+Feb 11 08:21:28 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth9eb1aae) entered forwarding state
+Feb 11 08:21:31 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=12985 DF PROTO=UDP SPT=38069 DPT=40018 LEN=794 
+Feb 11 08:21:31 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=12986 DF PROTO=UDP SPT=38069 DPT=40018 LEN=887 
+Feb 11 08:21:31 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=12987 DF PROTO=UDP SPT=38069 DPT=40018 LEN=842 
+Feb 11 08:49:44 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth9eb1aae) entered disabled state
+Feb 11 08:49:44 [REDACTED_HOST] kernel: vethc76436c: renamed from eth0
+Feb 11 08:49:45 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth9eb1aae) entered disabled state
+Feb 11 08:49:45 [REDACTED_HOST] kernel: device veth9eb1aae left promiscuous mode
+Feb 11 08:49:45 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth9eb1aae) entered disabled state
+Feb 11 08:49:45 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethc81412d) entered blocking state
+Feb 11 08:49:45 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethc81412d) entered disabled state
+Feb 11 08:49:45 [REDACTED_HOST] kernel: device vethc81412d entered promiscuous mode
+Feb 11 08:49:45 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethc81412d) entered blocking state
+Feb 11 08:49:45 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethc81412d) entered forwarding state
+Feb 11 08:49:45 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=42024 DF PROTO=UDP SPT=43037 DPT=40499 LEN=794 
+Feb 11 08:49:45 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=42025 DF PROTO=UDP SPT=43037 DPT=40499 LEN=887 
+Feb 11 08:49:45 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=42026 DF PROTO=UDP SPT=43037 DPT=40499 LEN=842 
+Feb 11 08:49:45 [REDACTED_HOST] kernel: eth0: renamed from veth518a7c0
+Feb 11 08:49:45 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=42027 DF PROTO=UDP SPT=36868 DPT=40499 LEN=836 
+Feb 11 08:49:45 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethc81412d: link becomes ready
+Feb 11 08:49:46 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=42164 DF PROTO=UDP SPT=52438 DPT=39193 LEN=794 
+Feb 11 08:49:46 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=42165 DF PROTO=UDP SPT=52438 DPT=39193 LEN=887 
+Feb 11 08:49:46 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=42166 DF PROTO=UDP SPT=52438 DPT=39193 LEN=842 
+Feb 11 08:49:46 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=42167 DF PROTO=UDP SPT=49612 DPT=39193 LEN=836 
+Feb 11 08:49:48 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethc81412d) entered disabled state
+Feb 11 08:49:48 [REDACTED_HOST] kernel: veth518a7c0: renamed from eth0
+Feb 11 08:49:48 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethc81412d) entered disabled state
+Feb 11 08:49:48 [REDACTED_HOST] kernel: device vethc81412d left promiscuous mode
+Feb 11 08:49:48 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethc81412d) entered disabled state
+Feb 11 08:49:48 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=42798 DF PROTO=UDP SPT=53811 DPT=43791 LEN=794 
+Feb 11 08:49:48 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=42799 DF PROTO=UDP SPT=53811 DPT=43791 LEN=887 
+Feb 11 08:49:49 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth7b9fd7a) entered blocking state
+Feb 11 08:49:49 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth7b9fd7a) entered disabled state
+Feb 11 08:49:49 [REDACTED_HOST] kernel: device veth7b9fd7a entered promiscuous mode
+Feb 11 08:49:49 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth7b9fd7a) entered blocking state
+Feb 11 08:49:49 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth7b9fd7a) entered forwarding state
+Feb 11 08:49:49 [REDACTED_HOST] kernel: eth0: renamed from veth1a06f8b
+Feb 11 08:49:49 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth7b9fd7a: link becomes ready
+Feb 11 08:49:52 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth7b9fd7a) entered disabled state
+Feb 11 08:49:52 [REDACTED_HOST] kernel: veth1a06f8b: renamed from eth0
+Feb 11 08:49:52 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth7b9fd7a) entered disabled state
+Feb 11 08:49:52 [REDACTED_HOST] kernel: device veth7b9fd7a left promiscuous mode
+Feb 11 08:49:52 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth7b9fd7a) entered disabled state
+Feb 11 08:49:52 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth0706137) entered blocking state
+Feb 11 08:49:52 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth0706137) entered disabled state
+Feb 11 08:49:52 [REDACTED_HOST] kernel: device veth0706137 entered promiscuous mode
+Feb 11 08:49:52 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth0706137) entered blocking state
+Feb 11 08:49:52 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth0706137) entered forwarding state
+Feb 11 08:49:52 [REDACTED_HOST] kernel: eth0: renamed from vethca67764
+Feb 11 08:49:52 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth0706137: link becomes ready
+Feb 11 08:49:56 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth0706137) entered disabled state
+Feb 11 08:49:56 [REDACTED_HOST] kernel: vethca67764: renamed from eth0
+Feb 11 08:49:56 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth0706137) entered disabled state
+Feb 11 08:49:56 [REDACTED_HOST] kernel: device veth0706137 left promiscuous mode
+Feb 11 08:49:56 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth0706137) entered disabled state
+Feb 11 08:49:56 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth25a1501) entered blocking state
+Feb 11 08:49:56 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth25a1501) entered disabled state
+Feb 11 08:49:56 [REDACTED_HOST] kernel: device veth25a1501 entered promiscuous mode
+Feb 11 08:49:56 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth25a1501) entered blocking state
+Feb 11 08:49:56 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth25a1501) entered forwarding state
+Feb 11 08:49:56 [REDACTED_HOST] kernel: eth0: renamed from veth7bca41e
+Feb 11 08:49:56 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth25a1501: link becomes ready
+Feb 11 08:50:00 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth25a1501) entered disabled state
+Feb 11 08:50:00 [REDACTED_HOST] kernel: veth7bca41e: renamed from eth0
+Feb 11 08:50:00 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth25a1501) entered disabled state
+Feb 11 08:50:00 [REDACTED_HOST] kernel: device veth25a1501 left promiscuous mode
+Feb 11 08:50:00 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth25a1501) entered disabled state
+Feb 11 08:50:00 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbb00574) entered blocking state
+Feb 11 08:50:00 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbb00574) entered disabled state
+Feb 11 08:50:00 [REDACTED_HOST] kernel: device vethbb00574 entered promiscuous mode
+Feb 11 08:50:00 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbb00574) entered blocking state
+Feb 11 08:50:00 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbb00574) entered forwarding state
+Feb 11 08:50:00 [REDACTED_HOST] kernel: eth0: renamed from veth2497823
+Feb 11 08:50:00 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethbb00574: link becomes ready
+Feb 11 08:50:04 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbb00574) entered disabled state
+Feb 11 08:50:04 [REDACTED_HOST] kernel: veth2497823: renamed from eth0
+Feb 11 08:50:04 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbb00574) entered disabled state
+Feb 11 08:50:04 [REDACTED_HOST] kernel: device vethbb00574 left promiscuous mode
+Feb 11 08:50:04 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbb00574) entered disabled state
+Feb 11 08:50:05 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=45048 DF PROTO=UDP SPT=57577 DPT=39872 LEN=794 
+Feb 11 08:50:06 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered blocking state
+Feb 11 08:50:06 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered disabled state
+Feb 11 08:50:06 [REDACTED_HOST] kernel: device veth3bf15bc entered promiscuous mode
+Feb 11 08:50:06 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered blocking state
+Feb 11 08:50:06 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered forwarding state
+Feb 11 08:50:06 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered disabled state
+Feb 11 08:50:06 [REDACTED_HOST] kernel: eth0: renamed from veth7add1c6
+Feb 11 08:50:06 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth3bf15bc: link becomes ready
+Feb 11 08:50:06 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered blocking state
+Feb 11 08:50:06 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered forwarding state
+Feb 11 08:50:09 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered disabled state
+Feb 11 08:50:09 [REDACTED_HOST] kernel: veth7add1c6: renamed from eth0
+Feb 11 08:50:09 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered disabled state
+Feb 11 08:50:09 [REDACTED_HOST] kernel: device veth3bf15bc left promiscuous mode
+Feb 11 08:50:09 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth3bf15bc) entered disabled state
+Feb 11 08:50:12 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth914ac8f) entered blocking state
+Feb 11 08:50:12 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth914ac8f) entered disabled state
+Feb 11 08:50:12 [REDACTED_HOST] kernel: device veth914ac8f entered promiscuous mode
+Feb 11 08:50:12 [REDACTED_HOST] kernel: eth0: renamed from veth9a5e436
+Feb 11 08:50:12 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth914ac8f: link becomes ready
+Feb 11 08:50:12 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth914ac8f) entered blocking state
+Feb 11 08:50:12 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth914ac8f) entered forwarding state
+Feb 11 08:50:16 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth914ac8f) entered disabled state
+Feb 11 08:50:16 [REDACTED_HOST] kernel: veth9a5e436: renamed from eth0
+Feb 11 08:50:16 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth914ac8f) entered disabled state
+Feb 11 08:50:16 [REDACTED_HOST] kernel: device veth914ac8f left promiscuous mode
+Feb 11 08:50:16 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth914ac8f) entered disabled state
+Feb 11 08:50:16 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth850bd10) entered blocking state
+Feb 11 08:50:16 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth850bd10) entered disabled state
+Feb 11 08:50:16 [REDACTED_HOST] kernel: device veth850bd10 entered promiscuous mode
+Feb 11 08:50:16 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth850bd10) entered blocking state
+Feb 11 08:50:16 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth850bd10) entered forwarding state
+Feb 11 08:50:16 [REDACTED_HOST] kernel: eth0: renamed from veth8c4c2fa
+Feb 11 08:50:16 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth850bd10: link becomes ready
+Feb 11 08:50:19 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth850bd10) entered disabled state
+Feb 11 08:50:19 [REDACTED_HOST] kernel: veth8c4c2fa: renamed from eth0
+Feb 11 08:50:19 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth850bd10) entered disabled state
+Feb 11 08:50:19 [REDACTED_HOST] kernel: device veth850bd10 left promiscuous mode
+Feb 11 08:50:19 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth850bd10) entered disabled state
+Feb 11 08:50:19 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2590fcf) entered blocking state
+Feb 11 08:50:19 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2590fcf) entered disabled state
+Feb 11 08:50:19 [REDACTED_HOST] kernel: device veth2590fcf entered promiscuous mode
+Feb 11 08:50:19 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2590fcf) entered blocking state
+Feb 11 08:50:19 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2590fcf) entered forwarding state
+Feb 11 08:50:19 [REDACTED_HOST] kernel: eth0: renamed from vethc352665
+Feb 11 08:50:19 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth2590fcf: link becomes ready
+Feb 11 08:50:23 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2590fcf) entered disabled state
+Feb 11 08:50:23 [REDACTED_HOST] kernel: vethc352665: renamed from eth0
+Feb 11 08:50:23 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2590fcf) entered disabled state
+Feb 11 08:50:23 [REDACTED_HOST] kernel: device veth2590fcf left promiscuous mode
+Feb 11 08:50:23 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2590fcf) entered disabled state
+Feb 11 08:50:23 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2fed1a6) entered blocking state
+Feb 11 08:50:23 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2fed1a6) entered disabled state
+Feb 11 08:50:23 [REDACTED_HOST] kernel: device veth2fed1a6 entered promiscuous mode
+Feb 11 08:50:23 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2fed1a6) entered blocking state
+Feb 11 08:50:23 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2fed1a6) entered forwarding state
+Feb 11 08:50:23 [REDACTED_HOST] kernel: eth0: renamed from veth009cc3c
+Feb 11 08:50:24 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth2fed1a6: link becomes ready
+Feb 11 08:50:27 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2fed1a6) entered disabled state
+Feb 11 08:50:27 [REDACTED_HOST] kernel: veth009cc3c: renamed from eth0
+Feb 11 08:50:27 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2fed1a6) entered disabled state
+Feb 11 08:50:27 [REDACTED_HOST] kernel: device veth2fed1a6 left promiscuous mode
+Feb 11 08:50:27 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth2fed1a6) entered disabled state
+Feb 11 08:50:27 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=47643 DF PROTO=UDP SPT=37123 DPT=44979 LEN=794 
+Feb 11 08:50:27 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfcba173) entered blocking state
+Feb 11 08:50:27 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfcba173) entered disabled state
+Feb 11 08:50:27 [REDACTED_HOST] kernel: device vethfcba173 entered promiscuous mode
+Feb 11 08:50:27 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfcba173) entered blocking state
+Feb 11 08:50:27 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfcba173) entered forwarding state
+Feb 11 08:50:27 [REDACTED_HOST] kernel: eth0: renamed from veth973940d
+Feb 11 08:50:27 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethfcba173: link becomes ready
+Feb 11 08:50:31 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfcba173) entered disabled state
+Feb 11 08:50:31 [REDACTED_HOST] kernel: veth973940d: renamed from eth0
+Feb 11 08:50:31 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfcba173) entered disabled state
+Feb 11 08:50:31 [REDACTED_HOST] kernel: device vethfcba173 left promiscuous mode
+Feb 11 08:50:31 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfcba173) entered disabled state
+Feb 11 08:50:32 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth1d984eb) entered blocking state
+Feb 11 08:50:32 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth1d984eb) entered disabled state
+Feb 11 08:50:32 [REDACTED_HOST] kernel: device veth1d984eb entered promiscuous mode
+Feb 11 08:50:32 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth1d984eb) entered blocking state
+Feb 11 08:50:32 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth1d984eb) entered forwarding state
+Feb 11 08:50:32 [REDACTED_HOST] kernel: eth0: renamed from veth9aa8102
+Feb 11 08:50:32 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth1d984eb: link becomes ready
+Feb 11 08:50:35 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth1d984eb) entered disabled state
+Feb 11 08:50:35 [REDACTED_HOST] kernel: veth9aa8102: renamed from eth0
+Feb 11 08:50:35 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth1d984eb) entered disabled state
+Feb 11 08:50:35 [REDACTED_HOST] kernel: device veth1d984eb left promiscuous mode
+Feb 11 08:50:35 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth1d984eb) entered disabled state
+Feb 11 08:50:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered blocking state
+Feb 11 08:50:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered disabled state
+Feb 11 08:50:37 [REDACTED_HOST] kernel: device veth233a19d entered promiscuous mode
+Feb 11 08:50:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered blocking state
+Feb 11 08:50:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered forwarding state
+Feb 11 08:50:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered disabled state
+Feb 11 08:50:37 [REDACTED_HOST] kernel: eth0: renamed from vethe89dd78
+Feb 11 08:50:37 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth233a19d: link becomes ready
+Feb 11 08:50:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered blocking state
+Feb 11 08:50:37 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered forwarding state
+Feb 11 08:50:40 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered disabled state
+Feb 11 08:50:40 [REDACTED_HOST] kernel: vethe89dd78: renamed from eth0
+Feb 11 08:50:40 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered disabled state
+Feb 11 08:50:40 [REDACTED_HOST] kernel: device veth233a19d left promiscuous mode
+Feb 11 08:50:40 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth233a19d) entered disabled state
+Feb 11 08:50:43 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbf229fa) entered blocking state
+Feb 11 08:50:43 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbf229fa) entered disabled state
+Feb 11 08:50:43 [REDACTED_HOST] kernel: device vethbf229fa entered promiscuous mode
+Feb 11 08:50:43 [REDACTED_HOST] kernel: eth0: renamed from vetha1946a4
+Feb 11 08:50:43 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethbf229fa: link becomes ready
+Feb 11 08:50:43 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbf229fa) entered blocking state
+Feb 11 08:50:43 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbf229fa) entered forwarding state
+Feb 11 08:50:47 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbf229fa) entered disabled state
+Feb 11 08:50:47 [REDACTED_HOST] kernel: vetha1946a4: renamed from eth0
+Feb 11 08:50:47 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbf229fa) entered disabled state
+Feb 11 08:50:47 [REDACTED_HOST] kernel: device vethbf229fa left promiscuous mode
+Feb 11 08:50:47 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethbf229fa) entered disabled state
+Feb 11 08:50:47 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=51078 DF PROTO=UDP SPT=58990 DPT=49521 LEN=794 
+Feb 11 08:50:53 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth4d9673f) entered blocking state
+Feb 11 08:50:53 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth4d9673f) entered disabled state
+Feb 11 08:50:53 [REDACTED_HOST] kernel: device veth4d9673f entered promiscuous mode
+Feb 11 08:50:53 [REDACTED_HOST] kernel: eth0: renamed from vethad0712c
+Feb 11 08:50:53 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth4d9673f: link becomes ready
+Feb 11 08:50:53 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth4d9673f) entered blocking state
+Feb 11 08:50:53 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth4d9673f) entered forwarding state
+Feb 11 08:50:57 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth4d9673f) entered disabled state
+Feb 11 08:50:57 [REDACTED_HOST] kernel: vethad0712c: renamed from eth0
+Feb 11 08:50:57 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth4d9673f) entered disabled state
+Feb 11 08:50:57 [REDACTED_HOST] kernel: device veth4d9673f left promiscuous mode
+Feb 11 08:50:57 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth4d9673f) entered disabled state
+Feb 11 08:51:10 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfb246e5) entered blocking state
+Feb 11 08:51:10 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfb246e5) entered disabled state
+Feb 11 08:51:10 [REDACTED_HOST] kernel: device vethfb246e5 entered promiscuous mode
+Feb 11 08:51:10 [REDACTED_HOST] kernel: eth0: renamed from veth2fe38ed
+Feb 11 08:51:10 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethfb246e5: link becomes ready
+Feb 11 08:51:10 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfb246e5) entered blocking state
+Feb 11 08:51:10 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfb246e5) entered forwarding state
+Feb 11 08:51:12 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=54559 DF PROTO=UDP SPT=38837 DPT=53816 LEN=794 
+Feb 11 08:51:13 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfb246e5) entered disabled state
+Feb 11 08:51:13 [REDACTED_HOST] kernel: veth2fe38ed: renamed from eth0
+Feb 11 08:51:13 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfb246e5) entered disabled state
+Feb 11 08:51:13 [REDACTED_HOST] kernel: device vethfb246e5 left promiscuous mode
+Feb 11 08:51:13 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vethfb246e5) entered disabled state
+Feb 11 08:51:39 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vetha084ea7) entered blocking state
+Feb 11 08:51:39 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vetha084ea7) entered disabled state
+Feb 11 08:51:39 [REDACTED_HOST] kernel: device vetha084ea7 entered promiscuous mode
+Feb 11 08:51:39 [REDACTED_HOST] kernel: eth0: renamed from veth086d4d5
+Feb 11 08:51:39 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vetha084ea7: link becomes ready
+Feb 11 08:51:39 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vetha084ea7) entered blocking state
+Feb 11 08:51:39 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vetha084ea7) entered forwarding state
+Feb 11 08:51:41 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=55530 DF PROTO=UDP SPT=42054 DPT=57663 LEN=794 
+Feb 11 08:51:42 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vetha084ea7) entered disabled state
+Feb 11 08:51:42 [REDACTED_HOST] kernel: veth086d4d5: renamed from eth0
+Feb 11 08:51:42 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vetha084ea7) entered disabled state
+Feb 11 08:51:42 [REDACTED_HOST] kernel: device vetha084ea7 left promiscuous mode
+Feb 11 08:51:42 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(vetha084ea7) entered disabled state
+Feb 11 08:52:12 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth057752d) entered blocking state
+Feb 11 08:52:12 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth057752d) entered disabled state
+Feb 11 08:52:12 [REDACTED_HOST] kernel: device veth057752d entered promiscuous mode
+Feb 11 08:52:12 [REDACTED_HOST] kernel: eth0: renamed from veth7dfd612
+Feb 11 08:52:12 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth057752d: link becomes ready
+Feb 11 08:52:12 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth057752d) entered blocking state
+Feb 11 08:52:12 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth057752d) entered forwarding state
+Feb 11 08:52:14 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=59679 DF PROTO=UDP SPT=40576 DPT=43493 LEN=794 
+Feb 11 08:52:14 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=59680 DF PROTO=UDP SPT=40576 DPT=43493 LEN=887 
+Feb 11 08:54:52 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth057752d) entered disabled state
+Feb 11 08:54:52 [REDACTED_HOST] kernel: veth7dfd612: renamed from eth0
+Feb 11 08:54:53 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth057752d) entered disabled state
+Feb 11 08:54:53 [REDACTED_HOST] kernel: device veth057752d left promiscuous mode
+Feb 11 08:54:53 [REDACTED_HOST] kernel: br-aaed55a96e45: port 1(veth057752d) entered disabled state
+Feb 11 08:54:53 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=35021 DF PROTO=UDP SPT=50766 DPT=48025 LEN=794 
+Feb 11 08:54:53 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=35022 DF PROTO=UDP SPT=50766 DPT=48025 LEN=887 
+Feb 11 08:54:53 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=35023 DF PROTO=UDP SPT=50766 DPT=48025 LEN=842 
+Feb 11 08:54:53 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=35024 DF PROTO=UDP SPT=37061 DPT=48025 LEN=836 
+Feb 11 08:54:53 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered blocking state
+Feb 11 08:54:53 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered disabled state
+Feb 11 08:54:53 [REDACTED_HOST] kernel: device vethdd66ff4 entered promiscuous mode
+Feb 11 08:54:53 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered blocking state
+Feb 11 08:54:53 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered forwarding state
+Feb 11 08:54:53 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): br-bd82c795022c: link becomes ready
+Feb 11 08:54:53 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered disabled state
+Feb 11 08:54:53 [REDACTED_HOST] kernel: eth0: renamed from veth4f06321
+Feb 11 08:54:53 [REDACTED_HOST] kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethdd66ff4: link becomes ready
+Feb 11 08:54:53 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered blocking state
+Feb 11 08:54:53 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered forwarding state
+Feb 11 08:54:54 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=814 TOS=0x00 PREC=0x00 TTL=64 ID=35127 DF PROTO=UDP SPT=38089 DPT=51175 LEN=794 
+Feb 11 08:54:54 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=907 TOS=0x00 PREC=0x00 TTL=64 ID=35128 DF PROTO=UDP SPT=38089 DPT=51175 LEN=887 
+Feb 11 08:54:54 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=862 TOS=0x00 PREC=0x00 TTL=64 ID=35129 DF PROTO=UDP SPT=38089 DPT=51175 LEN=842 
+Feb 11 08:54:54 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=856 TOS=0x00 PREC=0x00 TTL=64 ID=35130 DF PROTO=UDP SPT=38989 DPT=51175 LEN=836 
+Feb 11 09:25:01 [REDACTED_HOST] kernel: [UFW BLOCK] IN=br-bd82c795022c OUT= MAC=4a:6c:83:af:1c:4f:1e:14:f2:a4:b8:3c:08:00 SRC=172.18.0.2 DST=172.17.0.1 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=18919 DF PROTO=TCP SPT=50330 DPT=28789 WINDOW=64240 RES=0x00 SYN URGP=0 
+Feb 11 09:25:02 [REDACTED_HOST] kernel: [UFW BLOCK] IN=br-bd82c795022c OUT= MAC=4a:6c:83:af:1c:4f:1e:14:f2:a4:b8:3c:08:00 SRC=172.18.0.2 DST=172.17.0.1 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=18920 DF PROTO=TCP SPT=50330 DPT=28789 WINDOW=64240 RES=0x00 SYN URGP=0 
+Feb 11 10:49:24 [REDACTED_HOST] kernel: kauditd_printk_skb: 135 callbacks suppressed
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.804:147): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_apt_news" name="/usr/lib/python3/dist-packages/uaclient/__pycache__/__init__.cpython-312.pyc.140576531822384" pid=30175 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.816:148): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_apt_news" name="/usr/lib/python3/dist-packages/uaclient/__pycache__/apt.cpython-312.pyc.140576531996144" pid=30175 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.824:149): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_esm_cache" name="/usr/lib/python3/dist-packages/uaclient/__pycache__/__init__.cpython-312.pyc.140472644750768" pid=30176 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.828:150): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_esm_cache" name="/usr/lib/python3/dist-packages/uaclient/__pycache__/log.cpython-312.pyc.140472646302080" pid=30176 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.844:151): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_esm_cache" name="/usr/lib/python3/dist-packages/uaclient/__pycache__/defaults.cpython-312.pyc.140472643606576" pid=30176 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.844:152): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_esm_cache" name="/usr/lib/python3/dist-packages/uaclient/__pycache__/secret_manager.cpython-312.pyc.140472643606832" pid=30176 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.852:153): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_esm_cache" name="/usr/lib/python3/dist-packages/uaclient/__pycache__/system.cpython-312.pyc.140472643608240" pid=30176 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.868:154): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_esm_cache" name="/usr/lib/python3/dist-packages/uaclient/__pycache__/exceptions.cpython-312.pyc.140472643972272" pid=30176 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.880:155): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_esm_cache" name="/usr/lib/python3/dist-packages/uaclient/messages/__pycache__/__init__.cpython-312.pyc.140472642846000" pid=30176 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:49:24 [REDACTED_HOST] kernel: audit: type=1400 audit(1770806964.880:156): apparmor="DENIED" operation="mknod" profile="ubuntu_pro_apt_news" name="/usr/lib/python3/dist-packages/uaclient/__pycache__/event_logger.cpython-312.pyc.140576530175664" pid=30175 comm="python3" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+Feb 11 10:51:52 [REDACTED_HOST] kernel: kauditd_printk_skb: 94 callbacks suppressed
+Feb 11 10:51:52 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807112.732:251): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="ubuntu_pro_apt_news" pid=32683 comm="apparmor_parser"
+Feb 11 10:51:53 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807113.032:252): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="ubuntu_pro_esm_cache" pid=32686 comm="apparmor_parser"
+Feb 11 10:51:53 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807113.056:253): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="ubuntu_pro_esm_cache//apt_methods" pid=32686 comm="apparmor_parser"
+Feb 11 10:51:53 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807113.060:254): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="ubuntu_pro_esm_cache//apt_methods_gpgv" pid=32686 comm="apparmor_parser"
+Feb 11 10:51:53 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807113.064:255): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="ubuntu_pro_esm_cache//cloud_id" pid=32686 comm="apparmor_parser"
+Feb 11 10:51:53 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807113.064:256): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="ubuntu_pro_esm_cache//dpkg" pid=32686 comm="apparmor_parser"
+Feb 11 10:51:53 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807113.068:257): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="ubuntu_pro_esm_cache//ps" pid=32686 comm="apparmor_parser"
+Feb 11 10:51:53 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807113.068:258): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="ubuntu_pro_esm_cache//ubuntu_distro_info" pid=32686 comm="apparmor_parser"
+Feb 11 10:51:53 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807113.068:259): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="ubuntu_pro_esm_cache_systemctl" pid=32686 comm="apparmor_parser"
+Feb 11 10:51:53 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807113.072:260): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="ubuntu_pro_esm_cache_systemd_detect_virt" pid=32686 comm="apparmor_parser"
+Feb 11 10:51:59 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered disabled state
+Feb 11 10:51:59 [REDACTED_HOST] kernel: veth4f06321: renamed from eth0
+Feb 11 10:51:59 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered disabled state
+Feb 11 10:51:59 [REDACTED_HOST] kernel: device vethdd66ff4 left promiscuous mode
+Feb 11 10:51:59 [REDACTED_HOST] kernel: br-bd82c795022c: port 1(vethdd66ff4) entered disabled state
+Feb 11 10:51:59 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=774 TOS=0x00 PREC=0x00 TTL=64 ID=45134 DF PROTO=UDP SPT=47143 DPT=56706 LEN=754 
+Feb 11 10:51:59 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=867 TOS=0x00 PREC=0x00 TTL=64 ID=45135 DF PROTO=UDP SPT=47143 DPT=56706 LEN=847 
+Feb 11 10:51:59 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=822 TOS=0x00 PREC=0x00 TTL=64 ID=45136 DF PROTO=UDP SPT=47143 DPT=56706 LEN=802 
+Feb 11 10:51:59 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=816 TOS=0x00 PREC=0x00 TTL=64 ID=45137 DF PROTO=UDP SPT=45771 DPT=56706 LEN=796 
+Feb 11 10:52:00 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=774 TOS=0x00 PREC=0x00 TTL=64 ID=45386 DF PROTO=UDP SPT=46445 DPT=59441 LEN=754 
+Feb 11 10:52:00 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=867 TOS=0x00 PREC=0x00 TTL=64 ID=45387 DF PROTO=UDP SPT=46445 DPT=59441 LEN=847 
+Feb 11 10:52:00 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=822 TOS=0x00 PREC=0x00 TTL=64 ID=45388 DF PROTO=UDP SPT=46445 DPT=59441 LEN=802 
+Feb 11 10:52:00 [REDACTED_HOST] kernel: [UFW BLOCK] IN=enp6s18 OUT= MAC=bc:24:11:cc:40:a8:14:ea:63:76:b3:65:08:00 SRC=192.168.8.237 DST=192.168.8.200 LEN=816 TOS=0x00 PREC=0x00 TTL=64 ID=45389 DF PROTO=UDP SPT=56332 DPT=59441 LEN=796 
+Feb 11 10:52:00 agent systemd[1]: systemd 255.4-1ubuntu8.12 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+Feb 11 10:52:00 agent systemd[1]: Detected virtualization kvm.
+Feb 11 10:52:00 agent systemd[1]: Detected architecture x86-64.
+Feb 11 10:52:01 agent systemd-journald[484]: Received SIGTERM from PID 1 (systemd).
+Feb 11 10:52:01 agent systemd[1]: Stopping systemd-journald.service - Journal Service...
+Feb 11 10:52:01 agent systemd[1]: systemd-journald.service: Deactivated successfully.
+Feb 11 10:52:01 agent systemd[1]: Stopped systemd-journald.service - Journal Service.
+Feb 11 10:52:01 agent systemd[1]: systemd-journald.service: Consumed 1.107s CPU time.
+Feb 11 10:52:01 agent systemd[1]: Starting systemd-journald.service - Journal Service...
+Feb 11 10:52:01 agent systemd[1]: Finished systemd-networkd-wait-online.service - Wait for Network to be Configured.
+Feb 11 10:52:01 agent systemd-journald[33888]: Collecting audit messages is disabled.
+Feb 11 10:52:01 agent systemd[1]: Started systemd-journald.service - Journal Service.
+Feb 11 10:52:09 [REDACTED_HOST] kernel: audit: type=1400 audit(1770807129.813:261): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="rsyslogd" pid=34589 comm="apparmor_parser"
