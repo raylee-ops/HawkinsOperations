@@ -22,7 +22,7 @@ This directory contains **raw imports** from the active RH_MIGRATION_2026_V2 rep
 - migration.gitignore - Recommended exclusion patterns
 
 **Status:** ✅ Curated to:
-- `docs/migration-patterns/` - Documentation
+- `projects/migration-rh/reference/migration-patterns/` - Documentation
 - `tools/migration-tools/` - Validation scripts
 
 ---

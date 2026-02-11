@@ -1,20 +1,19 @@
-# HawkinsOps Proof Pack
+# PROOF_PACK Index
 
-**Purpose:** Give reviewers everything they need to evaluate this repo quickly without guessing.
+Curated reviewer lane for this repository.
 
-## Quick Verify (Windows)
-Run from repo root:
-- `docs/VERIFY_COMMANDS_POWERSHELL.md`
+## Core Files
 
-## What’s in the Proof Pack (current)
+- `PROOF_PACK/VERIFIED_COUNTS.md`
+- `PROOF_PACK/ARCHITECTURE.md`
+- `PROOF_PACK/EVIDENCE_CHECKLIST.md`
+- `PROOF_PACK/SAMPLES/`
+- `PROOF_PACK/EVIDENCE/`
 
-- `PROOF_PACK/DIAGRAMS/` — diagrams and related notes
-- `PROOF_PACK/EVIDENCE/legacy/` — legacy evidence samples (sanitized)
+## Suggested Review Path
 
-> This pack is intentionally curated. No secrets, no internal IPs, no tokens.
-
-## Suggested review path (2 minutes)
-1) Read repo `README.md`
-2) Open `detection-rules/INDEX.md`
-3) Open `docs/wazuh/DEPLOYMENT_REALITY.md`
-4) Skim `PROOF_PACK/EVIDENCE/legacy/` for sample rule modules
+1. Read root `README.md`
+2. Read `START_HERE.md`
+3. Validate counts in `PROOF_PACK/VERIFIED_COUNTS.md`
+4. Inspect sample artifacts in `PROOF_PACK/SAMPLES/`
+5. Review migration project entrypoint at `projects/migration-rh/README.md`

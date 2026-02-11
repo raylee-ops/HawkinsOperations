@@ -101,7 +101,7 @@ Follow the appropriate guidelines:
 
 **Verify counts:**
 ```powershell
-.\\_verify_counts.ps1
+pwsh -NoProfile -File ".\\scripts\\verify\\verify-counts.ps1"
 ```
 
 **Build Wazuh bundle (if applicable):**
@@ -271,7 +271,7 @@ index=windows EventCode=1
 
 - [ ] Code follows the style guidelines
 - [ ] All files are sanitized (no real IPs, credentials, PII)
-- [ ] Verification scripts pass (`.\\_verify_counts.ps1`)
+- [ ] Verification scripts pass (`pwsh -NoProfile -File ".\\scripts\\verify\\verify-counts.ps1"`)
 - [ ] Commit messages are descriptive
 - [ ] Changes are focused (one logical change per PR)
 
