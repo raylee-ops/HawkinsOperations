@@ -1,0 +1,189 @@
+{
+  "ok": true,
+  "ts": 1770813650240,
+  "durationMs": 2532,
+  "timeoutMs": 4000,
+  "primaryTargetId": "explicit",
+  "warnings": [
+    {
+      "code": "ssh_tunnel_failed",
+      "message": "SSH tunnel failed: ssh exited (255)\nWarning: Identity file /home/[REDACTED_USER]/.ssh/id_rsa not accessible: No such file or directory.\n[REDACTED_USER]@[REDACTED_IP]: Permission denied (publickey,[REDACTED_AUTH])."
+    }
+  ],
+  "network": {
+    "localLoopbackUrl": "ws://[REDACTED_IP]:18789",
+    "localTailnetUrl": "ws://[REDACTED_IP]:18789",
+    "tailnetIPv4": "[REDACTED_IP]"
+  },
+  "discovery": {
+    "timeoutMs": 1200,
+    "count": 0,
+    "beacons": []
+  },
+  "targets": [
+    {
+      "id": "explicit",
+      "kind": "explicit",
+      "url": "ws://[REDACTED_IP]:28789",
+      "active": true,
+      "tunnel": null,
+      "connect": {
+        "ok": true,
+        "latencyMs": 38,
+        "error": null,
+        "close": null
+      },
+      "self": {
+        "host": "734ffe00cd36",
+        "ip": "[REDACTED_IP]",
+        "version": "unknown",
+        "platform": "linux 5.15.0-168-generic"
+      },
+      "config": {
+        "path": "/home/node/.clawdbot/moltbot.json",
+        "exists": false,
+        "valid": true,
+        "issues": [],
+        "legacyIssues": [],
+        "gateway": {
+          "mode": null,
+          "bind": null,
+          "port": null,
+          "controlUiEnabled": null,
+          "controlUiBasePath": null,
+          "authMode": null,
+          "authTokenConfigured": false,
+          "authPasswordConfigured": false,
+          "remoteUrl": null,
+          "remoteTokenConfigured": false,
+          "remotePasswordConfigured": false,
+          "tailscaleMode": null
+        },
+        "discovery": {
+          "wideAreaEnabled": null
+        }
+      },
+      "health": {
+        "ok": true,
+        "ts": 1770813649466,
+        "durationMs": 0,
+        "channels": {},
+        "channelOrder": [],
+        "channelLabels": {},
+        "heartbeatSeconds": 1800,
+        "defaultAgentId": "main",
+        "agents": [
+          {
+            "agentId": "main",
+            "isDefault": true,
+            "heartbeat": {
+              "enabled": true,
+              "every": "30m",
+              "everyMs": 1800000,
+              "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+              "target": "last",
+              "ackMaxChars": 300
+            },
+            "sessions": {
+              "path": "/home/node/.clawdbot/agents/main/sessions/sessions.json",
+              "count": 0,
+              "recent": []
+            }
+          }
+        ],
+        "sessions": {
+          "path": "/home/node/.clawdbot/agents/main/sessions/sessions.json",
+          "count": 0,
+          "recent": []
+        }
+      },
+      "summary": {
+        "heartbeat": {
+          "defaultAgentId": "main",
+          "agents": [
+            {
+              "agentId": "main",
+              "enabled": true,
+              "every": "30m",
+              "everyMs": 1800000
+            }
+          ]
+        },
+        "channelSummary": [],
+        "queuedSystemEvents": [],
+        "sessions": {
+          "paths": [
+            "/home/node/.clawdbot/agents/main/sessions/sessions.json"
+          ],
+          "count": 0,
+          "defaults": {
+            "model": "claude-opus-4-5",
+            "contextTokens": 200000
+          },
+          "recent": [],
+          "byAgent": [
+            {
+              "agentId": "main",
+              "path": "/home/node/.clawdbot/agents/main/sessions/sessions.json",
+              "count": 0,
+              "recent": []
+            }
+          ]
+        }
+      },
+      "presence": [
+        {
+          "host": "734ffe00cd36",
+          "ip": "[REDACTED_IP]",
+          "version": "unknown",
+          "platform": "linux 5.15.0-168-generic",
+          "deviceFamily": "Linux",
+          "modelIdentifier": "x64",
+          "mode": "gateway",
+          "reason": "self",
+          "text": "Gateway: 734ffe00cd36 ([REDACTED_IP]) · app unknown · mode gateway · reason self",
+          "ts": 1770813649469
+        },
+        {
+          "host": "cli",
+          "ip": "[REDACTED_IP]",
+          "version": "dev",
+          "platform": "linux",
+          "mode": "probe",
+          "deviceId": "[REDACTED_HEX64]",
+          "roles": [
+            "operator"
+          ],
+          "scopes": [
+            "operator.admin"
+          ],
+          "instanceId": "[REDACTED_HEX64]",
+          "reason": "connect",
+          "ts": 1770813649465,
+          "text": "Node: cli · mode probe"
+        }
+      ]
+    },
+    {
+      "id": "localLoopback",
+      "kind": "localLoopback",
+      "url": "ws://[REDACTED_IP]:18789",
+      "active": false,
+      "tunnel": null,
+      "connect": {
+        "ok": false,
+        "latencyMs": null,
+        "error": "connect failed: connect ECONNREFUSED [REDACTED_IP]:18789",
+        "close": {
+          "code": 1006,
+          "reason": ""
+        }
+      },
+      "self": null,
+      "config": null,
+      "health": null,
+      "summary": null,
+      "presence": null
+    }
+  ]
+}

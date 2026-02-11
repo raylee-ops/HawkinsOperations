@@ -1,0 +1,64 @@
+Client: Docker Engine - Community
+ Version:    29.2.1
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.31.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.0.2
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 1
+  Running: 1
+  Paused: 0
+  Stopped: 0
+ Images: 3
+ Server Version: 29.2.1
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /run/cdi
+ Discovered Devices:
+  cdi: nvidia.com/gpu=0
+  cdi: nvidia.com/gpu=GPU-83151d83-271d-6121-3731-011825ce81a9
+  cdi: nvidia.com/gpu=all
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: [REDACTED_HEX32]3fad8f75
+ runc version: v1.3.4-0-gd6d73eb8
+ init version: de40ad0
+ Security Options:
+  apparmor
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 5.15.0-168-generic
+ Operating System: Ubuntu 24.04.4 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 62.77GiB
+ Name: agent
+ ID: fefce03d-acfa-4c3a-aa2e-ddaef2bb9e88
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  ::1/128
+  [REDACTED_IP]/8
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+

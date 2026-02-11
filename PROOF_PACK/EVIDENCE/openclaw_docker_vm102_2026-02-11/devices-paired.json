@@ -1,0 +1,62 @@
+{
+  "[REDACTED_HEX64]": {
+    "deviceId": "[REDACTED_HEX64]",
+    "publicKey": "1hVuXvlClnm19zGY9cWdaqaFBl1hzFL61YVy5zWyye4",
+    "platform": "linux",
+    "clientId": "cli",
+    "clientMode": "probe",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "[REDACTED_HEX32]",
+        "role": "operator",
+        "scopes": [
+          "operator.admin"
+        ],
+        "createdAtMs": 1770801395356,
+        "lastUsedAtMs": 1770801901575
+      }
+    },
+    "createdAtMs": 1770801395356,
+    "approvedAtMs": 1770801395356
+  },
+  "[REDACTED_HEX64]": {
+    "deviceId": "[REDACTED_HEX64]",
+    "publicKey": "KZm4oZ3d0t7eyC-j8Jw0TSLE4Ohr646ZGOM-7LEjBXc",
+    "platform": "linux",
+    "clientId": "cli",
+    "clientMode": "cli",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "remoteIp": "[REDACTED_IP]",
+    "tokens": {
+      "operator": {
+        "token": "[REDACTED_HEX32]",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1770812905724,
+        "rotatedAtMs": 1770813187639,
+        "lastUsedAtMs": 1770813654589
+      }
+    },
+    "createdAtMs": 1770812905724,
+    "approvedAtMs": 1770813187639
+  }
+}

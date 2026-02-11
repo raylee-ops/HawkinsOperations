@@ -1,0 +1,2 @@
+NAMES             IMAGE                    STATUS             PORTS
+moltbot-gateway   moltbot/moltbot:latest   Up About an hour   [REDACTED_IP]:28789->18789/tcp, [::]:28789->18789/tcp, [REDACTED_IP]:28790->18790/tcp, [::]:28790->18790/tcp
