@@ -6,7 +6,7 @@
 # Kept for reference only - DO NOT USE in production workflows.
 # ============================================================================
 
-# tools/import/import-local-soc-content.ps1
+# tools/migration-tools/legacy/import-local-soc-content.ps1
 [CmdletBinding()]
 param(
   [string]$SourceRoot = "C:\2026\OPS\GITHUB\hawkinsops-soc-content",

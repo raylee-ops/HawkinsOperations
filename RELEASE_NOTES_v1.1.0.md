@@ -27,7 +27,7 @@ This release transforms the HawkinsOps repository into a recruiter-grade, profes
 
 ### Verification & Validation
 - ✅ GitHub Actions CI/CD pipeline auto-verifies counts on every commit
-- ✅ PowerShell verification script (`_verify_counts.ps1`)
+- ✅ PowerShell verification script (`scripts/verify/verify-counts.ps1`)
 - ✅ Auto-generated verification report ([PROOF_PACK/VERIFIED_COUNTS.md](PROOF_PACK/VERIFIED_COUNTS.md))
 - ✅ Reproducible artifact counts (no hard-coded claims)
 
@@ -66,7 +66,7 @@ This release transforms the HawkinsOps repository into a recruiter-grade, profes
 ### For Technical Reviewers
 ```powershell
 # Verify counts
-.\_verify_counts.ps1
+pwsh -NoProfile -File ".\scripts\verify\verify-counts.ps1"
 
 # Build Wazuh bundle
 .\scripts\build-wazuh-bundle.ps1
@@ -87,7 +87,7 @@ sudo systemctl restart wazuh-manager
 ### Repository Structure
 - ✅ Clean detection rules structure (`detection-rules/wazuh/rules/`)
 - ✅ Removed `_incoming/` clutter and duplicate legacy content
-- ✅ Organized config files in `tools/security-automation/configs/`
+- ✅ Organized mapping/config files in `detection-rules/mappings/security-automation/configs/`
 - ✅ Professional directory naming (no staging/import/quarantine vibes)
 
 ### CI/CD Pipeline

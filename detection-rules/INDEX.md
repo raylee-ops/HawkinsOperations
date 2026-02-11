@@ -1,28 +1,21 @@
 # Detection Rules Index
 
-This repo is the canonical SOC content library. Counts should be taken from the verification commands:
+Primary detection content is grouped by platform, with supporting mapping artifacts for implementation contexts.
 
-- `docs/VERIFY_COMMANDS_POWERSHELL.md`
+## Layout
 
----
+- `detection-rules/sigma/` Sigma YAML rules by ATT&CK tactic
+- `detection-rules/splunk/` SPL query packs
+- `detection-rules/wazuh/` Wazuh XML modules (`rules/`)
+- `detection-rules/mappings/` platform and automation mapping artifacts
 
-## What's in this repo right now (repo-verified)
+## Verification
 
-### Sigma (YAML)
-- Folder: `detection-rules/sigma/`
-- Organized by MITRE ATT&CK tactics (credential-access, defense-evasion, discovery, execution, etc.)
-- Format: Standard Sigma YAML detection rules
-- Count verification: use `docs/VERIFY_COMMANDS_POWERSHELL.md`
+Use repository scripts:
 
-### Splunk (SPL)
-- Folder: `detection-rules/splunk/`
-- Organized by MITRE ATT&CK tactics with SPL search queries
-- Format: Splunk Search Processing Language (.spl files)
-- Count verification: use `docs/VERIFY_COMMANDS_POWERSHELL.md`
+```powershell
+pwsh -NoProfile -File ".\scripts\verify\verify-counts.ps1"
+pwsh -NoProfile -File ".\scripts\verify\generate-verified-counts.ps1" -OutFile ".\PROOF_PACK\VERIFIED_COUNTS.md"
+```
 
-### Wazuh (XML)
-- Stored as individual XML modules here:
-  - `detection-rules/wazuh/rules/*.xml`
-- **Important:** Some XML files contain multiple `<rule id="...">` blocks.
-  - Quote **rule block count**, not just file count.
-- Count verification: use `docs/VERIFY_COMMANDS_POWERSHELL.md`
+`PROOF_PACK/VERIFIED_COUNTS.md` is generated from live file counts.
