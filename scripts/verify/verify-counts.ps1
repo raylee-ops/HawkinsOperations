@@ -1,10 +1,12 @@
-# Verification script - counts all detection content
-$sigma = (Get-ChildItem -Recurse -Filter *.yml -Path ".\detection-rules\sigma" -ErrorAction SilentlyContinue).Count
-$splunk = (Get-ChildItem -Recurse -Filter *.spl -Path ".\detection-rules\splunk" -ErrorAction SilentlyContinue).Count
-$wazuhXmlFiles = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\rules" -ErrorAction SilentlyContinue).Count
-$wazuhRuleBlocks = (Get-ChildItem -Recurse -Filter *.xml -Path ".\detection-rules\wazuh\rules" -ErrorAction SilentlyContinue |
+# Verification script - counts detection and IR content from repo root.
+$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+
+$sigma = (Get-ChildItem -Recurse -Filter *.yml -Path (Join-Path $repoRoot "detection-rules\sigma") -ErrorAction SilentlyContinue).Count
+$splunk = (Get-ChildItem -Recurse -Filter *.spl -Path (Join-Path $repoRoot "detection-rules\splunk") -ErrorAction SilentlyContinue).Count
+$wazuhXmlFiles = (Get-ChildItem -Recurse -Filter *.xml -Path (Join-Path $repoRoot "detection-rules\wazuh\rules") -ErrorAction SilentlyContinue).Count
+$wazuhRuleBlocks = (Get-ChildItem -Recurse -Filter *.xml -Path (Join-Path $repoRoot "detection-rules\wazuh\rules") -ErrorAction SilentlyContinue |
     Select-String -Pattern "<rule id=" | Measure-Object).Count
-$playbooks = (Get-ChildItem -Recurse -Filter *.md -Path ".\incident-response\playbooks" -ErrorAction SilentlyContinue).Count
+$playbooks = (Get-ChildItem -Recurse -Filter *.md -Path (Join-Path $repoRoot "incident-response\playbooks") -ErrorAction SilentlyContinue).Count
 
 Write-Host "======================================"
 Write-Host "HawkinsOps Detection Content Counts"
