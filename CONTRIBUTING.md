@@ -52,7 +52,7 @@ We welcome the following contributions:
 
 ### Read These First
 
-1. [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Expected behavior
+1. [.github/CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md) - Expected behavior
 2. [SECURITY.md](SECURITY.md) - Reporting security issues
 3. [PROOF_PACK/EVIDENCE_CHECKLIST.md](PROOF_PACK/EVIDENCE_CHECKLIST.md) - Sanitization requirements
 
@@ -245,7 +245,7 @@ index=windows EventCode=1
 
 **Location:** `incident-response/playbooks/`
 
-**Format:** Follow the template in `incident-response/IR-Template.md`
+**Format:** Follow the template in `incident-response/templates/IR-Template.md`
 
 **Required Sections:**
 1. **DETECTION** - Alert trigger and indicators
@@ -334,9 +334,10 @@ When you create a PR, fill out the template:
 - ❌ Does NOT auto-commit (PR stays clean)
 
 **On Main Branch Push:**
-- ✅ Same as above, plus:
-- ✅ Auto-updates `PROOF_PACK/VERIFIED_COUNTS.md`
-- ✅ Commits updated counts back to `main`
+- ✅ Same verification steps as pull requests
+- ✅ Generates `PROOF_PACK/VERIFIED_COUNTS.md` in workflow context
+- ✅ Uploads verification and bundle artifacts
+- ❌ Does NOT commit or push generated files back to the repository
 
 ### Skipping CI
 
