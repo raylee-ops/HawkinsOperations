@@ -3,6 +3,9 @@
 **Release Date:** January 26, 2026
 **Tag:** v1.1.0-recruiter-ready
 
+> Historical snapshot: this document describes tag `v1.1.0-recruiter-ready` on January 26, 2026.
+> For current repository counts, see `PROOF_PACK/VERIFIED_COUNTS.md`.
+
 ---
 
 ## 🎯 Overview

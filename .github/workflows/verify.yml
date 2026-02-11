@@ -9,7 +9,7 @@ jobs:
   verify:
     runs-on: windows-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - name: Checkout repository
@@ -43,18 +43,3 @@ jobs:
           name: wazuh-rules-bundle
           path: dist/wazuh/local_rules.xml
           retention-days: 30
-
-      - name: Commit updated counts on main pushes
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        shell: pwsh
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add PROOF_PACK/VERIFIED_COUNTS.md
-          git diff --staged --quiet
-          if ($LASTEXITCODE -eq 0) {
-            Write-Host "No VERIFIED_COUNTS changes detected."
-            exit 0
-          }
-          git commit -m "Auto-update: verified detection counts [skip ci]"
-          git push

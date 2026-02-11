@@ -1,10 +1,14 @@
 # Threat Hunting Index
 
-This folder will contain threat hunting queries and procedures.
+Threat hunting content is organized into a matrix plus platform-specific query sets.
 
-## Current status
-- ✅ Index present (this file)
-- ⏳ Queries in progress (to be added)
+## Current Files
+
+- [00-Hunt-Matrix.md](./00-Hunt-Matrix.md)
+- [linux/linux-threat-hunts.md](./linux/linux-threat-hunts.md)
+- [windows/credential-access-hunts.md](./windows/credential-access-hunts.md)
+- [windows/lateral-movement-hunts.md](./windows/lateral-movement-hunts.md)
+- [windows/persistence-execution-hunts.md](./windows/persistence-execution-hunts.md)
 
 ## How to contribute
 Open a Feature Request issue describing:

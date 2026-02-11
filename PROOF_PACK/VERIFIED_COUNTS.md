@@ -1,8 +1,6 @@
 # Verified Detection Counts
 
-**Last Verified:** 2026-02-11 09:24:51 UTC
-**Commit:** $commit
-**Branch:** $branch
+This file is generated from live repository file counts.
 
 ---
 
@@ -18,23 +16,19 @@
 
 | Type | Count | Location |
 |------|-------|----------|
-| **IR Playbooks** (Markdown) | **10** playbooks | incident-response/playbooks/ |
+| **IR Playbooks** (IR-*.md) | **10** playbooks | incident-response/playbooks/ |
 
 ---
 
 ## Verification Commands
 
-`powershell
-pwsh -NoProfile -File ".\scripts\verify\verify-counts.ps1"
-pwsh -NoProfile -File ".\scripts\verify\generate-verified-counts.ps1" -OutFile ".\PROOF_PACK\VERIFIED_COUNTS.md"
-`
+    pwsh -NoProfile -File ".\scripts\verify\verify-counts.ps1"
+    pwsh -NoProfile -File ".\scripts\verify\generate-verified-counts.ps1" -OutFile ".\PROOF_PACK\VERIFIED_COUNTS.md"
 
 ## Build Artifact Command
 
-`powershell
-pwsh -NoProfile -File ".\scripts\build-wazuh-bundle.ps1"
-`
+    pwsh -NoProfile -File ".\scripts\build-wazuh-bundle.ps1"
 
 ---
 
-_Auto-generated from repository file counts._
+_Regenerate this file after detection or playbook content changes._

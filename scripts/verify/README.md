@@ -3,6 +3,11 @@
 - `verify-counts.ps1` prints current detection/playbook counts.
 - `generate-verified-counts.ps1` updates `PROOF_PACK/VERIFIED_COUNTS.md` from live repository counts.
 
+Count rules:
+
+- Sigma includes both `*.yml` and `*.yaml` under `detection-rules/sigma/`.
+- IR playbooks include only `IR-*.md` under `incident-response/playbooks/`.
+
 Run from repository root:
 
 ```powershell

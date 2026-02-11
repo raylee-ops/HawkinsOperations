@@ -10,7 +10,7 @@ Security operations portfolio repository focused on verifiable detection enginee
 - 5-minute reviewer path: [START_HERE.md](START_HERE.md)
 - Proof index: [PROOF_PACK/PROOF_INDEX.md](PROOF_PACK/PROOF_INDEX.md)
 - Detection catalog: [detection-rules/INDEX.md](detection-rules/INDEX.md)
-- Incident response index: [incident-response/00-Playbook-Index.md](incident-response/00-Playbook-Index.md)
+- Incident response index: [incident-response/INDEX.md](incident-response/INDEX.md)
 - Migration project entrypoint: [projects/migration-rh/README.md](projects/migration-rh/README.md)
 
 ## Repository Map

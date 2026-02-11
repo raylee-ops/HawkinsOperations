@@ -12,30 +12,19 @@ $wazuhPath = Join-Path $repoRoot "detection-rules\wazuh\rules"
 $playbookPath = Join-Path $repoRoot "incident-response\playbooks"
 $outPath = if ([System.IO.Path]::IsPathRooted($OutFile)) { $OutFile } else { Join-Path $repoRoot $OutFile }
 
-$sigma = (Get-ChildItem -Recurse -Filter *.yml -Path $sigmaPath -ErrorAction SilentlyContinue).Count
+$sigmaYml = (Get-ChildItem -Recurse -Filter *.yml -Path $sigmaPath -ErrorAction SilentlyContinue).Count
+$sigmaYaml = (Get-ChildItem -Recurse -Filter *.yaml -Path $sigmaPath -ErrorAction SilentlyContinue).Count
+$sigma = $sigmaYml + $sigmaYaml
 $splunk = (Get-ChildItem -Recurse -Filter *.spl -Path $splunkPath -ErrorAction SilentlyContinue).Count
 $wazuhXmlFiles = (Get-ChildItem -Recurse -Filter *.xml -Path $wazuhPath -ErrorAction SilentlyContinue).Count
 $wazuhRuleBlocks = (Get-ChildItem -Recurse -Filter *.xml -Path $wazuhPath -ErrorAction SilentlyContinue |
     Select-String -Pattern "<rule id=" | Measure-Object).Count
-$playbooks = (Get-ChildItem -Recurse -Filter *.md -Path $playbookPath -ErrorAction SilentlyContinue).Count
-
-$timestamp = (Get-Date).ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss UTC")
-$commit = "UNKNOWN"
-$branch = "UNKNOWN"
-
-try {
-    $commit = (git -C $repoRoot rev-parse --short HEAD).Trim()
-    $branch = (git -C $repoRoot rev-parse --abbrev-ref HEAD).Trim()
-} catch {
-    # Running outside git-aware context is allowed for local previews.
-}
+$playbooks = (Get-ChildItem -Recurse -Filter IR-*.md -Path $playbookPath -ErrorAction SilentlyContinue).Count
 
 $content = @"
 # Verified Detection Counts
 
-**Last Verified:** $timestamp
-**Commit:** `$commit`
-**Branch:** `$branch`
+This file is generated from live repository file counts.
 
 ---
 
@@ -43,34 +32,30 @@ $content = @"
 
 | Platform | Count | Location |
 |----------|-------|----------|
-| **Sigma** (YAML) | **$sigma** rules | `detection-rules/sigma/` |
-| **Splunk** (SPL) | **$splunk** queries | `detection-rules/splunk/` |
-| **Wazuh** (XML) | **$wazuhXmlFiles** files, **$wazuhRuleBlocks** rule blocks | `detection-rules/wazuh/rules/` |
+| **Sigma** (YAML) | **$sigma** rules | detection-rules/sigma/ |
+| **Splunk** (SPL) | **$splunk** queries | detection-rules/splunk/ |
+| **Wazuh** (XML) | **$wazuhXmlFiles** files, **$wazuhRuleBlocks** rule blocks | detection-rules/wazuh/rules/ |
 
 ## Incident Response
 
 | Type | Count | Location |
 |------|-------|----------|
-| **IR Playbooks** (Markdown) | **$playbooks** playbooks | `incident-response/playbooks/` |
+| **IR Playbooks** (IR-*.md) | **$playbooks** playbooks | incident-response/playbooks/ |
 
 ---
 
 ## Verification Commands
 
-```powershell
-pwsh -NoProfile -File ".\scripts\verify\verify-counts.ps1"
-pwsh -NoProfile -File ".\scripts\verify\generate-verified-counts.ps1" -OutFile ".\PROOF_PACK\VERIFIED_COUNTS.md"
-```
+    pwsh -NoProfile -File ".\scripts\verify\verify-counts.ps1"
+    pwsh -NoProfile -File ".\scripts\verify\generate-verified-counts.ps1" -OutFile ".\PROOF_PACK\VERIFIED_COUNTS.md"
 
 ## Build Artifact Command
 
-```powershell
-pwsh -NoProfile -File ".\scripts\build-wazuh-bundle.ps1"
-```
+    pwsh -NoProfile -File ".\scripts\build-wazuh-bundle.ps1"
 
 ---
 
-_Auto-generated from repository file counts._
+_Regenerate this file after detection or playbook content changes._
 "@
 
 $outDir = Split-Path -Parent $outPath

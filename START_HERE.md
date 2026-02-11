@@ -7,7 +7,7 @@ Use this file for a fast technical validation path.
 1. Open [PROOF_PACK/PROOF_INDEX.md](PROOF_PACK/PROOF_INDEX.md) to see the evidence layout.
 2. Open [PROOF_PACK/VERIFIED_COUNTS.md](PROOF_PACK/VERIFIED_COUNTS.md) for current rule/playbook counts.
 3. Open [detection-rules/INDEX.md](detection-rules/INDEX.md) to inspect detection coverage and platform layout.
-4. Open [incident-response/00-Playbook-Index.md](incident-response/00-Playbook-Index.md) to review the IR catalog.
+4. Open [incident-response/INDEX.md](incident-response/INDEX.md) to review the IR catalog.
 5. Open [projects/migration-rh/README.md](projects/migration-rh/README.md) for migration project proof linkage.
 
 ## Reproduce Locally
