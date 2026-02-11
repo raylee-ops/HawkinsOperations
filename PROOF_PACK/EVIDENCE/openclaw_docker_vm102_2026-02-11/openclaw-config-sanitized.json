@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.1.30",
+    "lastTouchedAt": "2026-02-02T05:58:52.583Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-02T05:32:31.313Z",
+    "lastRunVersion": "2026.1.30",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "checkOnStart": true
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/qwen2.5:7b-instruct"
+      },
+      "models": {
+        "ollama/qwen2.5:7b-instruct": {}
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "gateway": {
+    "mode": "remote",
+    "auth": {
+      "mode": "token",
+      "token": "[REDACTED_HEX64]",
+      "allowTailscale": false
+    },
+    "remote": {
+      "url": "ws://[REDACTED_IP]:28789",
+      "token": "[REDACTED_HEX64]"
+    }
+  }
+}

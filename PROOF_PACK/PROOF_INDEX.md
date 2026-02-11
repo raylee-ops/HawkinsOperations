@@ -17,3 +17,7 @@ Curated reviewer lane for this repository.
 3. Validate counts in `PROOF_PACK/VERIFIED_COUNTS.md`
 4. Inspect sample artifacts in `PROOF_PACK/SAMPLES/`
 5. Review migration project entrypoint at `projects/migration-rh/README.md`
+
+## Additional Evidence Sets
+
+- `PROOF_PACK/EVIDENCE/openclaw_docker_vm102_2026-02-11/`

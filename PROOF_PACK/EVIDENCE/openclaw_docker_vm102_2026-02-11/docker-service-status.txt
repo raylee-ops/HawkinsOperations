@@ -1,0 +1,26 @@
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-02-11 11:40:17 UTC; 1h 0min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 52052 (dockerd)
+      Tasks: 48
+     Memory: 34.0M ()
+        CPU: 2.712s
+     CGroup: /system.slice/docker.service
+             ├─52052 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─52414 /usr/bin/docker-proxy -proto tcp -host-ip [REDACTED_IP] -host-port 28789 -container-ip [REDACTED_IP] -container-port 18789 -use-listen-fd
+             ├─52421 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 28789 -container-ip [REDACTED_IP] -container-port 18789 -use-listen-fd
+             ├─52438 /usr/bin/docker-proxy -proto tcp -host-ip [REDACTED_IP] -host-port 28790 -container-ip [REDACTED_IP] -container-port 18790 -use-listen-fd
+             └─52444 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 28790 -container-ip [REDACTED_IP] -container-port 18790 -use-listen-fd
+
+Feb 11 11:40:15 agent dockerd[52052]: time="2026-02-11T11:40:15.669442280Z" level=info msg="Deleting nftables IPv6 rules" error="exit status 1"
+Feb 11 11:40:16 agent dockerd[52052]: time="2026-02-11T11:40:16.645268758Z" level=warning msg="error locating sandbox id [REDACTED_HEX64]: sandbox [REDACTED_HEX64] not found"
+Feb 11 11:40:16 agent dockerd[52052]: time="2026-02-11T11:40:16.934025730Z" level=info msg="sbJoin: gwep4 ''->'a6e55d92a371', gwep6 ''->''" eid=a6e55d92a371 ep=moltbot-gateway net=moltbot_default nid=bd82c795022c
+Feb 11 11:40:17 agent dockerd[52052]: time="2026-02-11T11:40:17.001513715Z" level=info msg="Loading containers: done."
+Feb 11 11:40:17 agent dockerd[52052]: time="2026-02-11T11:40:17.009883319Z" level=info msg="Docker daemon" commit=6bc6209 containerd-snapshotter=true storage-driver=overlayfs version=29.2.1
+Feb 11 11:40:17 agent dockerd[52052]: time="2026-02-11T11:40:17.010017201Z" level=info msg="Initializing buildkit"
+Feb 11 11:40:17 agent dockerd[52052]: time="2026-02-11T11:40:17.015310480Z" level=info msg="Completed buildkit initialization"
+Feb 11 11:40:17 agent dockerd[52052]: time="2026-02-11T11:40:17.025407401Z" level=info msg="Daemon has completed initialization"
+Feb 11 11:40:17 agent dockerd[52052]: time="2026-02-11T11:40:17.025490014Z" level=info msg="API listen on /run/docker.sock"
+Feb 11 11:40:17 agent systemd[1]: Started docker.service - Docker Application Container Engine.

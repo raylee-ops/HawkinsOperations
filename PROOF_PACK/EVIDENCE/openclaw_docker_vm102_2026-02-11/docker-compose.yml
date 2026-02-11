@@ -1,0 +1,19 @@
+services:
+  moltbot:
+    image: moltbot/moltbot:latest
+    container_name: moltbot-gateway
+    restart: unless-stopped
+    gpus: all
+    env_file:
+      - .env
+    environment:
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    ports:
+      - "28789:18789"
+      - "28790:18790"
+    volumes:
+      - /srv/moltbot/config:/home/node/.clawdbot
+      - /srv/moltbot/data:/home/node/clawd
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

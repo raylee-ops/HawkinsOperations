@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moltbot Control</title>
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <script type="module" crossorigin src="./assets/index-Bb7zaWmQ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BAFzd9IE.css">
+  <script>window.__CLAWDBOT_CONTROL_UI_BASE_PATH__="";window.__CLAWDBOT_ASSISTANT_NAME__="Assistant";window.__CLAWDBOT_ASSISTANT_AVATAR__="A";</script></head>
+  <body>
+    <moltbot-app></moltbot-app>
+  </body>
+</html>

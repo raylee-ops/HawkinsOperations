@@ -1,0 +1,14 @@
+○ openclaw-gateway.service - OpenClaw Gateway (v2026.1.30)
+     Loaded: loaded (/home/[REDACTED_USER]/.config/systemd/user/openclaw-gateway.service; disabled; preset: enabled)
+     Active: inactive (dead)
+
+Feb 11 09:19:16 agent node[1205]: 2026-02-11T09:19:16.373Z [gateway] listening on ws://[REDACTED_IP]:18789 (PID 1205)
+Feb 11 09:19:16 agent node[1205]: 2026-02-11T09:19:16.375Z [gateway] listening on ws://[::1]:18789
+Feb 11 09:19:16 agent node[1205]: 2026-02-11T09:19:16.377Z [gateway] log file: /tmp/openclaw/openclaw-2026-02-11.log
+Feb 11 09:19:16 agent node[1205]: 2026-02-11T09:19:16.380Z [browser/service] Browser control service ready (profiles=2)
+Feb 11 11:14:51 agent systemd[1112]: Stopping openclaw-gateway.service - OpenClaw Gateway (v2026.1.30)...
+Feb 11 11:14:51 agent node[1205]: 2026-02-11T11:14:51.223Z [gateway] signal SIGTERM received
+Feb 11 11:14:51 agent node[1205]: 2026-02-11T11:14:51.226Z [gateway] received SIGTERM; shutting down
+Feb 11 11:14:51 agent node[1205]: 2026-02-11T11:14:51.232Z [gmail-watcher] gmail watcher stopped
+Feb 11 11:14:51 agent systemd[1112]: Stopped openclaw-gateway.service - OpenClaw Gateway (v2026.1.30).
+Feb 11 11:14:51 agent systemd[1112]: openclaw-gateway.service: Consumed 1min 6.408s CPU time.
