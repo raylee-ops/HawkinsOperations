@@ -1,0 +1,62 @@
+<!--
+  Wazuh Rule: Rootkit Detection Alert
+  ID: 100053
+  Level: 13 (Critical)
+  Description: Rootkit detected by rootcheck module
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="rootcheck,">
+  <rule id="100053" level="13">
+    <if_sid>510</if_sid>
+    <match>Rootkit|Trojan|Backdoor</match>
+    <description>Rootkit or backdoor detected on system</description>
+    <mitre>
+      <id>T1014</id>
+    </mitre>
+    <group>rootkit,malware,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Detects rootkits, trojans, and backdoors identified by Wazuh rootcheck module.
+  Includes signature-based detection and behavioral anomalies.
+
+Fields Used:
+  - file: Suspected malicious file
+  - detection_method: How rootkit was identified
+  - description: Details of rootkit signature match
+
+False Positives:
+  - Some security tools may trigger false positives
+  - Virtualization software kernel modules
+  - Legitimate debugging tools
+  - Custom kernel modules
+
+Severity: Critical (13)
+
+MITRE ATT&CK: T1014 - Rootkit
+
+Log Sources:
+  - Wazuh Rootcheck module
+  - Rootkit signature databases
+  - System file anomaly detection
+  - Hidden process/file detection
+
+Test Examples:
+  - Detection of known rootkit signatures (e.g., Diamorphine, Reptile)
+  - Hidden processes or files
+  - Modified system binaries
+  - Kernel module rootkits
+
+Tuning Notes:
+  - Keep rootcheck database updated
+  - Schedule regular rootcheck scans
+  - Immediately isolate affected systems
+  - Perform forensic analysis before remediation
+  - Correlate with other compromise indicators
+  - Verify with secondary rootkit detection tools
+  - Implement kernel module signing enforcement
+-->

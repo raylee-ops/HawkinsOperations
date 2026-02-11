@@ -1,0 +1,45 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate verified counts markdown
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File ".\scripts\verify\generate-verified-counts.ps1" -OutFile ".\PROOF_PACK\VERIFIED_COUNTS.md"
+          pwsh -NoProfile -File ".\scripts\verify\verify-counts.ps1"
+
+      - name: Build Wazuh bundle
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File ".\scripts\build-wazuh-bundle.ps1"
+          if (-not (Test-Path -LiteralPath ".\dist\wazuh\local_rules.xml")) {
+            throw "dist/wazuh/local_rules.xml was not generated"
+          }
+          Get-Item -LiteralPath ".\dist\wazuh\local_rules.xml" | Select-Object Name, Length
+
+      - name: Upload verified counts artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-counts
+          path: PROOF_PACK/VERIFIED_COUNTS.md
+          retention-days: 30
+
+      - name: Upload wazuh bundle artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: wazuh-rules-bundle
+          path: dist/wazuh/local_rules.xml
+          retention-days: 30

@@ -1,0 +1,64 @@
+<!--
+  Wazuh Rule: Potential Ransomware File Encryption Activity
+  ID: 100062
+  Level: 13 (Critical)
+  Description: Detects rapid file modification patterns consistent with ransomware encryption
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="ransomware,malware,">
+  <rule id="100062" level="13" frequency="50" timeframe="120">
+    <if_matched_sid>554</if_matched_sid>
+    <match>\.encrypted|\.locked|\.crypto|\.crypt|\.enc|README|DECRYPT|RESTORE</match>
+    <description>Ransomware activity detected - Mass file encryption in progress</description>
+    <mitre>
+      <id>T1486</id>
+    </mitre>
+    <group>ransomware,file_encryption,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Detects ransomware by identifying 50+ file modifications within 2 minutes with common
+  ransomware file extensions or README/ransom note creation patterns.
+
+Fields Used:
+  - file_path: Files being encrypted/modified
+  - file_extension: New file extensions
+  - process: Process performing encryption
+  - user: User context of encryption process
+
+False Positives:
+  - Legitimate bulk file operations
+  - Backup and archival processes
+  - Mass file encryption tools (legitimate crypto)
+  - Data migration activities
+
+Severity: Critical (13)
+
+MITRE ATT&CK: T1486 - Data Encrypted for Impact
+
+Log Sources:
+  - Wazuh FIM (File Integrity Monitoring)
+  - Sysmon Event ID 11 (File Created)
+  - Windows Security Event 4663 (File Access)
+  - File system audit logs
+
+Test Examples:
+  - 100 files changed to .encrypted extension within 2 minutes
+  - Creation of DECRYPT_INSTRUCTIONS.txt files
+  - Mass modification of documents to .locked
+  - README_TO_DECRYPT files appearing in multiple directories
+
+Tuning Notes:
+  - Immediately isolate affected systems from network
+  - Kill suspicious processes immediately
+  - Enable Volume Shadow Copy protection
+  - Implement behavioral ransomware detection
+  - Monitor for unusual process file access patterns
+  - Deploy honeypot files to detect early encryption
+  - Maintain offline backups
+  - Consider endpoint detection and response (EDR) solutions
+-->

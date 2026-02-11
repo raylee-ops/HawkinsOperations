@@ -1,0 +1,71 @@
+<!--
+  Wazuh Rule: Suspicious Scheduled Task Creation via XML
+  ID: 100068
+  Level: 9 (Medium-High)
+  Description: Detects scheduled task creation using XML import method
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="windows,scheduled_task,">
+  <rule id="100068" level="9">
+    <if_sid>60000</if_sid>
+    <field name="win.eventdata.commandLine">/Create /XML|schtasks.*\/xml</field>
+    <description>Scheduled task created via XML import - Review task contents</description>
+    <mitre>
+      <id>T1053.005</id>
+    </mitre>
+    <group>scheduled_task,persistence,</group>
+  </rule>
+
+  <rule id="100068001" level="11">
+    <if_sid>100068</if_sid>
+    <field name="win.eventdata.commandLine">\\Temp\\|\\AppData\\|\\Public\\</field>
+    <description>Suspicious scheduled task created via XML from unusual location</description>
+    <mitre>
+      <id>T1053.005</id>
+    </mitre>
+    <group>scheduled_task,persistence,suspicious,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Monitors for schtasks.exe usage with /XML parameter which creates tasks from XML files.
+  Elevated severity when XML file is in suspicious location.
+
+Fields Used:
+  - win.eventdata.commandLine: Full command line
+  - win.eventdata.image: Process path (schtasks.exe)
+  - win.eventdata.user: User creating task
+  - win.eventdata.parentImage: Parent process
+
+False Positives:
+  - Legitimate administrative task creation
+  - Software deployment tools
+  - Configuration management systems
+  - IT automation scripts
+
+Severity: Medium-High (9), High (11 for suspicious paths)
+
+MITRE ATT&CK: T1053.005 - Scheduled Task/Job
+
+Log Sources:
+  - Sysmon Event ID 1 (Process Creation)
+  - Windows Security Event 4688
+  - Windows Task Scheduler Event 106
+
+Test Examples:
+  - schtasks /Create /XML C:\\Temp\\malicious.xml /TN "Backdoor"
+  - schtasks.exe /create /tn "Update" /xml %APPDATA%\\task.xml
+  - XML task with suspicious actions or triggers
+
+Tuning Notes:
+  - Inspect XML file contents for suspicious commands
+  - Whitelist authorized deployment tools
+  - Monitor for task creation followed by immediate execution
+  - Check task triggers (ONLOGON, ONSTART, repeated intervals)
+  - Validate task actions against known good patterns
+  - Alert on tasks running with SYSTEM privileges
+  - Review tasks with unusual time triggers
+-->

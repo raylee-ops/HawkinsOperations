@@ -1,0 +1,62 @@
+<!--
+  Wazuh Rule: Suspicious Process Creation via WMI
+  ID: 100071
+  Level: 10 (High)
+  Description: Detects process creation through WMI which may indicate malicious execution
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="windows,wmi,">
+  <rule id="100071" level="10">
+    <if_sid>60000</if_sid>
+    <field name="win.eventdata.parentImage">\\wmiprvse.exe$</field>
+    <field name="win.eventdata.image">\\cmd.exe$|\\powershell.exe$|\\wscript.exe$|\\cscript.exe$</field>
+    <description>Suspicious process spawned from WMI - Possible remote execution</description>
+    <mitre>
+      <id>T1047</id>
+    </mitre>
+    <group>wmi_execution,remote_execution,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Detects when WMI provider host (wmiprvse.exe) spawns suspicious child processes like
+  cmd.exe, powershell.exe, or scripting engines, indicating WMI-based command execution.
+
+Fields Used:
+  - win.eventdata.parentImage: Parent process (wmiprvse.exe)
+  - win.eventdata.image: Child process spawned
+  - win.eventdata.commandLine: Command line executed
+  - win.eventdata.user: User context of execution
+
+False Positives:
+  - Legitimate system administration via WMI
+  - Configuration management tools
+  - Monitoring and management agents
+  - Scheduled tasks using WMI
+
+Severity: High (10)
+
+MITRE ATT&CK: T1047 - Windows Management Instrumentation
+
+Log Sources:
+  - Sysmon Event ID 1 (Process Creation)
+  - Windows Security Event 4688
+  - WMI-Activity/Operational logs
+
+Test Examples:
+  - wmic process call create "cmd.exe /c malware.exe"
+  - wmiprvse.exe spawning powershell.exe with encoded command
+  - WMI process creation on remote host
+
+Tuning Notes:
+  - Whitelist authorized WMI usage by administrators
+  - Monitor for WMI from unusual source hosts
+  - Correlate with authentication events for remote WMI
+  - Alert on WMI usage outside business hours
+  - Track command lines for suspicious patterns
+  - Implement WMI filtering and hardening
+  - Monitor WMI event consumers for persistence
+-->

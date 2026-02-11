@@ -1,0 +1,64 @@
+<!--
+  Wazuh Rule: Suspicious Network Share Access
+  ID: 100073
+  Level: 8 (Medium)
+  Description: Detects access to administrative network shares from unusual sources
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="windows,network,shares,">
+  <rule id="100073" level="8" frequency="5" timeframe="300">
+    <if_sid>60000</if_sid>
+    <field name="win.system.eventID">^5140$</field>
+    <field name="win.eventdata.shareName">\\\\.*\\ADMIN\$|\\\\.*\\C\$|\\\\.*\\IPC\$</field>
+    <same_source_ip />
+    <description>Multiple administrative share access attempts - Possible lateral movement</description>
+    <mitre>
+      <id>T1021.002</id>
+    </mitre>
+    <group>share_access,lateral_movement,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Monitors Windows Event 5140 (Network share accessed) for access to administrative shares
+  (ADMIN$, C$, IPC$) with 5+ attempts from same source IP within 5 minutes.
+
+Fields Used:
+  - win.eventdata.shareName: Network share name
+  - win.eventdata.ipAddress: Source IP accessing share
+  - win.eventdata.subjectUserName: User account used
+  - win.eventdata.accessMask: Access permissions requested
+
+False Positives:
+  - Legitimate administrative access
+  - System management tools
+  - Backup software
+  - Monitoring agents
+
+Severity: Medium (8)
+
+MITRE ATT&CK: T1021.002 - Remote Services: SMB/Windows Admin Shares
+
+Log Sources:
+  - Windows Security Event 5140 (Network share accessed)
+  - Windows Security Event 5145 (Share access check)
+
+Test Examples:
+  - Access to \\\\DC01\\ADMIN$ from workstation
+  - Multiple C$ share access attempts
+  - IPC$ enumeration for share discovery
+  - Administrative share access during off-hours
+
+Tuning Notes:
+  - Whitelist authorized jump servers and admin workstations
+  - Alert on share access from non-IT user accounts
+  - Monitor for failed then successful access patterns
+  - Correlate with authentication events
+  - Track lateral movement chains across network
+  - Implement share access restrictions via GPO
+  - Disable unnecessary administrative shares
+  - Monitor for file access after share connection
+-->

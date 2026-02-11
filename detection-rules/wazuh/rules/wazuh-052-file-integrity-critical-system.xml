@@ -1,0 +1,62 @@
+<!--
+  Wazuh Rule: Critical System File Modification
+  ID: 100052
+  Level: 12 (Critical)
+  Description: Detects unauthorized modifications to critical system files
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="syscheck,">
+  <rule id="100052" level="12">
+    <if_sid>550</if_sid>
+    <match>/etc/passwd|/etc/shadow|/etc/sudoers|/boot/|C:\Windows\System32\</match>
+    <description>Critical system file modified - Possible system compromise</description>
+    <mitre>
+      <id>T1078</id>
+    </mitre>
+    <group>file_integrity,critical_files,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Monitors file integrity monitoring (FIM) events for changes to critical system files
+  including password files, boot configurations, and Windows system directories.
+
+Fields Used:
+  - file: Modified file path
+  - md5_after: New file hash
+  - md5_before: Previous file hash
+  - changed_attributes: What changed (size, permissions, content)
+
+False Positives:
+  - Authorized system updates and patches
+  - Package manager installations
+  - Legitimate system administration
+  - Configuration management tools (Ansible, Puppet, Chef)
+
+Severity: Critical (12)
+
+MITRE ATT&CK: T1078 - Valid Accounts
+
+Log Sources:
+  - Wazuh Syscheck module
+  - File integrity monitoring events
+  - Windows file system auditing
+  - Linux inotify/audit events
+
+Test Examples:
+  - Modification of /etc/passwd or /etc/shadow
+  - Changes to /etc/sudoers file
+  - Modifications in /boot/ directory
+  - Changes to Windows System32 files
+
+Tuning Notes:
+  - Configure FIM to monitor critical directories
+  - Whitelist known update processes and hash changes
+  - Implement change control correlation
+  - Alert security team immediately for unauthorized changes
+  - Maintain baseline hashes for critical files
+  - Schedule regular integrity verification scans
+-->

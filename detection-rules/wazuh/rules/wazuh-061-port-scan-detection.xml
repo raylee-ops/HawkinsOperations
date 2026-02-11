@@ -1,0 +1,63 @@
+<!--
+  Wazuh Rule: Port Scanning Activity Detected
+  ID: 100061
+  Level: 9 (Medium-High)
+  Description: Detects port scanning attempts from internal or external sources
+  Author: HawkinsOps SOC
+  Date: 2025-11-18
+-->
+
+<group name="network,reconnaissance,">
+  <rule id="100061" level="9" frequency="20" timeframe="60">
+    <if_matched_sid>5104</if_matched_sid>
+    <same_source_ip />
+    <description>Port scan detected - Multiple connection attempts from same source</description>
+    <mitre>
+      <id>T1046</id>
+    </mitre>
+    <group>port_scan,network_scan,reconnaissance,</group>
+  </rule>
+</group>
+
+<!--
+Summary:
+  Identifies port scanning by correlating 20+ connection attempts from the same source IP
+  within 60 seconds. Indicates network reconnaissance activity.
+
+Fields Used:
+  - srcip: Source IP conducting scan
+  - dstport: Destination ports targeted
+  - protocol: Network protocol used
+  - connection_state: TCP connection states
+
+False Positives:
+  - Network vulnerability scanners
+  - Network monitoring tools
+  - Service discovery tools
+  - Load balancers performing health checks
+
+Severity: Medium-High (9)
+
+MITRE ATT&CK: T1046 - Network Service Discovery
+
+Log Sources:
+  - Firewall logs
+  - IDS/IPS alerts
+  - Network flow data
+  - Syslog from network devices
+
+Test Examples:
+  - Nmap scan: nmap -p 1-65535 target-host
+  - SYN scan from single IP to multiple ports
+  - Connection attempts to closed ports
+  - Rapid sequential port probing
+
+Tuning Notes:
+  - Whitelist authorized vulnerability scanners by IP
+  - Adjust frequency threshold for noisy environments
+  - Track scanning patterns (sequential, random, specific ports)
+  - Correlate with other reconnaissance activities
+  - Alert on scans targeting critical infrastructure
+  - Monitor for scans from internal sources (compromised hosts)
+  - Implement network segmentation to limit scan impact
+-->
