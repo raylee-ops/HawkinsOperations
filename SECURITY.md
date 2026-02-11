@@ -1,23 +1,27 @@
 # Security Policy
 
-This repository contains security detections, response guidance, and operational content.
+This repository contains security detections, incident response content, and proof artifacts.
 
-## Reporting a security concern
+## Report a Security Concern
 
-If you discover:
-- credentials/tokens accidentally committed
-- real IPs/hostnames/usernames/emails that should be sanitized
-- unsafe deployment instructions
+If you find exposed secrets, unsanitized evidence, or unsafe instructions:
 
-Please do **not** file a public issue with sensitive details.
+- Do not post sensitive details in a public issue.
+- Open a private report through the repository security advisory flow.
+- Include file path, branch/commit, and a short impact summary.
 
-Instead, follow the sanitization standard below and contact the repo owner via the website listed in the root README.
+## Sanitization Standard
 
-## Sanitization standard
+Before publishing screenshots, logs, or sample artifacts, use:
 
-Before pushing screenshots, logs, or samples, follow:
 - `PROOF_PACK/EVIDENCE_CHECKLIST.md`
+
+Minimum requirements:
+
+- No credentials, tokens, secrets, or internal-only identifiers.
+- No sensitive hostnames, usernames, or email addresses.
+- Use sanitized examples and redact where needed.
 
 ## Scope
 
-This repo does not ship a running service. Content is provided “as-is” and must be reviewed before use in production.
+This repository does not ship a managed service. Content is provided as reference material and must be reviewed and tested before production use.
