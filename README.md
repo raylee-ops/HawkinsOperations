@@ -7,6 +7,14 @@
 
 ---
 
+## Portfolio site and quick CTAs
+- Site: [hawkinsops.com](https://hawkinsops.com)
+- Proof Pack: [`PROOF_PACK/PROOF_INDEX.md`](PROOF_PACK/PROOF_INDEX.md)
+- Clone + Verify: [`scripts/verify/verify-counts.ps1`](scripts/verify/verify-counts.ps1)
+- Projects: [`projects/`](projects/)
+
+---
+
 ## What this repo is (in one breath)
 A security operations portfolio repository focused on verifiable detection content (Sigma, Splunk, Wazuh), structured IR playbooks, and reproducible artifacts you can validate locally or via CI.
 If a claim cannot be verified, it does not belong here.

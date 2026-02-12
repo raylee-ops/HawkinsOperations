@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>HawkinsOps | Home Lab (Proxmox, Wazuh, Splunk)</title>
+<meta name="description" content="Home lab used to test detections and playbooks: Proxmox, Wazuh, Splunk. Built for repeatable validation runs.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+
+</head>
+<body>
+<nav>
+  <div class="nav-i">
+    <a class="logo" href="index.html"><b>Hawkins</b>Ops</a>
+    <button id="mobBtn" class="mob-btn" type="button">Menu</button>
+    <ul class="nav-l">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="triage.html">Triage</a></li>
+      <li><a href="proof.html">Proof</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="mobMenu" class="mob-menu" data-open="false">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="security.html">Security</a>
+  <a href="lab.html">Lab</a>
+  <a href="triage.html">Triage</a>
+  <a href="proof.html">Proof</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+<section style="padding-top:110px">
+  <div class="ctr">
+    <div class="slbl">Lab</div>
+    <h1 class="stitle">Home lab (built to break detections, not egos)</h1>
+    <p class="sdesc">
+      This is the environment used to test rules, generate logs, and validate playbooks.
+      If a detection can’t survive messy reality, it doesn’t belong in a repo.
+    </p>
+
+    <div class="g2">
+      <div class="card">
+        <div class="card-ttl">Compute</div>
+        <div class="card-sub">Proxmox host: HO-SR-01 • ~72 CPUs • ~2 TiB RAM</div>
+        <div class="card-meta"><span class="tag">Virtualized</span><span class="tag">Snapshot driven</span><span class="tag">Evidence-first</span></div>
+      </div>
+      <div class="card">
+        <div class="card-ttl">Monitoring</div>
+        <div class="card-sub">Wazuh Manager + agented endpoints (Windows + Linux) feeding test data.</div>
+        <div class="card-meta"><span class="tag">Wazuh</span><span class="tag">Sysmon-ready</span><span class="tag">Alert tuning</span></div>
+      </div>
+    </div>
+
+    <div style="height:14px"></div>
+
+    <div class="g2">
+      <div class="card">
+        <div class="card-ttl">SIEM / Search</div>
+        <div class="card-sub">Splunk for SPL detections and investigation pivots.</div>
+        <div class="card-meta"><span class="tag">SPL</span><span class="tag">ES-style pivots</span></div>
+      </div>
+      <div class="card">
+        <div class="card-ttl">Network</div>
+        <div class="card-sub">Private lab subnet (192.168.8.0/24). Isolated, reproducible, boring in a good way.</div>
+        <div class="card-meta"><span class="tag">Isolated</span><span class="tag">Repeatable runs</span></div>
+      </div>
+    </div>
+
+    <details>
+      <summary>What to screenshot for proof <span>(redact anything sensitive)</span></summary>
+      <div class="details-body">
+        <ul>
+          <li>Wazuh alert showing a custom rule firing (rule ID + level visible, no hostnames if you don’t want them public).</li>
+          <li>Splunk search results with the SPL query name + hit count.</li>
+          <li>One screenshot of the lab topology (VM list) with internal IPs only.</li>
+        </ul>
+        <p>
+          Drop images into <code>assets/screenshots/</code> and link them on this page.
+          Placeholders are included so you don’t forget.
+        </p>
+      </div>
+    </details>
+
+    <div class="g2">
+      <div class="card">
+        <div class="card-ttl">Screenshot: detection firing (placeholder)</div>
+        <div class="card-sub">Add a redacted screenshot to: <code>assets/screenshots/detection_firing.png</code></div>
+      </div>
+      <div class="card">
+        <div class="card-ttl">Screenshot: splunk pivot (placeholder)</div>
+        <div class="card-sub">Add a redacted screenshot to: <code>assets/screenshots/splunk_pivot.png</code></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="modalBg" class="modal-backdrop" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-h">
+      <div id="modalTitle" class="modal-ttl">DETAILS</div>
+      <button id="modalClose" class="modal-x" type="button">Close</button>
+    </div>
+    <div id="modalBody" class="modal-b"></div>
+  </div>
+</div>
+<footer>
+  <div class="ctr">
+    <p><b>HawkinsOps</b> • Huntsville-adjacent (North Alabama)</p>
+    <div class="fl">
+      <a href="https://github.com/raylee-ops/HawkinsOperations" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/raylee-hawkins" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:raylee@hawkinsops.com">raylee@hawkinsops.com</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
+
+

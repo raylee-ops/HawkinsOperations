@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Raylee Hawkins | Resume (SOC, Detection Engineering, Security Automation)</title>
+<meta name="description" content="Resume for Raylee Hawkins: SOC analyst candidate focused on detection engineering and automation. Projects include HawkinsOperations detections and proof pack.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+
+</head>
+<body>
+<nav>
+  <div class="nav-i">
+    <a class="logo" href="index.html"><b>Hawkins</b>Ops</a>
+    <button id="mobBtn" class="mob-btn" type="button">Menu</button>
+    <ul class="nav-l">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="triage.html">Triage</a></li>
+      <li><a href="proof.html">Proof</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="mobMenu" class="mob-menu" data-open="false">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="security.html">Security</a>
+  <a href="lab.html">Lab</a>
+  <a href="triage.html">Triage</a>
+  <a href="proof.html">Proof</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+<section style="padding-top:110px">
+  <div class="ctr">
+    <div class="slbl">Resume</div>
+    <h1 class="stitle">Raylee Hawkins</h1>
+    <p class="sdesc">Huntsville-adjacent (North Alabama) • <a href="mailto:raylee@hawkinsops.com">raylee@hawkinsops.com</a> •
+      <a href="https://github.com/raylee-ops" target="_blank" rel="noreferrer">GitHub</a> •
+      <a href="https://linkedin.com/in/raylee-hawkins" target="_blank" rel="noreferrer">LinkedIn</a>
+    </p>
+
+    <div class="g2">
+      <div class="card">
+        <div class="card-ttl">Summary</div>
+        <div class="card-sub">
+          SOC analyst candidate focused on detection engineering and security automation.
+          Builds deployable detections with verification artifacts, maps content to MITRE ATT&CK, and validates in a home lab (Proxmox + Wazuh + Splunk).
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-ttl">Download</div>
+        <div class="card-sub">
+          <a class="btn btn-p" href="assets/Raylee_Hawkins_Resume.pdf" download="Raylee_Hawkins_Resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
+          <div class="lupd">If the PDF link 404s, your host didn’t upload <code>assets/</code> (classic).</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:18px"></div>
+
+    <div class="g2">
+      <div class="card">
+        <div class="card-ttl">Core skills</div>
+        <div class="card-sub">
+          <ul style="padding-left:18px;margin-top:8px">
+            <li>Detection engineering: Sigma, Wazuh rules, Splunk SPL</li>
+            <li>Threat modeling: MITRE ATT&CK mapping, hypothesis-driven hunting</li>
+            <li>Automation: PowerShell, Python, GitHub Actions (verification + reports)</li>
+            <li>Operations: Git, documentation-first workflows, reproducible evidence</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-ttl">Tools</div>
+        <div class="card-sub">
+          <ul style="padding-left:18px;margin-top:8px">
+            <li>Splunk, Wazuh, Sysmon-ready logging</li>
+            <li>Proxmox virtualization and snapshot-based test runs</li>
+            <li>Windows + Linux endpoints for telemetry generation</li>
+            <li>Markdown documentation + proof packs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:18px"></div>
+
+    <div class="slbl">Projects</div>
+    <h2 class="stitle">Selected projects</h2>
+
+    <div class="g3">
+      <a class="card" href="https://github.com/raylee-ops/HawkinsOperations" target="_blank" rel="noreferrer" style="text-decoration:none">
+        <div class="card-click">Open →</div>
+        <div class="card-ttl">HawkinsOperations</div>
+        <div class="card-sub">105 Sigma rules, 29 Wazuh rule blocks, 8 Splunk detections, 10 IR playbooks + proof pack.</div>
+        <div class="card-meta"><span class="tag">Verified counts</span><span class="tag">CI validation</span></div>
+      </a>
+
+      <a class="card" href="triage.html" style="text-decoration:none">
+        <div class="card-click">Open →</div>
+        <div class="card-ttl">Triage Simulator</div>
+        <div class="card-sub">Interactive SOC workflow drills with evidence checklists.</div>
+        <div class="card-meta"><span class="tag">Investigation</span><span class="tag">Workflow</span></div>
+      </a>
+
+      <a class="card" href="lab.html" style="text-decoration:none">
+        <div class="card-click">Open →</div>
+        <div class="card-ttl">Home Lab</div>
+        <div class="card-sub">Proxmox + Wazuh + Splunk environment for validation runs.</div>
+        <div class="card-meta"><span class="tag">Repro</span><span class="tag">Telemetry</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div id="modalBg" class="modal-backdrop" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-h">
+      <div id="modalTitle" class="modal-ttl">DETAILS</div>
+      <button id="modalClose" class="modal-x" type="button">Close</button>
+    </div>
+    <div id="modalBody" class="modal-b"></div>
+  </div>
+</div>
+<footer>
+  <div class="ctr">
+    <p><b>HawkinsOps</b> • Huntsville-adjacent (North Alabama)</p>
+    <div class="fl">
+      <a href="https://github.com/raylee-ops/HawkinsOperations" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/raylee-hawkins" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:raylee@hawkinsops.com">raylee@hawkinsops.com</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
+
+
+
