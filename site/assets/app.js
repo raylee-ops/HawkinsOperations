@@ -11,18 +11,43 @@
   const mobBtn = $('#mobBtn');
   const mobMenu = $('#mobMenu');
   if (mobBtn && mobMenu) {
+    mobBtn.setAttribute('aria-expanded', 'false');
+    mobBtn.setAttribute('aria-controls', 'mobMenu');
     mobBtn.addEventListener('click', () => {
       const open = mobMenu.getAttribute('data-open') === 'true';
       mobMenu.setAttribute('data-open', String(!open));
       mobMenu.style.display = open ? 'none' : 'block';
+      mobBtn.setAttribute('aria-expanded', String(!open));
     });
   }
 
   // Active link highlight
-  const path = (location.pathname || '/').split('/').pop() || 'index.html';
-  $$('.nav-l a').forEach(a => {
-    const href = (a.getAttribute('href') || '').split('/').pop();
-    if (href && href === path) a.classList.add('act');
+  function normalizeNavPath(value) {
+    const raw = String(value || '').trim();
+    const noQuery = raw.split('#')[0].split('?')[0];
+    const trimmed = noQuery.replace(/^https?:\/\/[^/]+/i, '').replace(/\\/g, '/').replace(/\/+$/, '');
+    const leaf = (trimmed.split('/').pop() || '').trim();
+    if (!leaf) return 'index.html';
+    return leaf.includes('.') ? leaf.toLowerCase() : `${leaf.toLowerCase()}.html`;
+  }
+
+  const activePath = normalizeNavPath(location.pathname || '/');
+  const navLinks = Array.from(
+    new Set([
+      ...$$('.nav-l a'),
+      ...$$('#mobMenu a'),
+      ...$$('.mob-menu a')
+    ])
+  );
+  navLinks.forEach(a => {
+    const hrefPath = normalizeNavPath(a.getAttribute('href') || '');
+    const isActive = hrefPath === activePath;
+    a.classList.toggle('act', isActive);
+    if (isActive) {
+      a.setAttribute('aria-current', 'page');
+    } else {
+      a.removeAttribute('aria-current');
+    }
   });
 
   // Copy wiring (supports dynamically injected modal content too)
