@@ -6,6 +6,30 @@
 (function () {
   const $ = (sel, root=document) => root.querySelector(sel);
   const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+  const html = document.documentElement;
+
+  // Theme toggle (dark default, persisted preference)
+  const themeToggle = $('#themeToggle');
+  const savedTheme = localStorage.getItem('rh-theme');
+  const startTheme = savedTheme || 'dark';
+  html.setAttribute('data-theme', startTheme);
+
+  function updateThemeButton(theme) {
+    if (!themeToggle) return;
+    const next = theme === 'dark' ? 'light' : 'dark';
+    themeToggle.textContent = theme === 'dark' ? 'Light' : 'Dark';
+    themeToggle.setAttribute('aria-label', `Switch to ${next} mode`);
+  }
+  updateThemeButton(startTheme);
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('rh-theme', next);
+      updateThemeButton(next);
+    });
+  }
 
   // Mobile nav
   const mobBtn = $('#mobBtn');
