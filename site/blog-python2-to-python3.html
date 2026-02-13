@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Migrating Legacy Detection Rules from Python 2 to Python 3 | HawkinsOps</title>
+<meta name="description" content="Practical guidance for migrating legacy detection and SOC automation code from Python 2 to Python 3 with validation steps.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07070b">
+<link rel="canonical" href="https://hawkinsops.com/blog-python2-to-python3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Migrating Legacy Detection Rules from Python 2 to Python 3">
+<meta property="og:description" content="Failure modes, migration workflow, and validation methods for SOC code in legacy-heavy environments.">
+<meta property="og:url" content="https://hawkinsops.com/blog-python2-to-python3">
+<meta property="og:image" content="https://hawkinsops.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Migrating Legacy Detection Rules from Python 2 to Python 3">
+<meta name="twitter:description" content="Failure modes, migration workflow, and validation methods for SOC code in legacy-heavy environments.">
+<meta name="twitter:image" content="https://hawkinsops.com/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<nav>
+  <div class="nav-i">
+    <a class="logo" href="index.html"><b>Hawkins</b>Ops</a>
+    <button id="mobBtn" class="mob-btn" type="button" aria-expanded="false" aria-controls="mobMenu" aria-label="Toggle site navigation">Menu</button>
+    <ul class="nav-l">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="triage.html">Triage</a></li>
+      <li><a href="proof.html">Proof</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="mobMenu" class="mob-menu" data-open="false" role="navigation" aria-label="Mobile site navigation">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="security.html">Security</a>
+  <a href="lab.html">Lab</a>
+  <a href="triage.html">Triage</a>
+  <a href="proof.html">Proof</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+<section style="padding-top:110px">
+  <div class="ctr" style="max-width:920px">
+    <div class="slbl">Writing</div>
+    <h1 class="stitle">Migrating Legacy Detection Rules from Python 2 to Python 3</h1>
+    <p class="sdesc">Legacy SOC environments still carry Python 2-era scripts in surprising places. If those scripts produce detections, enrich logs, or generate alerts, they are production risk. This write-up covers the migration approach I use to move rule-processing utilities safely to Python 3 without breaking investigation workflows.</p>
+
+    <div class="about-box">
+      <h2 style="margin-bottom:8px">Why this matters</h2>
+      <p>Detection engineering is not only about writing rules. It is also about the glue code that normalizes telemetry, enriches context, and generates artifacts for analysts. In many organizations, that glue was written years ago in Python 2. Python 2 reached end-of-life in January 2020, which means no security updates and inconsistent behavior on modern systems.</p>
+      <p>In government and defense-adjacent environments, migration pressure is often complicated by long procurement cycles, certification boundaries, and old host baselines. That does not remove risk. It increases it. Unsupported runtimes are exactly the kind of weak link that slows incident response when speed matters most.</p>
+    </div>
+
+    <div style="height:14px"></div>
+    <div class="about-box">
+      <h2 style="margin-bottom:8px">Common failure modes during migration</h2>
+      <p><b>String and bytes confusion:</b> Python 2 tolerated implicit conversion that Python 3 rejects. Log pipelines break when script output silently becomes byte strings.</p>
+      <p><b>Dependency rot:</b> Some legacy packages are pinned to unsupported versions. Replacements or vendored alternatives are required before logic changes even begin.</p>
+      <p><b>Date/time behavior drift:</b> Timestamp parsing can change subtly, which is dangerous in detection windows and incident timelines.</p>
+      <p><b>Regex and encoding surprises:</b> Detection parsing often uses regex against mixed encodings. Python 3 is stricter, so malformed assumptions fail fast.</p>
+      <p><b>Operational blind spots:</b> Teams validate script execution but forget to validate downstream dashboards, alert thresholds, and runbook dependencies.</p>
+    </div>
+
+    <div style="height:14px"></div>
+    <div class="about-box">
+      <h2 style="margin-bottom:8px">A safe migration workflow</h2>
+      <p><b>1. Inventory by blast radius.</b> Tag scripts by operational impact: detection-critical, enrichment-only, reporting-only. Migrate highest-risk items first.</p>
+      <p><b>2. Freeze behavior with sample fixtures.</b> Save representative input logs and expected outputs before touching code. This becomes your regression baseline.</p>
+      <p><b>3. Port in small vertical slices.</b> Convert one utility at a time. Avoid broad rewrites. Every change should map to a single validation objective.</p>
+      <p><b>4. Replace unsafe assumptions.</b> Explicitly handle UTF-8, bytes decoding, timezone-aware timestamps, and deterministic sorting.</p>
+      <p><b>5. Run dual-path validation.</b> Execute old and new versions against the same sample logs and compare outputs line-by-line where possible.</p>
+      <p><b>6. Update runbooks and operator notes.</b> Migrations fail socially when docs still point to old commands. Treat documentation updates as part of the release.</p>
+    </div>
+
+    <div style="height:14px"></div>
+    <div class="about-box">
+      <h2 style="margin-bottom:8px">How to validate the migration</h2>
+      <p><b>Unit tests:</b> Cover parser edge cases: malformed fields, missing values, empty files, high-ASCII characters, and unusual delimiters.</p>
+      <p><b>Sample log replay:</b> Use captured event samples from known incidents and benign background noise. Your migration is only real if both paths handle real data.</p>
+      <p><b>Output contract checks:</b> Validate schema, field names, date formats, and count totals. Detection output should not “look close.” It should match expected contracts.</p>
+      <p><b>SOC workflow checks:</b> Confirm that saved searches, dashboards, and triage playbooks still consume output fields without manual patching.</p>
+      <p>For this repo’s style of verification, I prefer command-level reproducibility: scripts that anyone can run and compare against committed expected artifacts.</p>
+    </div>
+
+    <div style="height:14px"></div>
+    <div class="about-box">
+      <h2 style="margin-bottom:8px">Government and legacy environment realities</h2>
+      <p>In legacy-heavy programs, migration is frequently constrained by hard policy and accreditation timelines. The practical approach is to stage the work: keep interfaces stable, migrate internals first, and publish clear delta notes for every behavior change. This keeps mission owners informed while reducing technical debt safely.</p>
+      <p>Another practical lesson: migrations should be tied to incident-response outcomes, not language purity. If Python 3 migration reduces analyst confusion, lowers false-positive handling time, and makes automation less fragile, that is operational value leadership can support.</p>
+      <p>Finally, treat migration as repeatable engineering, not heroics. A small migration playbook, reproducible tests, and transparent reporting will outperform one-time “big bang” rewrites every time.</p>
+    </div>
+
+    <div style="height:14px"></div>
+    <a class="btn btn-g" href="projects.html">Back to projects</a>
+  </div>
+</section>
+
+<footer>
+  <div class="ctr">
+    <p><b>HawkinsOps</b> • Huntsville-adjacent (North Alabama)</p>
+    <div class="fl">
+      <a href="https://github.com/raylee-ops/HawkinsOperations" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/raylee-hawkins" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:raylee@hawkinsops.com">raylee@hawkinsops.com</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
+

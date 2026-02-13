@@ -1,0 +1,5 @@
+title:   SUSPICIOUS POWERSHELL ENCODED COMMAND
+id: 11111111-1111-1111-1111-111111111111
+status: test
+description: Detects encoded command execution
+

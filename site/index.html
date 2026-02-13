@@ -5,9 +5,22 @@
 <meta name="description" content="Evidence-first security portfolio: deployable detection rules and playbooks with verifiable counts (Sigma, Wazuh, Splunk). Huntsville-adjacent, AL.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07070b">
+<link rel="canonical" href="https://hawkinsops.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HawkinsOps | Evidence-first SOC Portfolio">
+<meta property="og:description" content="Verified detections, reproducible commands, and lab-tested security content.">
+<meta property="og:url" content="https://hawkinsops.com/">
+<meta property="og:image" content="https://hawkinsops.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HawkinsOps | Evidence-first SOC Portfolio">
+<meta name="twitter:description" content="Verified detections, reproducible commands, and lab-tested security content.">
+<meta name="twitter:image" content="https://hawkinsops.com/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 
 </head>
@@ -15,7 +28,7 @@
 <nav>
   <div class="nav-i">
     <a class="logo" href="index.html"><b>Hawkins</b>Ops</a>
-    <button id="mobBtn" class="mob-btn" type="button">Menu</button>
+    <button id="mobBtn" class="mob-btn" type="button" aria-expanded="false" aria-controls="mobMenu" aria-label="Toggle site navigation">Menu</button>
     <ul class="nav-l">
       <li><a href="index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
@@ -27,7 +40,7 @@
     </ul>
   </div>
 </nav>
-<div id="mobMenu" class="mob-menu" data-open="false">
+<div id="mobMenu" class="mob-menu" data-open="false" role="navigation" aria-label="Mobile site navigation">
   <a href="index.html">Home</a>
   <a href="projects.html">Projects</a>
   <a href="security.html">Security</a>
@@ -69,7 +82,7 @@
     </div>
 
     <div class="sbadge"><span class="sdot"></span> Huntsville-adjacent • North Alabama</div>
-    <div class="lupd">Counts and links align to <code>raylee-ops/HawkinsOperations</code>.</div>
+    <div class="lupd">Counts and links align to <code>raylee-ops/HawkinsOperations</code> (verified, reproducible today).</div>
   </div>
 </header>
 
@@ -78,24 +91,52 @@
     <div class="mstrip">
       <div class="met">
         <div class="met-v">142</div>
-        <div class="met-l">Verified detections</div>
+        <div class="met-l">Verified detections (today)</div>
       </div>
       <div class="met">
         <div class="met-v">105</div>
-        <div class="met-l">Sigma rules</div>
+        <div class="met-l">Verified Sigma rules</div>
       </div>
       <div class="met">
         <div class="met-v">29</div>
-        <div class="met-l">Wazuh rule blocks</div>
+        <div class="met-l">Verified Wazuh blocks</div>
       </div>
       <div class="met">
         <div class="met-v">8</div>
-        <div class="met-l">Splunk SPL queries</div>
+        <div class="met-l">Verified Splunk queries</div>
       </div>
       <div class="met">
         <div class="met-v">10</div>
-        <div class="met-l">IR playbooks</div>
+        <div class="met-l">Verified IR playbooks</div>
       </div>
+    </div>
+    <div class="lupd" style="margin-top:8px">Only verified counts are shown. "Total library" is intentionally omitted.</div>
+  </div>
+</section>
+
+<section style="padding-top:24px">
+  <div class="ctr">
+    <div class="slbl">Tools</div>
+    <h2 class="stitle">Platform fluency at a glance</h2>
+    <div class="tools-grid">
+      <div class="tool-badge"><img src="assets/logos/wazuh.svg" alt="Wazuh"><div><b>Wazuh</b><span>Rule blocks + validation</span></div></div>
+      <div class="tool-badge"><img src="assets/logos/splunk.svg" alt="Splunk"><div><b>Splunk</b><span>SPL detections and pivots</span></div></div>
+      <div class="tool-badge"><img src="assets/logos/sigma.svg" alt="Sigma"><div><b>Sigma</b><span>Portable detection rules</span></div></div>
+      <div class="tool-badge"><img src="assets/logos/automation.svg" alt="Automation tooling"><div><b>Automation</b><span>Tines/Torq-ready workflow mindset</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="ctr">
+    <div class="slbl">About</div>
+    <h2 class="stitle">Who I am and what this portfolio proves</h2>
+    <div class="about-box">
+      <p>I am a self-taught SOC-track builder focused on detection engineering, incident response workflow quality, and repeatable technical communication.</p>
+      <p>This portfolio is designed for fast recruiter scanning and technical depth checks: every key count maps back to repository structure and reproducible commands.</p>
+      <p>My core workflow is simple: build detections, test them in a controlled lab, document verification commands, and keep claims aligned to artifacts.</p>
+      <p>I am based in Huntsville-adjacent North Alabama and actively open to SOC, detection engineering, and security automation roles.</p>
+      <p>I am open to cleared and non-cleared opportunities, and willing to pursue sponsorship paths when a role supports it.</p>
     </div>
   </div>
 </section>
@@ -132,6 +173,29 @@
         <div class="card-meta">
           <span class="tag">Runbooks</span><span class="tag">Evidence</span><span class="tag">Change control</span>
         </div>
+      </a>
+
+      <a class="card" href="case-study.html" style="text-decoration:none">
+        <div class="card-click">Click →</div>
+        <div class="card-ttl">Mini Case Study</div>
+        <div class="card-sub">How I built + validated 29 Wazuh rule blocks in a reproducible workflow.</div>
+        <div class="card-meta">
+          <span class="tag">Case study</span><span class="tag">Wazuh</span><span class="tag">Verification</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="ctr">
+    <div class="slbl">Writing</div>
+    <h2 class="stitle">Technical write-up</h2>
+    <div class="writing-grid">
+      <a class="card" href="blog-python2-to-python3.html" style="text-decoration:none">
+        <div class="card-click">Read →</div>
+        <div class="card-ttl">Migrating Legacy Detection Rules from Python 2 to Python 3</div>
+        <div class="card-sub">A practical migration path for legacy-heavy environments and SOC engineering teams.</div>
       </a>
     </div>
   </div>
@@ -193,6 +257,7 @@
 <script src="assets/app.js" defer></script>
 </body>
 </html>
+
 
 
 

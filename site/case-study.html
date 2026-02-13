@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>HawkinsOps | Case Study: 29 Wazuh Rule Blocks</title>
+<meta name="description" content="Mini case study: how 29 Wazuh rule blocks were built, validated, and documented with reproducible commands.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07070b">
+<link rel="canonical" href="https://hawkinsops.com/case-study">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Case Study | Building + validating 29 Wazuh rule blocks">
+<meta property="og:description" content="Objective, test method, verification commands, evidence path, and next improvements.">
+<meta property="og:url" content="https://hawkinsops.com/case-study">
+<meta property="og:image" content="https://hawkinsops.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case Study | Building + validating 29 Wazuh rule blocks">
+<meta name="twitter:description" content="Objective, test method, verification commands, evidence path, and next improvements.">
+<meta name="twitter:image" content="https://hawkinsops.com/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<nav>
+  <div class="nav-i">
+    <a class="logo" href="index.html"><b>Hawkins</b>Ops</a>
+    <button id="mobBtn" class="mob-btn" type="button" aria-expanded="false" aria-controls="mobMenu" aria-label="Toggle site navigation">Menu</button>
+    <ul class="nav-l">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="triage.html">Triage</a></li>
+      <li><a href="proof.html">Proof</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="mobMenu" class="mob-menu" data-open="false" role="navigation" aria-label="Mobile site navigation">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="security.html">Security</a>
+  <a href="lab.html">Lab</a>
+  <a href="triage.html">Triage</a>
+  <a href="proof.html">Proof</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+<section style="padding-top:110px">
+  <div class="ctr" style="max-width:900px">
+    <div class="slbl">Mini case study</div>
+    <h1 class="stitle">How I built + validated 29 Wazuh rule blocks</h1>
+    <div class="count-pill">Verified today: 29 blocks across 25 XML files</div>
+    <p class="sdesc">This is the practical workflow behind the Wazuh detection subset in HawkinsOperations, optimized for review speed and reproducibility.</p>
+
+    <div class="card">
+      <h2 class="card-ttl">Objective</h2>
+      <p class="card-sub">Build a Wazuh rule set that maps to realistic SOC triage patterns, packages cleanly for deployment, and can be validated with a small set of commands from repo root.</p>
+    </div>
+
+    <div style="height:14px"></div>
+    <div class="g2">
+      <div class="card">
+        <h2 class="card-ttl">Test method</h2>
+        <div class="card-sub">
+          <ol style="padding-left:18px">
+            <li>Author/tune XML rules under <code>detection-rules/wazuh/rules/</code>.</li>
+            <li>Build deployment bundle with <code>scripts/build-wazuh-bundle.ps1</code>.</li>
+            <li>Count files and count <code>&lt;rule id=</code> blocks separately.</li>
+            <li>Run representative alert simulations and verify generated evidence artifacts.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="card-ttl">Validation commands</h2>
+        <div class="card-sub">
+<pre class="term-b">pwsh -File .\scripts\build-wazuh-bundle.ps1
+
+(Get-ChildItem .\detection-rules\wazuh\rules -Filter *.xml).Count
+
+Select-String -Path .\detection-rules\wazuh\rules\*.xml `
+  -Pattern '<rule\s+id=' | Measure-Object | % Count
+
+pwsh -NoProfile -File .\scripts\verify\verify-counts.ps1</pre>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:14px"></div>
+    <div class="g2">
+      <div class="card">
+        <h2 class="card-ttl">Evidence placeholders (redacted)</h2>
+        <ul class="card-sub" style="padding-left:18px">
+          <li><code>assets/screenshots/wazuh_bundle_build.png</code></li>
+          <li><code>assets/screenshots/wazuh_rule_fire_example.png</code></li>
+          <li><code>assets/screenshots/wazuh_count_validation.png</code></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 class="card-ttl">What I would improve next</h2>
+        <ul class="card-sub" style="padding-left:18px">
+          <li>Add synthetic event generators for regression testing.</li>
+          <li>Split high-noise patterns into tuning profiles per environment.</li>
+          <li>Publish a compact false-positive review matrix per rule family.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ctr">
+    <p><b>HawkinsOps</b> • Huntsville-adjacent (North Alabama)</p>
+    <div class="fl">
+      <a href="https://github.com/raylee-ops/HawkinsOperations" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/raylee-hawkins" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:raylee@hawkinsops.com">raylee@hawkinsops.com</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
+

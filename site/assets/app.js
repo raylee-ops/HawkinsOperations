@@ -11,15 +11,19 @@
   const mobBtn = $('#mobBtn');
   const mobMenu = $('#mobMenu');
   if (mobBtn && mobMenu) {
+    mobBtn.setAttribute('aria-expanded', 'false');
+    mobBtn.setAttribute('aria-controls', 'mobMenu');
     mobBtn.addEventListener('click', () => {
       const open = mobMenu.getAttribute('data-open') === 'true';
       mobMenu.setAttribute('data-open', String(!open));
       mobMenu.style.display = open ? 'none' : 'block';
+      mobBtn.setAttribute('aria-expanded', String(!open));
     });
   }
 
   // Active link highlight
-  const path = (location.pathname || '/').split('/').pop() || 'index.html';
+  const rawPath = (location.pathname || '/').split('/').pop() || 'index.html';
+  const path = rawPath.includes('.') ? rawPath : `${rawPath || 'index'}.html`;
   $$('.nav-l a').forEach(a => {
     const href = (a.getAttribute('href') || '').split('/').pop();
     if (href && href === path) a.classList.add('act');
@@ -60,22 +64,52 @@
   const modalTitle = $('#modalTitle');
   const modalBody = $('#modalBody');
   const modalClose = $('#modalClose');
+  let lastFocused = null;
+
+  function getFocusable(container) {
+    return $$('a[href],button:not([disabled]),textarea,input,select,[tabindex]:not([tabindex="-1"])', container)
+      .filter(el => !el.hasAttribute('hidden'));
+  }
+
+  function trapFocus(e) {
+    if (!modalBg || !modalBg.classList.contains('open') || e.key !== 'Tab') return;
+    const focusable = getFocusable(modalBg);
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
 
   function closeModal() {
     if (!modalBg) return;
     modalBg.classList.remove('open');
     modalBg.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+    }
   }
 
   function openModal(title, html) {
     if (!modalBg || !modalTitle || !modalBody) return;
+    lastFocused = document.activeElement;
     modalTitle.textContent = title || 'DETAILS';
     modalBody.innerHTML = html || '';
     wireCopy(modalBody);
     modalBg.classList.add('open');
     modalBg.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    if (modalClose) {
+      modalClose.focus();
+    }
   }
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
@@ -86,6 +120,7 @@
   }
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
+    trapFocus(e);
   });
 
   // Expandable cards: data-modal points to a <template> id
