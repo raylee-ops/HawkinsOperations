@@ -5,9 +5,22 @@
 <meta name="description" content="Deployable detections and playbooks with reproducible counts: 105 Sigma, 29 Wazuh rule blocks, 8 Splunk SPL, 10 IR playbooks.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07070b">
+<link rel="canonical" href="https://hawkinsops.com/security">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HawkinsOps | Security Library">
+<meta property="og:description" content="Verified Sigma, Wazuh, Splunk, and IR playbook content with reproducible commands.">
+<meta property="og:url" content="https://hawkinsops.com/security">
+<meta property="og:image" content="https://hawkinsops.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HawkinsOps | Security Library">
+<meta name="twitter:description" content="Verified Sigma, Wazuh, Splunk, and IR playbook content with reproducible commands.">
+<meta name="twitter:image" content="https://hawkinsops.com/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 
 </head>
@@ -15,7 +28,7 @@
 <nav>
   <div class="nav-i">
     <a class="logo" href="index.html"><b>Hawkins</b>Ops</a>
-    <button id="mobBtn" class="mob-btn" type="button">Menu</button>
+    <button id="mobBtn" class="mob-btn" type="button" aria-expanded="false" aria-controls="mobMenu" aria-label="Toggle site navigation">Menu</button>
     <ul class="nav-l">
       <li><a href="index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
@@ -27,7 +40,7 @@
     </ul>
   </div>
 </nav>
-<div id="mobMenu" class="mob-menu" data-open="false">
+<div id="mobMenu" class="mob-menu" data-open="false" role="navigation" aria-label="Mobile site navigation">
   <a href="index.html">Home</a>
   <a href="projects.html">Projects</a>
   <a href="security.html">Security</a>
@@ -43,7 +56,7 @@
     <h1 class="stitle">Interactive, expandable content (like it should’ve been)</h1>
     <p class="sdesc">
       The repo ships multi-platform detection content and IR playbooks with reproducible counts.
-      No hard-coded “trust me bro” numbers.
+      All numbers below are <b>Verified (reproducible today)</b>; no inflated "total library" number is shown.
     </p>
 
     <div class="g3">
@@ -51,21 +64,21 @@
         <div class="card-click">Expand →</div>
         <div class="card-ttl">Sigma</div>
         <div class="card-sub">105 YAML rules organized by MITRE ATT&CK tactics.</div>
-        <div class="card-meta"><span class="tag">105</span><span class="tag">detection-rules/sigma/</span><span class="tag">YAML</span></div>
+        <div class="card-meta"><span class="tag">Verified 105</span><span class="tag">detection-rules/sigma/</span><span class="tag">YAML</span></div>
       </button>
 
       <button class="card" type="button" data-modal="tWazuh" data-modal-title="Wazuh detections">
         <div class="card-click">Expand →</div>
         <div class="card-ttl">Wazuh</div>
         <div class="card-sub">29 rule blocks (25 XML files) ready for deployment.</div>
-        <div class="card-meta"><span class="tag">29 blocks</span><span class="tag">detection-rules/wazuh/rules/</span><span class="tag">XML</span></div>
+        <div class="card-meta"><span class="tag">Verified 29 blocks</span><span class="tag">detection-rules/wazuh/rules/</span><span class="tag">XML</span></div>
       </button>
 
       <button class="card" type="button" data-modal="tSplunk" data-modal-title="Splunk detections">
         <div class="card-click">Expand →</div>
         <div class="card-ttl">Splunk</div>
         <div class="card-sub">8 SPL detections for Enterprise Security workflows.</div>
-        <div class="card-meta"><span class="tag">8</span><span class="tag">detection-rules/splunk/</span><span class="tag">SPL</span></div>
+        <div class="card-meta"><span class="tag">Verified 8</span><span class="tag">detection-rules/splunk/</span><span class="tag">SPL</span></div>
       </button>
     </div>
 
@@ -76,7 +89,7 @@
         <div class="card-click">Expand →</div>
         <div class="card-ttl">IR Playbooks</div>
         <div class="card-sub">10 structured playbooks with clear execution flow.</div>
-        <div class="card-meta"><span class="tag">10</span><span class="tag">incident-response/playbooks/</span><span class="tag">Markdown</span></div>
+        <div class="card-meta"><span class="tag">Verified 10</span><span class="tag">incident-response/playbooks/</span><span class="tag">Markdown</span></div>
       </button>
 
       <button class="card" type="button" data-modal="tVerify" data-modal-title="Verification workflow">
@@ -86,6 +99,9 @@
         <div class="card-meta"><span class="tag">scripts/verify/verify-counts.ps1</span><span class="tag">PROOF_PACK/VERIFIED_COUNTS.md</span></div>
       </button>
     </div>
+
+    <div style="height:14px"></div>
+    <a class="btn btn-g" href="case-study.html">Read case study: 29 Wazuh rule blocks</a>
   </div>
 </section>
 
@@ -151,7 +167,7 @@ pwsh -File .\scripts\build-wazuh-bundle.ps1</pre>
 (Get-ChildItem .\detection-rules\wazuh\rules -Filter *.xml).Count
 
 # rule blocks (simple regex count)
-Select-String -Path .\detection-rules\wazuh\rules\*.xml -Pattern "<rule\s+id=" | Measure-Object | % Count</pre>
+Select-String -Path .\detection-rules\wazuh\rules\*.xml -Pattern '&lt;rule\s+id=' | Measure-Object | % Count</pre>
   </div>
 </template>
 
@@ -311,6 +327,7 @@ Select-String -Path .\detection-rules\wazuh\rules\*.xml -Pattern "<rule\s+id=" |
 <script src="assets/app.js" defer></script>
 </body>
 </html>
+
 
 
 
