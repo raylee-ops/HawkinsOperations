@@ -45,3 +45,6 @@ __pycache__/
 **/secrets/
 **/vault/
 
+
+# Local Netlify folder
+.netlify
