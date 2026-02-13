@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 
 </head>
@@ -43,7 +43,7 @@
     <h1 class="stitle">Interactive, expandable content (like it should’ve been)</h1>
     <p class="sdesc">
       The repo ships multi-platform detection content and IR playbooks with reproducible counts.
-      No hard-coded “trust me bro” numbers.
+      All numbers below are <b>Verified (reproducible today)</b>; no inflated "total library" number is shown.
     </p>
 
     <div class="g3">
@@ -51,21 +51,21 @@
         <div class="card-click">Expand →</div>
         <div class="card-ttl">Sigma</div>
         <div class="card-sub">105 YAML rules organized by MITRE ATT&CK tactics.</div>
-        <div class="card-meta"><span class="tag">105</span><span class="tag">detection-rules/sigma/</span><span class="tag">YAML</span></div>
+        <div class="card-meta"><span class="tag">Verified 105</span><span class="tag">detection-rules/sigma/</span><span class="tag">YAML</span></div>
       </button>
 
       <button class="card" type="button" data-modal="tWazuh" data-modal-title="Wazuh detections">
         <div class="card-click">Expand →</div>
         <div class="card-ttl">Wazuh</div>
         <div class="card-sub">29 rule blocks (25 XML files) ready for deployment.</div>
-        <div class="card-meta"><span class="tag">29 blocks</span><span class="tag">detection-rules/wazuh/rules/</span><span class="tag">XML</span></div>
+        <div class="card-meta"><span class="tag">Verified 29 blocks</span><span class="tag">detection-rules/wazuh/rules/</span><span class="tag">XML</span></div>
       </button>
 
       <button class="card" type="button" data-modal="tSplunk" data-modal-title="Splunk detections">
         <div class="card-click">Expand →</div>
         <div class="card-ttl">Splunk</div>
         <div class="card-sub">8 SPL detections for Enterprise Security workflows.</div>
-        <div class="card-meta"><span class="tag">8</span><span class="tag">detection-rules/splunk/</span><span class="tag">SPL</span></div>
+        <div class="card-meta"><span class="tag">Verified 8</span><span class="tag">detection-rules/splunk/</span><span class="tag">SPL</span></div>
       </button>
     </div>
 
@@ -76,7 +76,7 @@
         <div class="card-click">Expand →</div>
         <div class="card-ttl">IR Playbooks</div>
         <div class="card-sub">10 structured playbooks with clear execution flow.</div>
-        <div class="card-meta"><span class="tag">10</span><span class="tag">incident-response/playbooks/</span><span class="tag">Markdown</span></div>
+        <div class="card-meta"><span class="tag">Verified 10</span><span class="tag">incident-response/playbooks/</span><span class="tag">Markdown</span></div>
       </button>
 
       <button class="card" type="button" data-modal="tVerify" data-modal-title="Verification workflow">
@@ -151,7 +151,7 @@ pwsh -File .\scripts\build-wazuh-bundle.ps1</pre>
 (Get-ChildItem .\detection-rules\wazuh\rules -Filter *.xml).Count
 
 # rule blocks (simple regex count)
-Select-String -Path .\detection-rules\wazuh\rules\*.xml -Pattern "<rule\s+id=" | Measure-Object | % Count</pre>
+Select-String -Path .\detection-rules\wazuh\rules\*.xml -Pattern '&lt;rule\s+id=' | Measure-Object | % Count</pre>
   </div>
 </template>
 
