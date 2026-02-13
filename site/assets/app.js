@@ -8,10 +8,11 @@
   const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
   const html = document.documentElement;
 
-  // Theme toggle (dark default, persisted preference)
+  // Theme toggle (saved preference, otherwise system preference)
   const themeToggle = $('#themeToggle');
   const savedTheme = localStorage.getItem('rh-theme');
-  const startTheme = savedTheme || 'dark';
+  const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const startTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
   html.setAttribute('data-theme', startTheme);
 
   function updateThemeButton(theme) {
