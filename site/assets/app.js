@@ -8,11 +8,10 @@
   const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
   const html = document.documentElement;
 
-  // Theme toggle (light default, persisted preference)
+  // Theme toggle (dark default, persisted preference)
   const themeToggle = $('#themeToggle');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const savedTheme = localStorage.getItem('rh-theme');
-  const startTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+  const startTheme = savedTheme || 'dark';
   html.setAttribute('data-theme', startTheme);
 
   function updateThemeButton(theme) {
@@ -24,7 +23,7 @@
   updateThemeButton(startTheme);
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme') || 'light';
+      const current = html.getAttribute('data-theme') || 'dark';
       const next = current === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
       localStorage.setItem('rh-theme', next);
