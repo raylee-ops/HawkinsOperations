@@ -10,9 +10,8 @@
 
   // Theme toggle (light default, persisted preference)
   const themeToggle = $('#themeToggle');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const savedTheme = localStorage.getItem('rh-theme');
-  const startTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+  const startTheme = savedTheme || 'light';
   html.setAttribute('data-theme', startTheme);
 
   function updateThemeButton(theme) {
