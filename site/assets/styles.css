@@ -138,6 +138,8 @@
 
         /* CARDS - clickable */
         .card{background:var(--bg2);border:1px solid var(--bdr);padding:24px;transition:all .24s ease;cursor:pointer;position:relative;color:var(--txt);border-radius:16px}
+        .writing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+        .writing-grid .card{display:block;position:relative;overflow:hidden}
         .card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,62,165,.14)}
         .card-click{position:absolute;top:10px;right:12px;font-family:var(--mono);font-size:.6rem;color:var(--faint);opacity:0;transition:opacity .2s}
         .card:hover .card-click{opacity:1}
@@ -264,7 +266,7 @@
         .fstat{font-family:var(--mono);font-size:.7rem;color:var(--faint)}
         .fstat strong{color:var(--acc)}
 
-        @media(max-width:900px){.g3,.g2{grid-template-columns:1fr}.mstrip{grid-template-columns:repeat(3,1fr)}}
+        @media(max-width:900px){.g3,.g2,.writing-grid{grid-template-columns:1fr}.mstrip{grid-template-columns:repeat(3,1fr)}}
         @media(max-width:640px){.nav-l{display:none}.nav-l.open{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--bdr);padding:20px;gap:16px}.mob-btn{display:block}.mstrip{grid-template-columns:repeat(2,1fr)}.hero-panel{padding:24px 18px 20px;border-radius:20px}.hero-icons .ico-chip svg{width:14px;height:14px;flex-basis:14px}.htitle{font-size:2rem}section{padding:54px 0}}
     
 
