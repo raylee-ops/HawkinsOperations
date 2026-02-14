@@ -20,9 +20,35 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
-
+<style>
+  .resume-shell{padding-top:110px}
+  .resume-sheet{max-width:960px;margin:0 auto;background:var(--bg1);border:1px solid var(--bdr);border-radius:16px;padding:28px}
+  .resume-head h1{font-size:2rem;line-height:1.1;margin:0 0 8px;color:var(--heading)}
+  .resume-headline{font-weight:600;color:var(--txt);margin-bottom:10px}
+  .resume-contact{font-size:.9rem;color:var(--dim);line-height:1.6}
+  .resume-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  .resume-section{margin-top:18px}
+  .resume-section h2{font-size:1.05rem;letter-spacing:.02em;margin:0 0 8px;color:var(--heading)}
+  .resume-section ul{margin:0;padding-left:18px;color:var(--txt)}
+  .resume-section li{margin-bottom:8px;line-height:1.5}
+  .resume-project{margin-bottom:12px}
+  .resume-project h3{font-size:.95rem;margin:0 0 6px;color:var(--txt)}
+  .resume-download{margin-top:16px;font-size:.84rem;color:var(--dim)}
+  .resume-download a{font-weight:600}
+  @media (max-width:840px){.resume-grid{grid-template-columns:1fr}.resume-sheet{padding:20px}}
+  @media print{
+    nav,#mobMenu,footer,.modal-backdrop,.card-click{display:none !important}
+    body{background:#fff !important;color:#111 !important}
+    body::before{display:none !important}
+    .resume-shell{padding-top:0 !important}
+    .resume-sheet{max-width:none;border:0;border-radius:0;padding:0;background:#fff !important;box-shadow:none}
+    .resume-head h1,.resume-section h2{color:#111 !important}
+    a{color:#111 !important;text-decoration:none}
+    .resume-section,.resume-project{break-inside:avoid-page;page-break-inside:avoid}
+  }
+</style>
 </head>
 <body>
 <nav>
@@ -50,85 +76,74 @@
   <a href="resume.html">Resume</a>
 </div>
 
-<section style="padding-top:110px">
+<section class="resume-shell">
   <div class="ctr">
-    <div class="slbl">Resume</div>
-    <h1 class="stitle">Raylee Hawkins</h1>
-    <p class="sdesc">Huntsville-adjacent (North Alabama) • <a href="mailto:raylee@hawkinsops.com">raylee@hawkinsops.com</a> •
-      <a href="https://github.com/raylee-ops" target="_blank" rel="noreferrer">GitHub</a> •
-      <a href="https://linkedin.com/in/raylee-hawkins" target="_blank" rel="noreferrer">LinkedIn</a>
-    </p>
-
-    <div class="g2">
-      <div class="card">
-        <div class="card-ttl">Summary</div>
-        <div class="card-sub">
-          SOC analyst candidate focused on detection engineering and security automation.
-          Builds deployable detections with verification artifacts, maps content to MITRE ATT&CK, and validates in a home lab (Proxmox + Wazuh + Splunk).
+    <div class="resume-sheet">
+      <div class="resume-head">
+        <h1>Raylee Hawkins</h1>
+        <div class="resume-headline">SOC Analyst (T1/T2) candidate focused on detection engineering + security automation</div>
+        <div class="resume-contact">
+          North Alabama (Huntsville-adjacent) | <a href="mailto:raylee@hawkinsops.com">raylee@hawkinsops.com</a> |
+          <a href="https://github.com/raylee-ops" target="_blank" rel="noreferrer">GitHub</a> |
+          <a href="https://hawkinsops.com" target="_blank" rel="noreferrer">hawkinsops.com</a> |
+          <a href="https://linkedin.com/in/raylee-hawkins" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
-      <div class="card">
-        <div class="card-ttl">Download</div>
-        <div class="card-sub">
-          <a class="btn btn-p" href="/assets/Raylee_Hawkins_Resume.pdf" download="Raylee_Hawkins_Resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
-          <div class="lupd">Verified deploy path: <code>/assets/Raylee_Hawkins_Resume.pdf</code>.</div>
+
+      <div class="resume-grid">
+        <div class="resume-section">
+          <h2>Summary</h2>
+          <ul>
+            <li>Build and validate deployable detections across Sigma, Wazuh, and Splunk with reproducible verification workflows and proof artifacts.</li>
+            <li>Maintain evidence-first quality controls using verified counts, CI-aligned checks, ATT&amp;CK mapping, and lab validation.</li>
+          </ul>
         </div>
-      </div>
-    </div>
-
-    <div style="height:18px"></div>
-
-    <div class="g2">
-      <div class="card">
-        <div class="card-ttl">Core skills</div>
-        <div class="card-sub">
-          <ul style="padding-left:18px;margin-top:8px">
-            <li>Detection engineering: Sigma, Wazuh rules, Splunk SPL</li>
-            <li>Threat modeling: MITRE ATT&CK mapping, hypothesis-driven hunting</li>
-            <li>Automation: PowerShell, Python, GitHub Actions (verification + reports)</li>
-            <li>Operations: Git, documentation-first workflows, reproducible evidence</li>
+        <div class="resume-section">
+          <h2>Skills</h2>
+          <ul>
+            <li><b>Detection:</b> Sigma, Wazuh rule authoring, Splunk SPL</li>
+            <li><b>Tooling:</b> PowerShell, Python, Git, GitHub Actions</li>
+            <li><b>Frameworks:</b> MITRE ATT&amp;CK, SOC triage workflow, incident response fundamentals</li>
+            <li><b>Lab/Validation:</b> Proxmox, Windows/Linux telemetry generation, reproducible test runs</li>
           </ul>
         </div>
       </div>
-      <div class="card">
-        <div class="card-ttl">Tools</div>
-        <div class="card-sub">
-          <ul style="padding-left:18px;margin-top:8px">
-            <li>Splunk, Wazuh, Sysmon-ready logging</li>
-            <li>Proxmox virtualization and snapshot-based test runs</li>
-            <li>Windows + Linux endpoints for telemetry generation</li>
-            <li>Markdown documentation + proof packs</li>
+
+      <div class="resume-section">
+        <h2>Projects</h2>
+        <div class="resume-project">
+          <h3>HawkinsOperations (Primary Portfolio Repo)</h3>
+          <ul>
+            <li>Built and maintain a detection and response library with verified inventory: 105 Sigma rules, 29 Wazuh rule blocks (25 XML files), 8 Splunk detections, and 10 IR playbooks.</li>
+            <li>Implemented proof-first validation workflow (scripts, documentation, CI alignment) so reviewers can reproduce claims directly from repo artifacts.</li>
+          </ul>
+        </div>
+        <div class="resume-project">
+          <h3>SOC Triage Simulator</h3>
+          <ul>
+            <li>Built an interactive triage workflow artifact to practice investigation steps, evidence review, and analyst decision flow.</li>
+            <li>Added repeatable drill structure and checklists to demonstrate process discipline, not one-off screenshots.</li>
+          </ul>
+        </div>
+        <div class="resume-project">
+          <h3>Home Lab Validation Environment</h3>
+          <ul>
+            <li>Built a Proxmox-based validation lab with Wazuh and Splunk components to test detection behavior before publishing artifacts.</li>
+            <li>Use lab runs to validate telemetry assumptions and improve signal quality in portfolio content.</li>
           </ul>
         </div>
       </div>
-    </div>
 
-    <div style="height:18px"></div>
+      <div class="resume-section">
+        <h2>Additional</h2>
+        <ul>
+          <li>“Eligible to obtain clearance; willing to pursue sponsorship.”</li>
+        </ul>
+      </div>
 
-    <div class="slbl">Projects</div>
-    <h2 class="stitle">Selected projects</h2>
-
-    <div class="g3">
-      <a class="card" href="https://github.com/raylee-ops/HawkinsOperations" target="_blank" rel="noreferrer" style="text-decoration:none">
-        <div class="card-click">Open →</div>
-        <div class="card-ttl">HawkinsOperations</div>
-        <div class="card-sub">Verified today: 105 Sigma rules, 29 Wazuh rule blocks, 8 Splunk detections, 10 IR playbooks + proof pack.</div>
-        <div class="card-meta"><span class="tag">Verified (reproducible today)</span><span class="tag">CI validation</span></div>
-      </a>
-
-      <a class="card" href="triage.html" style="text-decoration:none">
-        <div class="card-click">Open →</div>
-        <div class="card-ttl">Triage Simulator</div>
-        <div class="card-sub">Interactive SOC workflow drills with evidence checklists.</div>
-        <div class="card-meta"><span class="tag">Investigation</span><span class="tag">Workflow</span></div>
-      </a>
-
-      <a class="card" href="lab.html" style="text-decoration:none">
-        <div class="card-click">Open →</div>
-        <div class="card-ttl">Home Lab</div>
-        <div class="card-sub">Proxmox + Wazuh + Splunk environment for validation runs.</div>
-        <div class="card-meta"><span class="tag">Repro</span><span class="tag">Telemetry</span></div>
-      </a>
+      <div class="resume-download">
+        PDF download path: <a href="/assets/Raylee_Hawkins_Resume.pdf" download="Raylee_Hawkins_Resume.pdf" target="_blank" rel="noreferrer">/assets/Raylee_Hawkins_Resume.pdf</a>
+      </div>
     </div>
   </div>
 </section>
@@ -155,5 +170,3 @@
 <script src="assets/app.js" defer></script>
 </body>
 </html>
-
-
