@@ -1,0 +1,21 @@
+HTTP/1.1 301 Moved Permanently
+Date: Sat, 14 Feb 2026 05:36:50 GMT
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 48
+Connection: keep-alive
+Location: /assets/Raylee_Hawkins_Resume.pdf
+Access-Control-Allow-Origin: *
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+Report-To: [redacted]
+Nel: [redacted]
+Server: cloudflare
+Cache-Control: max-age=14400
+cf-cache-status: EXPIRED
+CF-RAY: [redacted]
+alt-svc: h3=":443"; ma=86400
+
+

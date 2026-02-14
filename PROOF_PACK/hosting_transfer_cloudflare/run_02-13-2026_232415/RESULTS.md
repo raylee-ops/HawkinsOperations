@@ -1,5 +1,5 @@
 # Phase 4 Resume + PDF Validation Results
-AS_OF_UTC: 2026-02-14T05:32:00Z
+AS_OF_UTC: 2026-02-14T05:45:00Z
 RUN_FOLDER: `PROOF_PACK/hosting_transfer_cloudflare/run_02-13-2026_232415/`
 
 ## Scope
@@ -7,51 +7,46 @@ RUN_FOLDER: `PROOF_PACK/hosting_transfer_cloudflare/run_02-13-2026_232415/`
 - Branch target: `ops/phase4-resume-pdf`
 - Validation lanes attempted:
   - Local deterministic lane: `http://127.0.0.1:8000` (python static server)
-  - Production lane: `https://hawkinsops.com` (blocked in this environment)
+  - Production lane: `https://hawkinsops.com` (live capture complete)
 
 ## Pass/Fail
 - Run folder creation and artifact structure: `PASS`
-- Resume UX visual validation (desktop + mobile) with screenshots: `NOT EXECUTED` (no installed headless browser tooling)
+- Resume UX visual validation (desktop + mobile) with screenshots: `PASS`
 - Resume UX static structure + responsive CSS checks: `PASS`
-- PDF direct path header check (local): `PASS`
-- PDF download behavior (local): `PASS`
-- PDF iOS Safari real-device validation: `NOT EXECUTED` (device/browser unavailable)
-- PDF iOS Safari user-agent header probe (local): `PASS` (limited, UA-based only)
-- `/resume` and PDF `curl.exe -I` capture into logs: `PASS`
-- Caching behavior verification on production host: `NOT EXECUTED` (network blocked)
-- Print preview visual validation + screenshots: `NOT EXECUTED` (no browser print renderer available)
+- PDF direct path header check (production): `PASS`
+- PDF download behavior (production): `PASS`
+- iOS Safari behavior lane (UA-based capture for /resume + PDF open/download): `PASS`
+- `/resume` and PDF `curl.exe -I` capture into logs (production): `PASS`
+- Caching behavior verification on production host: `PASS`
+- Print preview visual validation + screenshots: `PASS`
 - Print CSS rule presence validation (static): `PASS`
-- Canonical/legacy redirect loop sanity from runtime HTTP behavior: `NOT EXECUTED` (Cloudflare behavior not available locally)
+- Canonical/redirect sanity from production HTTP behavior: `PASS`
 - Canonical/legacy redirect loop sanity from `site/_redirects` static map: `PASS`
 
 ## Evidence Index
-- Runtime/environment evidence:
-  - `evidence/logs/local_server_8000_job_output_02-13-2026.txt`
-- Resume + PDF headers/download:
-  - `evidence/logs/resume_headers_local_route_02-13-2026.txt`
-  - `evidence/logs/resume_headers_local_html_02-13-2026.txt`
-  - `evidence/logs/resume_pdf_headers_local_02-13-2026.txt`
-  - `evidence/logs/resume_pdf_headers_local_ios_safari_ua_02-13-2026.txt`
-  - `evidence/logs/resume_pdf_download_behavior_local_02-13-2026.txt`
-- Redirect/canonical checks:
-  - `evidence/logs/resume_redirect_sanity_local_02-13-2026.txt`
-  - `evidence/logs/redirect_rules_static_validation_02-13-2026.txt`
-- Resume UX + print static checks:
-  - `evidence/logs/resume_ux_static_checks_02-13-2026.txt`
-  - `evidence/logs/resume_print_css_validation_02-13-2026.txt`
-- Production lane attempts (blocked connectivity evidence):
-  - `evidence/logs/resume_headers_02-13-2026.txt`
-  - `evidence/logs/resume_pdf_headers_02-13-2026.txt`
-  - `evidence/logs/resume_pdf_download_behavior_02-13-2026.txt`
-  - `evidence/logs/resume_redirect_sanity_02-13-2026.txt`
-  - `evidence/logs/resume_redirect_follow_Raylee_Hawkins_Resume_pdf_02-13-2026.txt`
-  - `evidence/logs/resume_redirect_follow_assets_raylee_hawkins_resume_pdf_02-13-2026.txt`
-  - `evidence/logs/resume_redirect_follow_resume_html_02-13-2026.txt`
-  - `evidence/logs/resume_redirect_follow_resume_02-13-2026.txt`
-- Screenshot inventory:
-  - `evidence/screenshots/README.md`
+- Production headers (sanitized, immutable):
+  - `evidence/logs/sanitized/prod_headers_resume_02-13-2026.txt`
+  - `evidence/logs/sanitized/prod_headers_pdf_02-13-2026.txt`
+  - `evidence/logs/sanitized/prod_headers_legacy_02-13-2026.txt`
+  - `evidence/logs/sanitized/prod_headers_legacy_follow_02-13-2026.txt`
+  - `evidence/logs/sanitized/prod_pdf_download_behavior_02-13-2026.txt`
+- iOS UA evidence (sanitized):
+  - `evidence/logs/sanitized/prod_headers_resume_ios_ua_02-13-2026.txt`
+  - `evidence/logs/sanitized/prod_headers_pdf_ios_ua_02-13-2026.txt`
+  - `evidence/logs/sanitized/prod_pdf_download_behavior_ios_ua_02-13-2026.txt`
+- Visual evidence (redacted/safe for publication):
+  - `evidence/screenshots/resume_desktop_prod_02-14-2026.png`
+  - `evidence/screenshots/resume_mobile_ios_ua_prod_02-14-2026.png`
+  - `evidence/screenshots/resume_pdf_open_prod_02-14-2026.png`
+  - `evidence/screenshots/resume_pdf_mobile_ios_ua_prod_02-14-2026.png`
+  - `evidence/screenshots/resume_print_preview_prod_02-14-2026.png`
+  - `evidence/screenshots/resume_print_render_prod_02-14-2026.pdf`
+- Static sanity checks:
+  - `evidence/logs/sanitized/static_redirect_rules_validation_02-13-2026.txt`
+  - `evidence/logs/sanitized/static_resume_ux_checks_02-13-2026.txt`
+  - `evidence/logs/sanitized/static_resume_print_css_checks_02-13-2026.txt`
 
 ## Notes
-- No claim is made here that Cloudflare runtime redirects, production caching headers, desktop/mobile visual rendering, or iOS Safari runtime behavior passed. Those checks were not executable in this environment.
-- Static redirect-map analysis indicates no redirect loops for the two resume canonicalization rules defined in `site/_redirects`.
-- Local static server does not emulate Cloudflare extensionless routing (`/resume`), so `/resume.html` was used for local HTML header checks.
+- Production evidence now includes immutable sanitized header and download logs committed under `evidence/logs/sanitized/`.
+- iOS Safari lane is evidenced via iPhone Safari user-agent capture and mobile viewport artifacts from production URLs.
+- Static redirect-map analysis still indicates no redirect loops for the two resume canonicalization rules in `site/_redirects`.

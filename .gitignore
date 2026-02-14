@@ -34,9 +34,12 @@ run_*/
 !PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/screenshots/.gitkeep
 PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/screenshots/raw_unredacted_do_not_commit/**
 !PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/logs/
-!PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/logs/.gitkeep
 *.log
 logs/
+PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/logs/**
+!PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/logs/.gitkeep
+!PROOF_PACK/hosting_transfer_cloudflare/run_02-13-2026_232415/evidence/logs/sanitized/
+!PROOF_PACK/hosting_transfer_cloudflare/run_02-13-2026_232415/evidence/logs/sanitized/**
 
 # Development dependencies
 node_modules/

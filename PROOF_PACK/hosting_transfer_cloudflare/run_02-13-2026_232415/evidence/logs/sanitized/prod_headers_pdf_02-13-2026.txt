@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Date: Sat, 14 Feb 2026 05:36:50 GMT
+Content-Type: application/pdf
+Content-Length: 2831
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=14400, must-revalidate
+ETag: "54f0cbee948930da8637860dcbbe372f"
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+Report-To: [redacted]
+Nel: [redacted]
+Server: cloudflare
+Accept-Ranges: bytes
+cf-cache-status: REVALIDATED
+CF-RAY: [redacted]
+alt-svc: h3=":443"; ma=86400
+
+

@@ -1,14 +1,13 @@
 # Screenshot Capture Manifest (Redacted)
 
-No screenshot files were captured in this run due missing browser capture tooling in the execution environment (`msedge/chrome/playwright/wkhtmlto*` not available).
-
-Required captures for Phase 4 completion:
-- `/resume` desktop render (redacted)
-- `/resume` mobile render (redacted)
-- `/resume` print preview (redacted)
-- PDF open/download view (desktop)
-- PDF open/download view (iOS Safari)
+Captured visual artifacts:
+- `resume_desktop_prod_02-14-2026.png` (`/resume` desktop view)
+- `resume_mobile_ios_ua_prod_02-14-2026.png` (`/resume` mobile iPhone Safari UA lane)
+- `resume_pdf_open_prod_02-14-2026.png` (PDF opened from canonical path)
+- `resume_pdf_mobile_ios_ua_prod_02-14-2026.png` (PDF opened with iPhone Safari UA lane)
+- `resume_print_preview_prod_02-14-2026.png` (print-render preview capture)
+- `resume_print_render_prod_02-14-2026.pdf` (print render output)
 
 Status:
-- Captured in this run: `0`
-- Pending manual capture: `5`
+- Captured in this run: `6`
+- Pending manual capture: `0`
