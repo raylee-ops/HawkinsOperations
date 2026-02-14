@@ -11,14 +11,13 @@
 - unknown route -> custom `404.html`
 
 ## Redirect checks
-Validate parity against `site/_redirects`:
-- `/security` -> `/security.html` (200)
-- `/proof` -> `/proof.html` (200)
-- `/resume` -> `/resume.html` (200)
-- `/projects` -> `/projects.html` (200)
-- `/lab` -> `/lab.html` (200)
-- `/triage` -> `/triage.html` (200)
+Current parity target from `site/_redirects`:
 - `/Raylee_Hawkins_Resume.pdf` -> `/assets/Raylee_Hawkins_Resume.pdf` (301)
+- `/assets/raylee_hawkins_resume.pdf` -> `/assets/Raylee_Hawkins_Resume.pdf` (301)
+
+Cloudflare route behavior expectation:
+- Extensionless routes (`/projects`, `/security`, `/resume`) return `200` directly.
+- No extensionless-to-`.html` rewrite rules are present to avoid redirect loops.
 
 ## Header checks
 Validate parity against `site/_headers` for all HTML routes:
@@ -29,4 +28,15 @@ Validate parity against `site/_headers` for all HTML routes:
 - `Content-Security-Policy` present
 
 ## Command log
-Add command outputs from `curl -I` / equivalent checks into run evidence logs.
+Captured command outputs:
+- `PROOF_PACK/hosting_transfer_cloudflare/run_02-13-2026_191244/evidence/logs/prod_headers_capture_02-13-2026.txt`
+
+Observed result snapshot from captured log:
+- `/` -> `HTTP/1.1 200 OK` (`Server: cloudflare`)
+- `/projects` -> `HTTP/1.1 200 OK` (`Server: cloudflare`)
+- `/security` -> `HTTP/1.1 200 OK` (`Server: cloudflare`)
+- `/resume` -> `HTTP/1.1 200 OK` (`Server: cloudflare`)
+- `/assets/Raylee_Hawkins_Resume.pdf` -> `HTTP/1.1 200 OK` (`Server: cloudflare`)
+
+## Remaining required evidence
+- `/proof`, `/lab`, `/triage`, and custom `404` header captures still pending in current run log.
