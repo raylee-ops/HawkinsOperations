@@ -12,9 +12,11 @@
 |---|---|---|---|
 | Deploy determinism | 3 consecutive commits deploy successfully with expected files | Any commit produces missing files, stale assets, or failed deployment | `DEPLOY_LOG_LINKS.md` |
 | Route coverage | `/`, `/security`, `/projects`, `/resume`, `/proof`, `/lab`, `/triage`, and custom `404` all return expected page | Any route returns wrong page, wrong status, or broken content | `ROUTING_AND_HEADERS_VALIDATION.md` |
+| Theme parity | Light and dark themes both render readable content across required routes | Broken contrast, missing toggle behavior, or inconsistent theme rendering | `RESULTS.md` |
 | Redirect behavior | Pretty URLs resolve via `_redirects` exactly as in `site/_redirects` | Any mismatch or loop | `ROUTING_AND_HEADERS_VALIDATION.md` |
 | Header behavior | Security headers match `site/_headers` | Missing or altered required headers | `ROUTING_AND_HEADERS_VALIDATION.md` |
 | Resume download | `/assets/Raylee_Hawkins_Resume.pdf` downloads successfully | 404, wrong file, or blocked download | `ROUTING_AND_HEADERS_VALIDATION.md` |
+| Resume print preview | `/resume` print preview renders cleanly with no clipped or missing sections | Missing content, severe clipping, or broken print formatting | `RESULTS.md` |
 | Desktop/mobile cache parity | Hard refresh on desktop and mobile shows latest assets | Stale JS/CSS/HTML after hard refresh | `RESULTS.md` |
 
 ## Required route list
