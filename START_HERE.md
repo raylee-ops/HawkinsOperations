@@ -29,3 +29,4 @@ Expected:
 
 - This repository is evidence-first: claims are backed by reproducible commands.
 - `PROOF_PACK/` is the curated review lane; raw imports and legacy material are not part of the front-door proof path.
+- Phase 6A docs: `projects/lab/README.md`, `docs/execution/PHASE_6A_INFRA_VALIDATION.md`, `PROOF_PACK/REDACTION_RULES.md`
