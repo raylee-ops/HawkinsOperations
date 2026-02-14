@@ -1,0 +1,6 @@
+@media print present: True
+print hides nav/footer elements: True
+print body white background rule: True
+print resume-shell top padding reset: True
+print link de-emphasis rule: True
+print page-break avoidance rule: True

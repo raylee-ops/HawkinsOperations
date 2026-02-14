@@ -1,0 +1,8 @@
+viewport meta present: True
+resume-shell present: True
+resume-sheet present: True
+resume-grid present: True
+pdf link absolute path present: True
+download attribute present: True
+mobile breakpoint rule present: True
+print media rule present: True

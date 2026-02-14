@@ -1,0 +1,6 @@
+url=https://hawkinsops.com/assets/Raylee_Hawkins_Resume.pdf
+status=200
+content_type=application/pdf
+size_download=2831
+redirects=0
+
