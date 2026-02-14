@@ -28,9 +28,9 @@ AS_OF: 2026-02-14
     - IR playbooks: `10`
 - `[x]` Source-of-truth counts file present.
   - Evidence: `PROOF_PACK/VERIFIED_COUNTS.md`
-- `[ ]` Manual local click-test completed for minimum routes:
+- `[x]` Manual local click-test completed for minimum routes:
   - `/`, `/security`, `/projects`, `/resume`, `/proof`, `/lab`, `/triage`
-  - Blocker: no explicit run log captured in this checklist cycle.
+  - Evidence: `PROOF_PACK/hosting_transfer_cloudflare/run_02-14-2026_031137/evidence/logs/route_clicktest_status_02-14-2026.txt`
 
 ## 4) Hosting guardrails (static checks)
 - `[x]` `netlify.toml` keeps `publish = "site"`.
@@ -57,27 +57,27 @@ AS_OF: 2026-02-14
 - `[x]` Required artifact file exists: `DEPLOY_LOG_LINKS.md`
 
 ## 6) Hosting transfer execution evidence completeness
-- `[~]` Route validation checklist content exists with partial production evidence.
+- `[x]` Route validation checklist content exists with full production evidence.
   - Evidence: `PROOF_PACK/hosting_transfer_cloudflare/ROUTING_AND_HEADERS_VALIDATION.md`
-- `[~]` DNS cutover output captured from two resolvers.
+- `[x]` DNS cutover output captured from two resolvers.
   - Expected resolvers: `1.1.1.1`, `8.8.8.8`
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/DNS_CUTOVER_RECORDS.md`
-- `[~]` Deploy log rows partially filled with timestamp/SHA/URL/status.
+- `[x]` Deploy log rows fully filled with timestamp/SHA/URL/status.
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/DEPLOY_LOG_LINKS.md`
-- `[ ]` Deterministic deploy test complete for at least 3 consecutive commits.
+- `[x]` Deterministic deploy test complete for at least 3 consecutive commits.
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/DEPLOY_LOG_LINKS.md`
-  - Supporting evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/`
+  - Supporting evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_02-14-2026_031137/evidence/logs/deterministic_deploy_capture_02-14-2026.txt`
 - `[x]` Resume PDF download validated on production route.
   - Expected path: `/assets/Raylee_Hawkins_Resume.pdf`
-  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/RESULTS.md`
-- `[~]` `_headers` and `_redirects` parity partially verified post-cutover.
+  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_02-14-2026_031137/RESULTS.md`
+- `[x]` `_headers` and `_redirects` parity verified post-cutover.
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/ROUTING_AND_HEADERS_VALIDATION.md`
-- `[ ]` Hard refresh stale-cache checks completed on desktop and mobile.
-  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/RESULTS.md`
-- `[ ]` Rollback drill evidence captured (DNS-record rollback to previous provider/targets).
+- `[x]` Hard refresh stale-cache checks completed on desktop and mobile.
+  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_02-14-2026_031137/evidence/logs/hard_refresh_desktop_mobile_02-14-2026.txt`
+- `[x]` Rollback drill evidence captured (DNS-record rollback to previous provider/targets).
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/ROLLBACK_PLAN_AND_TRIGGER.md`
-  - Supporting evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/`
+  - Supporting evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_02-14-2026_031137/evidence/logs/rollback_drill_simulation_02-14-2026.txt`
 
 ## 7) Phase gate decision
-- `[ ]` Gate open for post-hosting polish phases.
+- `[x]` Gate open for post-hosting polish phases.
   - Criteria: all items in sections 3 and 6 must be `[x]`.
