@@ -1,6 +1,6 @@
 # Cloudflare Hosting Transfer Proof Pack
 
-This folder stores execution evidence for Netlify -> Cloudflare Pages production cutover.
+This folder stores execution evidence for Cloudflare Pages production hosting.
 
 ## Required artifacts
 - `CF_PAGES_PROJECT_SETTINGS.md`
@@ -8,6 +8,7 @@ This folder stores execution evidence for Netlify -> Cloudflare Pages production
 - `ROUTING_AND_HEADERS_VALIDATION.md`
 - `ROLLBACK_PLAN_AND_TRIGGER.md`
 - `DEPLOY_LOG_LINKS.md`
+- `PHASE_CHECKLIST.md` (status tracker for AGENTS phase-order gates)
 
 ## Run outputs
 Each execution run must create a timestamped folder:

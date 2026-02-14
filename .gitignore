@@ -32,6 +32,7 @@ run_*/
 !PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/
 !PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/screenshots/
 !PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/screenshots/.gitkeep
+PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/screenshots/raw_unredacted_do_not_commit/**
 !PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/logs/
 !PROOF_PACK/hosting_transfer_cloudflare/run_*/evidence/logs/.gitkeep
 *.log

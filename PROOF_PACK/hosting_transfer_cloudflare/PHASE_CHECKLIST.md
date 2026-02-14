@@ -1,0 +1,83 @@
+# Phase Checklist (0-2B + Hosting Transfer)
+AS_OF: 2026-02-14
+
+## Status key
+- `[x]` complete and evidenced
+- `[~]` partial (exists, but missing execution evidence)
+- `[ ]` not completed
+
+## 1) Phase-order gate from AGENTS.md
+- `[~]` Step 1 complete current phase work (Phase 0 through Phase 2B) with verified-lane checks.
+- `[~]` Step 2 execute hosting transfer and complete Hosting Transfer Proof Pack.
+- `[ ]` Step 3 continue polish phases only after hosting transfer evidence is complete and reviewed.
+
+## 2) Pre-check workflow controls
+- `[x]` Repo state checked first (`git status`).
+  - Evidence: local run output on branch `ops/hosting-transfer-implementation`.
+- `[~]` Working tree clean before phase-close decision.
+  - Blocker: local uncommitted changes present under `PROOF_PACK/hosting_transfer_cloudflare/run_02-13-2026_191244/`.
+
+## 3) Verified-lane checks (Phase 0-2B)
+- `[x]` Counts verification executed with:
+  - `pwsh -NoProfile -File scripts/verify/verify-counts.ps1`
+  - Latest observed output:
+    - Sigma: `105`
+    - Splunk: `8`
+    - Wazuh XML files: `25`
+    - Wazuh `<rule id=>` blocks: `29`
+    - IR playbooks: `10`
+- `[x]` Source-of-truth counts file present.
+  - Evidence: `PROOF_PACK/VERIFIED_COUNTS.md`
+- `[ ]` Manual local click-test completed for minimum routes:
+  - `/`, `/security`, `/projects`, `/resume`, `/proof`, `/lab`, `/triage`
+  - Blocker: no explicit run log captured in this checklist cycle.
+
+## 4) Hosting guardrails (static checks)
+- `[x]` `netlify.toml` keeps `publish = "site"`.
+  - Evidence: `netlify.toml`
+- `[x]` Pretty redirect file exists.
+  - Evidence: `site/_redirects`
+- `[x]` Security headers file exists.
+  - Evidence: `site/_headers`
+- `[x]` Custom 404 exists.
+  - Evidence: `site/404.html`
+- `[x]` Resume PDF exists at required path.
+  - Evidence: `site/assets/Raylee_Hawkins_Resume.pdf`
+- `[x]` Resume absolute link uses required URL.
+  - Evidence: `site/resume.html`
+  - Expected: `/assets/Raylee_Hawkins_Resume.pdf`
+
+## 5) Hosting Transfer Proof Pack artifacts
+- `[x]` Artifact root exists.
+  - Evidence: `PROOF_PACK/hosting_transfer_cloudflare/`
+- `[x]` Required artifact file exists: `CF_PAGES_PROJECT_SETTINGS.md`
+- `[x]` Required artifact file exists: `DNS_CUTOVER_RECORDS.md`
+- `[x]` Required artifact file exists: `ROUTING_AND_HEADERS_VALIDATION.md`
+- `[x]` Required artifact file exists: `ROLLBACK_PLAN_AND_TRIGGER.md`
+- `[x]` Required artifact file exists: `DEPLOY_LOG_LINKS.md`
+
+## 6) Hosting transfer execution evidence completeness
+- `[~]` Route validation checklist content exists.
+  - Evidence: `PROOF_PACK/hosting_transfer_cloudflare/ROUTING_AND_HEADERS_VALIDATION.md`
+- `[ ]` DNS cutover output captured from two resolvers with timestamps.
+  - Expected resolvers: `1.1.1.1`, `8.8.8.8`
+  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/DNS_CUTOVER_RECORDS.md`
+- `[ ]` Deploy log rows filled with real timestamps, SHAs, URLs, statuses.
+  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/DEPLOY_LOG_LINKS.md`
+- `[ ]` Deterministic deploy test complete for at least 3 consecutive commits.
+  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/DEPLOY_LOG_LINKS.md`
+  - Supporting evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/`
+- `[ ]` Resume PDF download validated on production route.
+  - Expected path: `/assets/Raylee_Hawkins_Resume.pdf`
+  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/RESULTS.md`
+- `[ ]` `_headers` and `_redirects` parity verified post-cutover.
+  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/ROUTING_AND_HEADERS_VALIDATION.md`
+- `[ ]` Hard refresh stale-cache checks completed on desktop and mobile.
+  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/RESULTS.md`
+- `[ ]` Rollback drill evidence captured (DNS-record rollback to previous provider/targets).
+  - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/ROLLBACK_PLAN_AND_TRIGGER.md`
+  - Supporting evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/`
+
+## 7) Phase gate decision
+- `[ ]` Gate open for post-hosting polish phases.
+  - Criteria: all items in sections 3 and 6 must be `[x]`.
