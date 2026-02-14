@@ -6,4 +6,3 @@ Record every validation deploy and commit mapping.
 |---|---|---|---|---|---|---|
 | `<YYYY-MM-DDTHH:MM:SSZ>` | `<sha>` | `main` | Cloudflare Pages (production) | `<url>` | `<green/red>` | `<note>` |
 | `<YYYY-MM-DDTHH:MM:SSZ>` | `<sha>` | `<branch>` | Cloudflare Pages (preview) | `<url>` | `<green/red>` | `<note>` |
-| `<YYYY-MM-DDTHH:MM:SSZ>` | `<sha>` | `main` | Netlify (rollback drill) | `<url>` | `<green/red>` | `<note>` |

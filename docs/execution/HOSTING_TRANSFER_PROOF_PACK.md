@@ -1,11 +1,11 @@
-# Hosting Transfer Proof Pack (Cloudflare Primary)
+# Hosting Transfer Proof Pack (Cloudflare Only)
 
 ## Scope
-Docs-only execution checklist for transferring production hosting from Netlify to Cloudflare Pages.
+Docs-only execution checklist for Cloudflare Pages hosting validation.
 
 ## Target state
 - Cloudflare Pages = production primary
-- Netlify = rollback-only (preview deploys disabled)
+- No secondary host
 
 ## Required artifact directory
 - `PROOF_PACK/hosting_transfer_cloudflare/`
@@ -34,4 +34,4 @@ Docs-only execution checklist for transferring production hosting from Netlify t
 - [ ] Cloudflare Pages preview deploy screenshot/log link.
 - [ ] DNS propagation checks from two resolvers with timestamps.
 - [ ] Header/redirect validation command outputs.
-- [ ] Rollback drill evidence using Netlify fallback procedure.
+- [ ] Rollback drill evidence using DNS-record rollback to the previous provider/targets.

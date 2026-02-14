@@ -74,11 +74,10 @@ AS_OF: 2026-02-14
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/ROUTING_AND_HEADERS_VALIDATION.md`
 - `[ ]` Hard refresh stale-cache checks completed on desktop and mobile.
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/RESULTS.md`
-- `[ ]` Rollback drill evidence captured (Netlify fallback procedure).
+- `[ ]` Rollback drill evidence captured (DNS-record rollback to previous provider/targets).
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/ROLLBACK_PLAN_AND_TRIGGER.md`
   - Supporting evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/`
 
 ## 7) Phase gate decision
 - `[ ]` Gate open for post-hosting polish phases.
   - Criteria: all items in sections 3 and 6 must be `[x]`.
-
