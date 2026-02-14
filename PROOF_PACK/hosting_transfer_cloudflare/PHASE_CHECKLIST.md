@@ -57,20 +57,20 @@ AS_OF: 2026-02-14
 - `[x]` Required artifact file exists: `DEPLOY_LOG_LINKS.md`
 
 ## 6) Hosting transfer execution evidence completeness
-- `[~]` Route validation checklist content exists.
+- `[~]` Route validation checklist content exists with partial production evidence.
   - Evidence: `PROOF_PACK/hosting_transfer_cloudflare/ROUTING_AND_HEADERS_VALIDATION.md`
-- `[ ]` DNS cutover output captured from two resolvers with timestamps.
+- `[~]` DNS cutover output captured from two resolvers.
   - Expected resolvers: `1.1.1.1`, `8.8.8.8`
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/DNS_CUTOVER_RECORDS.md`
-- `[ ]` Deploy log rows filled with real timestamps, SHAs, URLs, statuses.
+- `[~]` Deploy log rows partially filled with timestamp/SHA/URL/status.
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/DEPLOY_LOG_LINKS.md`
 - `[ ]` Deterministic deploy test complete for at least 3 consecutive commits.
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/DEPLOY_LOG_LINKS.md`
   - Supporting evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/`
-- `[ ]` Resume PDF download validated on production route.
+- `[x]` Resume PDF download validated on production route.
   - Expected path: `/assets/Raylee_Hawkins_Resume.pdf`
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/RESULTS.md`
-- `[ ]` `_headers` and `_redirects` parity verified post-cutover.
+- `[~]` `_headers` and `_redirects` parity partially verified post-cutover.
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/ROUTING_AND_HEADERS_VALIDATION.md`
 - `[ ]` Hard refresh stale-cache checks completed on desktop and mobile.
   - Evidence target: `PROOF_PACK/hosting_transfer_cloudflare/run_*/RESULTS.md`

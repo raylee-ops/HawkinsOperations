@@ -1,0 +1,103 @@
+=== / ===
+HTTP/1.1 200 OK
+Date: Sat, 14 Feb 2026 02:49:28 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=tFfYtlib8wTL7J1pNDhy2YfqzVTZAWmAJ6q2zGIFUDE6nsCkQhs4oCKZrRH51Lhi9aW7ClLx8oyC%2Fj55tXDDz6ZgU1st6NpE9Ayum594"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+CF-RAY: 9cd940a27e664f07-ATL
+alt-svc: h3=":443"; ma=86400
+
+
+=== /projects ===
+HTTP/1.1 200 OK
+Date: Sat, 14 Feb 2026 02:49:28 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=WusFgMlwfQUsi4lcT8%2BTMb%2FYNIJh21ix1KXxPp8A9SWWg3oxriolfLFMywYQRnLsP0baRleuC6%2Fbb1sFcUpQqseG%2BYocH%2BA8h0HAsIqa"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+CF-RAY: 9cd940a3adc2b04c-ATL
+alt-svc: h3=":443"; ma=86400
+
+
+=== /security ===
+HTTP/1.1 200 OK
+Date: Sat, 14 Feb 2026 02:49:29 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TjLwlPiSw4J6FspFTAQjCTNWHNXudIzYY%2FXoV3oW%2BVPA56VwEKPyD%2F9QIn%2FfX56XUsap1VU8NvPl0VrAdmiVz5cr%2FNU9qAgpL8MtxF2w"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+CF-RAY: 9cd940a4ebdf2458-ATL
+alt-svc: h3=":443"; ma=86400
+
+
+=== /resume ===
+HTTP/1.1 200 OK
+Date: Sat, 14 Feb 2026 02:49:29 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2Fumeiiw2gGxo1iD8%2BpAF%2FEf23KWjy6QkqhbR22EOHTF4q5uF1NPw8gb5pTgkBBXtz4Pmi5gDt%2FtEkEuTnlBiR0FeRJgOPZflzQkqNmkq"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+CF-RAY: 9cd940a61ff597b4-ATL
+alt-svc: h3=":443"; ma=86400
+
+
+=== /assets/Raylee_Hawkins_Resume.pdf ===
+HTTP/1.1 200 OK
+Date: Sat, 14 Feb 2026 02:49:29 GMT
+Content-Type: application/pdf
+Content-Length: 2831
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=14400, must-revalidate
+ETag: "54f0cbee948930da8637860dcbbe372f"
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Uul6DQ51QIhj5yQ6sx9%2B7kWPW8Rvj2spcmuNYQaMmYbPxhrHuv%2BOJpAL4sPaxQZRy%2B%2Blx4bgjMej5bSM1p3qjpvaITlGi9c5fS949lnj"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+Accept-Ranges: bytes
+cf-cache-status: REVALIDATED
+CF-RAY: 9cd940a75adecefc-ATL
+alt-svc: h3=":443"; ma=86400
+
+
