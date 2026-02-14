@@ -1,3 +1,10 @@
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.14.0
+Date: Sat, 14 Feb 2026 06:00:53 GMT
+Content-type: text/html
+Content-Length: 8813
+Last-Modified: Sat, 14 Feb 2026 06:00:05 GMT
+
 <!doctype html>
 <html lang="en">
 <head>
