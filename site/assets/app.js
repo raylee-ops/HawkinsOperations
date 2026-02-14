@@ -9,7 +9,30 @@
   const html = document.documentElement;
 
   // Theme toggle (saved preference, otherwise system preference)
-  const themeToggle = $('#themeToggle');
+  function ensureThemeToggle() {
+    const existing = $('#themeToggle');
+    if (existing) return existing;
+
+    const navInner = $('.nav-i');
+    if (!navInner) return null;
+
+    const btn = document.createElement('button');
+    btn.id = 'themeToggle';
+    btn.className = 'theme-btn';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Switch to light mode');
+    btn.textContent = 'Light';
+
+    const navList = $('.nav-l', navInner);
+    if (navList && navList.parentNode === navInner) {
+      navInner.insertBefore(btn, navList.nextSibling);
+    } else {
+      navInner.appendChild(btn);
+    }
+    return btn;
+  }
+
+  const themeToggle = ensureThemeToggle();
   const savedTheme = localStorage.getItem('rh-theme');
   const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const startTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
