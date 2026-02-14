@@ -11,6 +11,11 @@ Upload **everything** in this folder to your site root:
 
 If you only upload `index.html`, the resume PDF and styling will 404 (because hosting platforms love chaos).
 
+## Hosting strategy
+- Primary production hosting: **Cloudflare Pages**
+- Rollback hosting: **Netlify** (rollback-only, previews disabled to reduce credit burn)
+- Publish directory for both hosts: `site/`
+
 ## Update counts
 Counts are sourced from your repo releases / verification artifacts:
 - `raylee-ops/HawkinsOperations`
