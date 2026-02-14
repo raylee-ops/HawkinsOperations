@@ -1,0 +1,2 @@
+browser_capture=PASS
+browser=C:\Program Files\Google\Chrome\Application\chrome.exe
